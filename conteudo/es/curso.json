@@ -1,0 +1,200 @@
+{
+  "id": "do-chat-ao-agente-terminal-v72",
+  "lang": "es",
+  "url": "https://inematds.github.io/do-chat-ao-agente-terminal-v72/es/",
+  "nome": "Del chat a la terminal",
+  "sub": "Nivel 1 de la formación Del chat al agente",
+  "volta": {
+    "t": "Descripción general: Del chat al agente",
+    "href": "https://inematds.github.io/do-chat-ao-agente-v72/"
+  },
+  "lado_card": {
+    "rot": "Lista de comandos",
+    "t": "Todos los comandos, en orden",
+    "texto": "La secuencia completa, desde la terminal hasta la página publicada, para dejarla abierta mientras trabajas.",
+    "link": "Abrir la lista de comandos de OSWork",
+    "href": "https://inematds.github.io/oswork-quick/materiais/"
+  },
+  "rodape": "INEMA.CLUB · contenido abierto y gratuito · formato INEMA Learning v7.2 · <a href=\"https://inematds.github.io/do-chat-ao-agente-v72/\">Descripción general de la formación Del chat al agente</a> · <a href=\"https://eventos.inema.pro/oswork/\">eventos.inema.pro/oswork</a> · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guía: cómo aprender inteligencia artificial</a> · <a href=\"https://www.inema.club/cursos/324-do-chat-ao-agente-degrau-1-o-terminal-pasta-regras-segredos-git-e-vps/\">Ficha completa de este curso en INEMA.CLUB</a>",
+  "videos": {
+    "seq1-oswork": {
+      "titulo": "Del chat a la terminal",
+      "duracao": "1 min 52 s",
+      "mp4": "https://github.com/inematds/jornada-agentes/releases/download/video-v2.0.0/jornada-seq1-oswork-16x9.mp4",
+      "vtt": "assets/vtt/seq1-oswork.vtt",
+      "poster": "assets/img/seq1-oswork.jpg",
+      "pagina": "https://inematds.github.io/jornada-agentes/serie/seq1-oswork/"
+    },
+    "oswork-terminal": {
+      "titulo": "El gestor que domina la terminal: OSWork comando por comando",
+      "duracao": "7 min 46 s",
+      "mp4": "https://github.com/inematds/oswork-terminal/releases/download/video-v2.0.0/oswork-terminal-completo-16x9.mp4",
+      "vtt": "assets/vtt/oswork-terminal.vtt",
+      "poster": "assets/img/oswork-terminal.jpg",
+      "pagina": "https://inematds.github.io/oswork-terminal/videos/"
+    },
+    "jornada-ia": {
+      "titulo": "Del chat al agente: la descripción general",
+      "duracao": "2 min 27 s",
+      "mp4": "https://github.com/inematds/jornada-agentes/releases/download/video-v2.0.0/jornada-jornada-ia-16x9.mp4",
+      "vtt": "assets/vtt/jornada-ia.vtt",
+      "poster": "assets/img/jornada-ia.jpg",
+      "pagina": "https://inematds.github.io/jornada-agentes/serie/jornada-ia/"
+    }
+  },
+  "inicio": {
+    "kicker": "Curso completo · nivel 1 de 4 · 8 clases",
+    "titulo": "Del chat a la terminal: el agente trabaja en una carpeta tuya",
+    "lead": "Abre la terminal sin miedo, instala el agente desde la fuente oficial, crea la carpeta con reglas, guarda cada versión con Git, mantén las claves fuera del texto y publica tu página. Comando por comando, con lo que debes revisar en cada paso.",
+    "cta": "Empezar por la clase 1",
+    "cta2": {
+      "t": "Volver a la descripción general de la formación",
+      "href": "https://inematds.github.io/do-chat-ao-agente-v72/"
+    },
+    "capa_alt": "Notebook con la terminal abierta junto a un cuaderno con el árbol de carpetas dibujado a mano.",
+    "numeros": [
+      {
+        "v": "8",
+        "t": "clases"
+      },
+      {
+        "v": "42",
+        "t": "modelos con botón para copiar"
+      },
+      {
+        "v": "6",
+        "t": "terminales de ensayo"
+      },
+      {
+        "v": "17",
+        "t": "ejercicios con «listo cuando»"
+      }
+    ],
+    "aulas_titulo": "Las clases",
+    "aulas_sub": "En el orden en que las haces. Cada clase termina con práctica y una prueba corta; pasa a la siguiente solo cuando se cumpla el «listo cuando».",
+    "blocos": [
+      {
+        "t": "Para quién es",
+        "itens": [
+          "Para quien usa ChatGPT, Claude o Gemini en el navegador y nunca ha abierto una terminal.",
+          "Para quien ya vio la descripción general de la formación y quiere hacer de verdad el nivel 1, con todos los comandos.",
+          "Para quien va a orientar a un equipo o cliente y necesita saber cómo revisar lo que hizo el agente."
+        ]
+      },
+      {
+        "t": "Lo que podrás hacer al terminar",
+        "itens": [
+          "Recorrer carpetas con cmd (y con la Terminal de Mac o Linux) sabiendo siempre dónde estás.",
+          "Instalar Claude Code o Codex e iniciar sesión con tu suscripción, comprobando el método.",
+          "Crear la carpeta del agente con README, AGENTS.md, .env fuera de Git e historial para deshacer cambios.",
+          "Publicar la página en GitHub Pages y llevar el mismo proyecto a una VPS."
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "pular": "Saltar al contenido",
+    "aulas": "Clases",
+    "concluido": "completado",
+    "aula": "Clase",
+    "nesta_aula": "En esta clase, aprenderás:",
+    "objetivo": "Objetivo:",
+    "proxima_aula": "Clase siguiente",
+    "aula_anterior": "Clase anterior",
+    "voltar_inicio": "Volver al inicio del curso",
+    "marcar_concluida": "Marcar la clase como completada",
+    "dg_dica": "Haz clic en cada bloque del diagrama para ver qué hace.",
+    "copiar": "Copiar",
+    "copiado": "Copiado",
+    "selo_simulacao": "Simulación: ejemplo ilustrativo",
+    "selo_real": "Ejemplo del repositorio",
+    "pronto_quando": "Listo cuando:",
+    "fiz": "Hice este ejercicio",
+    "video_pagina": "Página del video con guion",
+    "pergunta": "Pregunta",
+    "de": "de",
+    "cert_tag": "competencia",
+    "correto": "Correcto",
+    "errado": "No es esa",
+    "quiz_aguarda": "Elige una alternativa. La explicación aparece después de tu intento.",
+    "proxima_pergunta": "Siguiente pregunta",
+    "quiz_ver": "Ver resultado",
+    "quiz_fim": "Prueba completada",
+    "quiz_total": "Acertaste {a} de {n}. Si aciertas todas, la clase se marca como completada.",
+    "aparencia": "Apariencia",
+    "tamanho_texto": "Tamaño del texto",
+    "tema": "Tema",
+    "tema_escuro": "Oscuro",
+    "tema_papel": "Papel claro",
+    "role_dica": "Desplázate por la página: cada etapa ilumina su parte del diagrama.",
+    "pre_requisito": "requiere",
+    "ver_aula": "Ver la clase",
+    "mapa_dica": "Haz clic en un ejercicio para ver qué hacer y cuándo está listo.",
+    "etapas": "Etapas",
+    "exercicios": "ejercicios",
+    "rever": "Repasar:",
+    "revisar_erradas": "Revisar las incorrectas",
+    "refazer": "Rehacer la prueba",
+    "h_semana": "h por semana",
+    "data_inicio": "Fecha de inicio",
+    "ritmo": "Tiempo disponible",
+    "gerar_plano": "Generar mi plan",
+    "baixar_md": "Descargar plan.md",
+    "baixar_ics": "Descargar para el calendario (.ics)",
+    "ind_estudo": "Estudio (clases)",
+    "ind_pratica": "Práctica declarada",
+    "ind_nota": "Práctica = ejercicios que marcaste como hechos. La comprobación se realiza en el examen de certificación.",
+    "estudo": {
+      "titulo": "Tu estudio",
+      "continuar": "Continuar desde donde lo dejé",
+      "comecar": "Empezar por la clase 1",
+      "cta_continuar": "Continuar la clase {n}",
+      "hoje": "hoy",
+      "ontem": "ayer",
+      "ha_dias": "hace {n} días",
+      "desempenho": "Desempeño en las pruebas",
+      "notas": "Mis anotaciones",
+      "dados": "Copiar mis datos",
+      "sem_testes": "Todavía no hiciste ninguna prueba. La prueba está al final de cada lección.",
+      "nao_fez": "prueba aún no hecha",
+      "ultimo": "Último",
+      "melhor": "Mejor",
+      "tentativas": "intentos",
+      "tentativa": "intento",
+      "tudo_certo": "Respondiste todo correctamente en la última prueba.",
+      "rever": "Para repasar",
+      "resposta": "Respuesta correcta:",
+      "ir_teste": "Rehacer la prueba",
+      "sem_notas": "Todavía no tienes anotaciones. En la lección, selecciona un fragmento del texto y toca Marcar o Anotar.",
+      "so_marcado": "(solo marcado)",
+      "marcar": "Marcar",
+      "anotar": "Anotar",
+      "salvar": "Guardar",
+      "apagar": "Borrar marca",
+      "fechar": "Cerrar",
+      "nota_ph": "Escribe tu anotación sobre este fragmento…",
+      "um_bloco": "Marca solo dentro de un párrafo.",
+      "nao_marca": "Este fragmento no se puede marcar.",
+      "dados_exp": "Tu progreso, tus anotaciones y las calificaciones de las pruebas se guardan solo en este navegador. Descarga una copia (.json) para guardarla o continuar en otra computadora o navegador; allí, carga la copia. Cargarla suma los datos a los que ya existen y no borra nada.",
+      "exportar": "Descargar copia",
+      "importar": "Cargar copia",
+      "import_ok": "Copia cargada ({n} elementos). Actualizando la página…",
+      "import_erro": "Archivo no reconocido. No se modificó nada.",
+      "import_outro": "Esta copia es de otro curso. No se modificó nada.",
+      "export_ok": "Copia descargada."
+    },
+    "st_missoes": "Misiones",
+    "st_digite": "Escribe el comando y presiona Enter",
+    "st_dica": "Mostrar el comando",
+    "st_zerar": "Empezar de nuevo",
+    "st_missao": "Misión {n} de {t}:",
+    "st_cumpridas": "Misiones cumplidas.",
+    "st_pronto": "Listo.",
+    "st_onde": "Esto mostró dónde estás. Ahora haz lo que pide la misión {n}.",
+    "st_errado": "Ese no es el comando de la misión {n}. Vuelve a leer la solicitud o toca <b>{dica}</b>.",
+    "comecar": "Empezar la lección",
+    "nesta_vai": "En esta lección vas a",
+    "trocar_tema": "Cambiar el tema claro/oscuro"
+  },
+  "icone": "terminal"
+}

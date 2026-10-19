@@ -1,0 +1,305 @@
+{
+  "slug": "agents-md",
+  "num": 7,
+  "titulo": "AGENTS.md, Skills y memoria que puedes verificar",
+  "titulo_curto": "Reglas, Skills y memoria",
+  "menu": "Reglas",
+  "minutos": 18,
+  "lead": "Cada conversación nueva con el agente empieza desde cero. Sin un archivo de instrucciones, repites las mismas advertencias; con instrucciones vagas, nada cambia. Las reglas que puedes verificar, los procedimientos guardados en una Skill y la memoria breve con fecha ayudan al agente a mejorar con cada tarea.",
+  "objetivo": "reescribir el AGENTS.md con cinco reglas verificables y convertir un fallo real en una regla para la próxima ejecución.",
+  "hero_alt": "Mano señalando un cartel de instrucciones fijado en la puerta de una sala de trabajo.",
+  "competencias": [
+    "escribir-agents-md",
+    "crear-skill",
+    "mantener-memoria",
+    "registrar-fallo"
+  ],
+  "aprende": [
+    {
+      "icone": "check",
+      "t": "Escribir una regla observable: acción y evidencia"
+    },
+    {
+      "icone": "camadas",
+      "t": "Saber cuál AGENTS.md se aplica: global, proyecto, subcarpeta"
+    },
+    {
+      "icone": "lista",
+      "t": "Guardar un procedimiento repetido en una Skill"
+    },
+    {
+      "icone": "memoria",
+      "t": "Memoria con fecha y fallo con la corrección mínima"
+    }
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Cartel en la puerta, procedimiento en el archivador",
+      "sub": "Dónde va cada tipo de instrucción. Haz clic en cada bloque.",
+      "nos": [
+        {
+          "icone": "arquivo",
+          "titulo": "AGENTS.md",
+          "sub": "El cartel en la puerta de la carpeta",
+          "itens": [
+            {
+              "icone": "check",
+              "t": "Cinco reglas breves"
+            },
+            {
+              "icone": "lupa",
+              "t": "Se lee en cada tarea"
+            }
+          ],
+          "detalhe": "Indica cómo trabajar allí: por dónde empezar a leer, cómo verificar, qué no hacer y el formato de entrega. La historia y los motivos quedan fuera. Un archivo breve se lee completo.",
+          "forte": true
+        },
+        {
+          "icone": "lista",
+          "titulo": "Skill",
+          "sub": "El procedimiento que sacas del archivador",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": ".agents\\skills\\<nome>\\SKILL.md"
+            }
+          ],
+          "detalhe": "Un procedimiento que se repite (la lista semanal, el informe del viernes) se convierte en una Skill: un SKILL.md que empieza con nombre y descripción. El agente la activa cuando la tarea lo requiere, sin cargar todo el manual en cada tarea."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "Memoria",
+          "sub": "Un mural con fecha y responsable",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "config\\memoria.md"
+            },
+            {
+              "icone": "arquivo",
+              "t": "config\\decisoes.md"
+            }
+          ],
+          "detalhe": "No es el modelo aprendiendo: es un archivo que el agente lee cuando tú se lo indicas. Guarda hechos estables y decisiones con fecha y motivo, no toda la conversación. Marca al principio cuándo se revisó."
+        },
+        {
+          "icone": "x",
+          "titulo": "Fallos",
+          "sub": "La cinta en el nivel",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "config\\falhas.md"
+            }
+          ],
+          "detalhe": "Síntoma, causa observada, corrección mínima y verificación, en una línea. Di si el fallo fue del pedido o de la infraestructura. La corrección va donde la próxima ejecución la lea: en el AGENTS.md o la Skill."
+        }
+      ],
+      "volta": "El fallo se convierte en regla; la regla cambia la próxima tarea",
+      "legenda": "Ninguno de estos archivos está por encima de las instrucciones del sistema, los permisos de la herramienta y lo que tú pides explícitamente en la conversación.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "El agente que mejora",
+        "texto": "Una regla que se puede comprobar en la puerta, un guion en la carpeta, memoria breve con fecha y cada tropiezo convertido en una pequeña protección. Así, la tarea de mañana sale mejor que la de hoy, sin cambiar de modelo."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Cuatro hábitos",
+      "sub": "Haz clic en cada etapa.",
+      "passos": [
+        {
+          "titulo": "Regla observable",
+          "sub": "Acción y evidencia",
+          "texto": [
+            "Haz la prueba del letrero: «usa gafas de protección» se puede comprobar con solo mirar; «ten cuidado» no.",
+            "Una buena regla pide una acción y deja evidencia en la entrega. Si una regla no cambia ninguna decisión, quítala del archivo."
+          ],
+          "exemplo": {
+            "rot": "Observable",
+            "texto": "Compara el total del informe con ventas.csv e indica la diferencia."
+          }
+        },
+        {
+          "titulo": "Qué archivo manda",
+          "sub": "Global, proyecto, subcarpeta",
+          "texto": [
+            "En Codex, el AGENTS.md global está en <code>%USERPROFILE%\\.codex</code> y se aplica a todo; el del proyecto se aplica en esa carpeta; el de una subcarpeta prevalece dentro de ella.",
+            "¿Algo se comporta de forma extraña? Busca un <code>AGENTS.override.md</code> olvidado en una carpeta copiada: en esa misma carpeta, tiene prioridad sobre AGENTS.md."
+          ],
+          "exemplo": {
+            "rot": "Pide",
+            "texto": "Resume las instrucciones que cargaste y di de qué archivo vino cada una."
+          }
+        },
+        {
+          "titulo": "Skill con límites",
+          "sub": "La descripción dice cuándo usarla y cuándo no",
+          "texto": [
+            "El agente lee la descripción para decidir si activa la Skill. «Ayuda con informes» se activa incluso con un acta de reunión.",
+            "Di en qué situación se usa y dónde se detiene. Antes de confiar en ella, ensaya con tres casos: normal, incompleto y fuera de lo acordado."
+          ],
+          "exemplo": {
+            "rot": "Buena descripción",
+            "texto": "Generar un borrador de informe semanal cuando haya un CSV de ventas. No usar para enviar informes ni manejar credenciales."
+          }
+        },
+        {
+          "titulo": "Corrección mínima",
+          "sub": "No reconstruir todo",
+          "texto": [
+            "Cuando el resultado sale mal, dan ganas de cambiar de modelo o rehacerlo todo. Eso lleva horas y oculta problemas simples.",
+            "Un fallo del pedido se corrige en el texto; uno de infraestructura, con una comprobación. A menudo basta con agregar una línea al AGENTS.md."
+          ],
+          "exemplo": {
+            "rot": "Pequeña protección",
+            "texto": "Revisa el encabezado y la cantidad de registros antes de generar."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Los modelos",
+      "sub": "Copia y adapta a tu carpeta. Cambia lo que esté entre < >.",
+      "blocos": [
+        {
+          "rot": "AGENTS.md · cinco reglas que se pueden comprobar",
+          "icone": "arquivo",
+          "conteudo": "# Instrucciones para el agente\n\nPropósito: <lo que produce este proyecto>\n\n1. Lee README.md antes de cambiar cualquier cosa.\n2. Usa solo entradas/ y saidas/; no borres ni renombres archivos.\n3. No inventes datos que no estén en las entradas; lo que falte se anota como pendiente al final.\n4. Nunca escribas claves ni contraseñas en un archivo de texto; menciona solo el nombre de la variable de .env.\n5. Termina indicando: qué cambiaste, cómo lo comprobaste y qué quedó pendiente."
+        },
+        {
+          "rot": ".agents\\skills\\relatorio-semanal\\SKILL.md",
+          "icone": "lista",
+          "conteudo": "---\nname: relatorio-semanal\ndescription: Generar un borrador de informe semanal cuando el usuario proporcione un CSV de ventas. No usar para enviar informes ni manejar credenciales.\n---\n\n## Entrada\nUn CSV en entradas/.\n\n## Pasos\n1. Revisa el encabezado y la cantidad de registros antes de generar.\n2. Suma los valores; no inventes los que falten.\n3. Escribe el borrador en saidas/relatorio.md.\n\n## Salida y comprobación\nMenciona la fuente, el total conocido y los pendientes. Detente antes de enviar o publicar."
+        },
+        {
+          "rot": "config\\memoria.md",
+          "icone": "memoria",
+          "conteudo": "# Memoria\nRevisado el: <dd/mm/aaaa>\n\n- <hecho estable 1, ej.: informes breves, pendientes al final>\n- <hecho estable 2>\n- <hecho estable 3>"
+        },
+        {
+          "rot": "config\\falhas.md",
+          "icone": "x",
+          "conteudo": "| Fecha | Síntoma | Causa observada | Corrección mínima | Verificación | Tipo |\n|---|---|---|---|---|---|\n| <dd/mm> | informe vacío | hoja de cálculo sin registros | revisar la cantidad de filas antes de generar | una hoja vacía genera un aviso, no un informe | infraestructura |"
+        },
+        {
+          "rot": "Solicitud · comprobar qué instrucciones cargó",
+          "icone": "chat",
+          "conteudo": "Resume las instrucciones que cargaste en esta carpeta e indica de qué archivo provino cada una. Después, consulta ../config/memoria.md y, al hacer la siguiente tarea, di qué dato de la memoria usaste."
+        },
+        {
+          "rot": "cmd · crear la carpeta de la Skill y comprobar",
+          "icone": "terminal",
+          "conteudo": "mkdir .agents\\skills\\relatorio-semanal\nnotepad .agents\\skills\\relatorio-semanal\\SKILL.md\ntype .agents\\skills\\relatorio-semanal\\SKILL.md"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Vago × observable",
+            "html": "<ul><li>\"Sé excelente.\" → <b>cómo comprobarlo: no hay forma.</b></li><li>\"Compara el total con ventas.csv e indica la diferencia.\" → <b>el resultado incluye la suma y la diferencia.</b></li><li>\"Revisa todo con mucha atención.\" → cámbialo por \"Enumera los pendientes al final\".</li></ul>"
+          },
+          {
+            "rot": "Dónde se aplica",
+            "html": "<ol><li><code>%USERPROFILE%\\.codex\\AGENTS.md</code>: global, breve (\"informa qué comprobaste\").</li><li><code>projetos\\meu-primeiro-agente\\AGENTS.md</code>: se aplica al proyecto.</li><li><code>…\\provas\\AGENTS.md</code>: prevalece dentro de provas en los temas que trata.</li></ol><p>Tu pedido explícito en la conversación tiene prioridad sobre los tres.</p>"
+          },
+          {
+            "rot": "Caso incompleto",
+            "html": "<p><b>Sin la regla \"no inventes datos faltantes\"</b>: \"Total de la semana: 100,00\" — el bolígrafo no tenía precio y el total fingió que sí.</p><p><b>Con la regla</b>: \"Total conocido: 90,50. Pendiente: la línea del bolígrafo no tiene precio. No lo completé.\"</p>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "En el proyecto y en la carpeta config.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E13 · Cinco reglas que se pueden comprobar",
+          "min": "20 min",
+          "texto": "Reescribe el AGENTS.md con cinco reglas. Al lado de cada una, anota cómo comprobarás si se cumplió. Pide una tarea y compruébalo.",
+          "pronto": "para cada una de las cinco reglas que señales, indicas en el resultado del agente la evidencia de que se cumplió."
+        },
+        {
+          "id": "e2",
+          "titulo": "E14 · El error se convierte en regla",
+          "min": "15 min",
+          "texto": "Registra en config\\falhas.md un error real de las clases anteriores (síntoma, causa, corrección mínima, verificación, tipo) y agrega la corrección al AGENTS.md.",
+          "pronto": "en la siguiente tarea, el mismo problema no se repite y puedes decir qué línea del AGENTS.md lo evitó."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Pon a prueba lo que aprendiste",
+      "sub": "La explicación aparece después de tu respuesta.",
+      "perguntas": [
+        {
+          "p": "¿Cuál de estas reglas puedes comprobar al revisar el resultado del agente?",
+          "opcoes": [
+            "Revisa todo con mucha atención.",
+            "Enumera los pendientes al final.",
+            "Escribe de manera profesional.",
+            "Esfuérzate."
+          ],
+          "certa": 1,
+          "explica": "Una regla observable tiene una acción y evidencia: la lista de pendientes está o no está al final. Las otras no dejan rastro.",
+          "cert": true,
+          "ref": "passos"
+        },
+        {
+          "p": "Las instrucciones globales dicen \"responde en viñetas\", el AGENTS.md del proyecto no especifica el formato y tú pides una tabla en la conversación. ¿Qué prevalece?",
+          "opcoes": [
+            "Las viñetas de las instrucciones globales.",
+            "El AGENTS.md del proyecto.",
+            "La tabla que pediste en la conversación.",
+            "Ninguna, da error."
+          ],
+          "certa": 2,
+          "explica": "El pedido explícito en la conversación tiene prioridad sobre los archivos de instrucciones.",
+          "ref": "codigo"
+        },
+        {
+          "p": "Creaste memoria.md en config, pero el agente ignoró los datos. ¿Qué haces primero?",
+          "opcoes": [
+            "Cambiar a un modelo más grande.",
+            "Copiar más conversaciones en el archivo.",
+            "Indicar el archivo en el pedido y pedir el dato que usó.",
+            "Borrar la memoria."
+          ],
+          "certa": 2,
+          "explica": "Que el archivo exista no garantiza que se lea. Indica qué archivo debe consultar y pídele que mencione el dato que usó.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "El informe salió vacío porque la hoja de cálculo no tenía registros. ¿Cuál es la corrección mínima?",
+          "opcoes": [
+            "Cambiar de modelo.",
+            "Reescribir la Skill completa.",
+            "Una regla: comprobar la cantidad de registros antes de generar el informe.",
+            "Volver a crear las carpetas."
+          ],
+          "certa": 2,
+          "explica": "Un error de infraestructura se corrige con una verificación pequeña. Reconstruir todo lleva horas y la hoja vacía seguirá causando el problema.",
+          "ref": "passos"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para profundizar",
+      "links": [
+        {
+          "t": "OSWork v6.2: AGENTS, Skills y memoria (módulo 5)",
+          "href": "https://inematds.github.io/oswork-v62/",
+          "icone": "arquivo"
+        }
+      ]
+    }
+  ]
+}

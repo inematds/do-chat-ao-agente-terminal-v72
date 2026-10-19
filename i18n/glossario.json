@@ -1,0 +1,20 @@
+{
+  "en": {
+    "folder/file names typed in commands stay in Portuguese, also inside <code> and in simulated terminal output": "projetos, meu-primeiro-agente, entradas, saidas, config, MINHA_CHAVE, teste123, ana-exemplo, minha-vps (never translate these)",
+    "primeira versão (commit message used in the command git commit -m \"primeira versão\")": "primeira versão (keep in Portuguese inside <code> and in git output)",
+    "Prompt de Comando": "Command Prompt",
+    "Explorador": "File Explorer",
+    "Bloco de Notas": "Notepad",
+    "missão": "mission",
+    "ensaio / Ensaie": "rehearsal / Rehearse"
+  },
+  "es": {
+    "folder/file names typed in commands stay in Portuguese, also inside <code> and in simulated terminal output": "projetos, meu-primeiro-agente, entradas, saidas, config, MINHA_CHAVE, teste123, ana-exemplo, minha-vps (never translate these)",
+    "primeira versão (commit message used in the command git commit -m \"primeira versão\")": "primeira versão (keep in Portuguese inside <code> and in git output)",
+    "Prompt de Comando": "Símbolo del sistema",
+    "Explorador": "Explorador de archivos",
+    "Bloco de Notas": "Bloc de notas",
+    "missão": "misión",
+    "ensaio / Ensaie": "ensayo / Ensaya"
+  }
+}

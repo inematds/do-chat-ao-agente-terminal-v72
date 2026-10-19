@@ -182,7 +182,16 @@
       "import_erro": "Arquivo não reconhecido. Nada foi alterado.",
       "import_outro": "Esta cópia é de outro curso. Nada foi alterado.",
       "export_ok": "Cópia baixada."
-    }
+    },
+    "st_missoes": "Missões",
+    "st_digite": "Digite o comando e tecle Enter",
+    "st_dica": "Mostrar o comando",
+    "st_zerar": "Recomeçar",
+    "st_missao": "Missão {n} de {t}:",
+    "st_cumpridas": "Missões cumpridas.",
+    "st_pronto": "Pronto.",
+    "st_onde": "Isso mostrou onde você está. Agora faça o que a missão {n} pede.",
+    "st_errado": "Esse não é o comando da missão {n}. Releia o pedido ou toque em <b>{dica}</b>."
   },
   "icone": "terminal"
 }

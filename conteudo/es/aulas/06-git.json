@@ -1,0 +1,375 @@
+{
+  "slug": "git",
+  "num": 6,
+  "titulo": "Git: la red de seguridad para deshacer cualquier cambio",
+  "titulo_curto": "Git: guardar y deshacer",
+  "menu": "Git",
+  "minutos": 20,
+  "lead": "En una tarea, el agente puede cambiar diez archivos a la vez. Sin historial, no sabes qué cambió ni cómo volver atrás. Con Git, cada versión buena queda guardada con fecha y explicación, y el cambio que no aprobaste se revierte con un comando.",
+  "objetivo": "guardar versiones con status, add, diff y commit, y deshacer un cambio del agente con git restore, sin pánico.",
+  "hero_alt": "Hojas de papel sujetas en secuencia a un tendedero sobre una pared oscura, junto a una laptop.",
+  "competencias": [
+    "versionar-con-git",
+    "revisar-antes-de-guardar",
+    "deshacer-cambio"
+  ],
+  "aprende": [
+    {
+      "icone": "git",
+      "t": "Empezar el historial solo en la carpeta del proyecto"
+    },
+    {
+      "icone": "lupa",
+      "t": "Leer git status y git diff antes de guardar"
+    },
+    {
+      "icone": "check",
+      "t": "Guardar una versión con un mensaje que diga qué cambió"
+    },
+    {
+      "icone": "voltar",
+      "t": "Volver atrás un archivo con git restore y deshacer una versión con git revert"
+    }
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Cambió, separó, guardó",
+      "sub": "Las tres etapas de un archivo en Git. Haz clic en cada una.",
+      "nos": [
+        {
+          "icone": "caneta",
+          "titulo": "En la carpeta",
+          "sub": "Nuevo o cambiado",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "index.html (cambió)"
+            },
+            {
+              "icone": "arquivo",
+              "t": "notas.txt (nuevo)"
+            }
+          ],
+          "detalhe": "El agente creó o cambió archivos. <code>git status</code> muestra cada uno: \"Untracked files\" son los que Git todavía no sigue; \"Changes not staged\" son cambios que aún no se separaron."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Separado",
+          "sub": "git add <nome>",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "index.html"
+            }
+          ],
+          "detalhe": "<code>git add</code> con el nombre del archivo separa solo ese archivo para la próxima versión (Git lo llama staging). <code>git diff --cached</code> muestra, línea por línea, lo que se incluirá.",
+          "forte": true
+        },
+        {
+          "icone": "git",
+          "titulo": "Versión guardada",
+          "sub": "git commit -m \"…\"",
+          "itens": [
+            {
+              "icone": "check",
+              "t": "fecha, autor y mensaje"
+            }
+          ],
+          "detalhe": "El commit sujeta lo que se separó. El mensaje es el pie de foto: verbo y objeto, como \"Agrega sección de contacto\". \"update\" no dice nada dentro de un mes."
+        },
+        {
+          "icone": "voltar",
+          "titulo": "Volver",
+          "sub": "restore o revert",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "git restore index.html"
+            },
+            {
+              "icone": "git",
+              "t": "git revert <código>"
+            }
+          ],
+          "detalhe": "Cambio aún sin guardar: <code>git restore</code> devuelve el archivo a la última versión guardada (y descarta los cambios). Versión ya guardada: <code>git revert</code> crea una versión nueva que deshace la anterior, sin borrar el historial."
+        }
+      ],
+      "volta": "Regla de oro: haz un commit antes de pedir un cambio grande",
+      "legenda": "Git funciona solo en tu computadora, sin internet. GitHub es otro paso, opcional (clase 8).",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "El ciclo con el agente",
+        "texto": "Haz un commit antes de pedir el cambio. El agente modifica. Revisa con status y diff. Si te gusta: add y commit. Si no: restore. Cada versión buena se convierte en un punto de retorno."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "De git init al primer deshacer",
+      "sub": "Haz clic en cada etapa.",
+      "passos": [
+        {
+          "titulo": "Iniciar el historial",
+          "sub": "Solo en la carpeta del proyecto",
+          "texto": [
+            "Dentro de meu-primeiro-agente, <code>git init</code> crea el historial. Nunca lo hagas en toda tu carpeta personal.",
+            "<code>git config user.name</code> y <code>user.email</code>, sin <code>--global</code>, indican quién guarda los cambios, solo en este proyecto. El correo aparece en cada versión y queda visible si publicas la carpeta."
+          ],
+          "exemplo": {
+            "rot": "Responde",
+            "texto": "Initialized empty Git repository in …\\meu-primeiro-agente\\.git\\"
+          }
+        },
+        {
+          "titulo": "Revisar antes",
+          "sub": "status y diff",
+          "texto": [
+            "<code>git status</code> indica en qué etapa está cada archivo. Ejecútalo siempre antes de separar cualquier cosa.",
+            "Aquí se demuestra para qué sirve el .gitignore de la clase 5: .env no aparece en la lista."
+          ],
+          "exemplo": {
+            "rot": "Busca",
+            "texto": "AGENTS.md, README.md, .gitignore, .env.example… y ningún .env."
+          }
+        },
+        {
+          "titulo": "Guardar",
+          "sub": "add y commit",
+          "texto": [
+            "Para aprender, indica los archivos en <code>git add</code>. El atajo <code>git add .</code> separa todo lo que no está ignorado, incluso esa nota personal que olvidaste en la carpeta.",
+            "<code>git log --oneline</code> muestra una lista breve de las versiones, una por línea."
+          ],
+          "exemplo": {
+            "rot": "Un buen mensaje",
+            "texto": "Crea README, AGENTS.md y una lista de lo que no debes guardar"
+          }
+        },
+        {
+          "titulo": "Deshacer",
+          "sub": "Descubre dónde está el cambio",
+          "texto": [
+            "Solo en el archivo, sin guardar: <code>git restore archivo</code>. En una versión guardada: <code>git revert</code> con el código de la versión, que aparece en el log.",
+            "Revisa el archivo abierto, no solo la respuesta de la terminal."
+          ],
+          "exemplo": {
+            "rot": "Fe de erratas, no borrón",
+            "texto": "revert corrige y deja las tres versiones en el historial."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Los comandos de Git",
+      "sub": "En la carpeta meu-primeiro-agente. Reemplaza lo que esté entre < >.",
+      "blocos": [
+        {
+          "rot": "cmd · empezar y decir quién eres (solo en esta carpeta)",
+          "icone": "git",
+          "conteudo": "cd %USERPROFILE%\\projetos\\meu-primeiro-agente\ngit init\ngit config user.name \"<Seu Nome>\"\ngit config user.email \"<seu@email.com>\"\ngit status"
+        },
+        {
+          "rot": "cmd · iniciar e decir quién eres (solo en esta carpeta)",
+          "icone": "check",
+          "conteudo": "git add README.md AGENTS.md .gitignore .env.example index.html\ngit diff --cached\ngit commit -m \"primeira versão\"\ngit log --oneline"
+        },
+        {
+          "rot": "cmd · revisar, separar y guardar la primera versión",
+          "icone": "lupa",
+          "conteudo": "git status\ngit diff"
+        },
+        {
+          "rot": "cmd · después de que el agente hizo un cambio",
+          "icone": "voltar",
+          "conteudo": "git restore index.html\ngit status"
+        },
+        {
+          "rot": "cmd · no te gustó: restaura el archivo",
+          "icone": "git",
+          "conteudo": "git add index.html\ngit commit -m \"<o que mudou, com verbo>\""
+        },
+        {
+          "rot": "cmd · deshacer una versión ya guardada",
+          "icone": "camadas",
+          "conteudo": "git log --oneline\ngit revert <código de la versión>"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "git status",
+            "html": "<pre>On branch master\nNo commits yet\nUntracked files:\n  (use \"git add &lt;file&gt;...\" to include in what will be committed)\n        .env.example\n        .gitignore\n        AGENTS.md\n        README.md\n        index.html</pre><p>\"Untracked files\" = archivos fuera del historial. .env no aparece en la lista: .gitignore funcionó.</p>"
+          },
+          {
+            "rot": "Leyendo el inglés",
+            "html": "<ul><li><b>Untracked files</b>: archivos que Git todavía no rastrea.</li><li><b>Changes to be committed</b>: separados, se incluirán en la próxima versión.</li><li><b>Changes not staged</b>: cambiaron, pero no están separados.</li><li><b>nothing to commit, working tree clean</b>: no cambió nada desde la última versión.</li></ul>"
+          },
+          {
+            "rot": "Errores comunes",
+            "html": "<ul><li><b>git init en la carpeta personal</b>: Git empieza a revisar Documentos, Descargas y todo lo demás. Ejecuta <code>cd</code> antes y comprueba la ruta.</li><li><b>Saltarse Git</b>: el primer cambio malo del agente se convierte en trabajo manual.</li><li><b>\"Please tell me who you are\"</b>: faltó el <code>git config</code> con el nombre y el correo electrónico.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "simterm",
+      "titulo": "Ensaya: guarda, estropea y vuelve",
+      "sub": "El agente cambiará index.html a mitad del proceso.",
+      "janela": "Símbolo del sistema · simulación",
+      "sistema": "windows",
+      "inicio": "C:\\Users\\ana\\projetos\\meu-primeiro-agente",
+      "sufixo": ">",
+      "missoes": [
+        {
+          "pede": "Empieza el historial en esta carpeta.",
+          "aceita": [
+            "git init"
+          ],
+          "saida": "Initialized empty Git repository in C:/Users/ana/projetos/meu-primeiro-agente/.git/",
+          "explica": "El historial está en la carpeta oculta .git, solo para este proyecto."
+        },
+        {
+          "pede": "Mira el estado de los archivos.",
+          "aceita": [
+            "git status"
+          ],
+          "saida": "On branch master\nNo commits yet\nUntracked files:\n        .env.example\n        .gitignore\n        AGENTS.md\n        README.md\n        index.html",
+          "explica": "Cinco archivos fuera del historial y ningún .env. Es la prueba de la lección 5. (master o main es solo el nombre de la rama principal; en la lección 8 pasa a ser main.)"
+        },
+        {
+          "pede": "Separa todo lo que no está ignorado.",
+          "aceita": [
+            "git add .",
+            "git add -A"
+          ],
+          "saida": "",
+          "explica": "Ahora puedes usar el atajo: acabas de comprobar en el status que no hay nada personal en la lista."
+        },
+        {
+          "pede": "Guarda la primera versión con el mensaje <code>primeira versão</code>.",
+          "aceita": [
+            "git commit -m \"primeira versão\"",
+            "git commit -m \"primeira versao\""
+          ],
+          "saida": "[master (root-commit) 5f6c1eb] primeira versão\n 5 files changed, 41 insertions(+)",
+          "explica": "Versión guardada, con un código corto (5f6c1eb). Los números son de ejemplo."
+        },
+        {
+          "pede": "El agente reescribió la página y no te gustó. Mira el estado.",
+          "aceita": [
+            "git status"
+          ],
+          "saida": "On branch master\nChanges not staged for commit:\n        modified:   index.html",
+          "explica": "\"modified\": index.html cambió desde la última versión y todavía no está guardado."
+        },
+        {
+          "pede": "Vuelve a la última versión guardada de index.html.",
+          "aceita": [
+            "git restore index.html"
+          ],
+          "saida": "",
+          "explica": "El silencio es buena señal. El cambio del agente se descartó."
+        },
+        {
+          "pede": "Comprueba que todo quedó como antes.",
+          "aceita": [
+            "git status"
+          ],
+          "saida": "On branch master\nnothing to commit, working tree clean",
+          "explica": "\"working tree clean\": la carpeta está igual que la versión guardada. Deshecho con un comando, sin pánico."
+        }
+      ],
+      "fim": "Ciclo completo: guarda, mira el cambio y vuelve. Haz lo mismo en tu proyecto.",
+      "legenda": "Simulación: los códigos y los recuentos de las respuestas son de ejemplo."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "En la carpeta meu-primeiro-agente, con el agente abierto en otra ventana del cmd.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E11 · La red de seguridad",
+          "min": "20 min",
+          "texto": "<code>git init</code>, config, status, add y commit. Pídele al agente un cambio grande en la página y, si no te gusta, vuelve con <code>git restore</code>.",
+          "pronto": "deshiciste un cambio del agente con un comando y <code>git status</code> dice \"working tree clean\"."
+        },
+        {
+          "id": "e2",
+          "titulo": "E12 · Tres versiones con descripción",
+          "min": "15 min",
+          "texto": "Pide dos cambios pequeños y guarda cada uno con un mensaje que diga qué cambió. Después deshaz el último con <code>git revert</code>.",
+          "pronto": "<code>git log --oneline</code> muestra las versiones con mensajes claros, incluido el revert, y la página volvió a como estaba."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Pon a prueba lo que aprendiste",
+      "sub": "La explicación aparece después de tu respuesta.",
+      "perguntas": [
+        {
+          "p": "El agente hizo un cambio grande que no aprobaste y todavía no guardaste nada después. ¿Qué haces?",
+          "opcoes": [
+            "Borrar la carpeta y empezar de nuevo.",
+            "Pedirle al agente que recuerde cómo era.",
+            "git restore en el archivo, volviendo a la última versión guardada.",
+            "git push."
+          ],
+          "certa": 2,
+          "explica": "Con un commit antes del cambio, <code>git restore</code> vuelve el archivo con un comando. Por eso: haz un commit antes de pedir un cambio grande.",
+          "cert": true,
+          "ref": "simterm"
+        },
+        {
+          "p": "¿Por qué nombrar los archivos en <code>git add</code> en vez de usar siempre <code>git add .</code>?",
+          "opcoes": [
+            "Porque el punto no funciona en Windows.",
+            "Para no incluir en el historial un archivo que no querías.",
+            "Porque es más rápido.",
+            "Porque el commit lo exige."
+          ],
+          "certa": 1,
+          "explica": "El punto incluye todo lo que no está ignorado, incluso una nota personal olvidada. Usa el atajo solo después de revisar el status.",
+          "ref": "passos"
+        },
+        {
+          "p": "¿Cuál de estos mensajes de commit te ayuda dentro de un mes?",
+          "opcoes": [
+            "update",
+            "ajustes",
+            "Agrega una sección de contacto a index.html",
+            "varios"
+          ],
+          "certa": 2,
+          "explica": "Verbo y objeto: la lista de versiones ya indica qué cambió, sin abrir ningún archivo.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "Una versión guardada estaba mal. ¿Qué comando la deshace sin borrar el historial?",
+          "opcoes": [
+            "git restore",
+            "git revert",
+            "git init",
+            "git status"
+          ],
+          "certa": 1,
+          "explica": "Revert es la fe de erratas del periódico: crea una versión nueva que deshace la anterior. Restore es para cambios que aún no guardaste.",
+          "ref": "diagrama"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para profundizar",
+      "links": [
+        {
+          "t": "OSWork v6.2: Git y GitHub sin perder tu trabajo (módulo 6)",
+          "href": "https://inematds.github.io/oswork-v62/",
+          "icone": "git"
+        }
+      ]
+    }
+  ]
+}

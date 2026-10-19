@@ -1,0 +1,200 @@
+{
+  "id": "do-chat-ao-agente-terminal-v72",
+  "lang": "en",
+  "url": "https://inematds.github.io/do-chat-ao-agente-terminal-v72/en/",
+  "nome": "From chat to the terminal",
+  "sub": "Step 1 of the From chat to agent program",
+  "volta": {
+    "t": "Overview: From chat to agent",
+    "href": "https://inematds.github.io/do-chat-ao-agente-v72/"
+  },
+  "lado_card": {
+    "rot": "Command cheat sheet",
+    "t": "All commands, in order",
+    "texto": "The full sequence from the terminal to a live page, so you can keep it open while you work.",
+    "link": "Open the OSWork cheat sheet",
+    "href": "https://inematds.github.io/oswork-quick/materiais/"
+  },
+  "rodape": "INEMA.CLUB · open, free content · INEMA Learning v7.2 format · <a href=\"https://inematds.github.io/do-chat-ao-agente-v72/\">Overview of the From chat to agent program</a> · <a href=\"https://eventos.inema.pro/oswork/\">eventos.inema.pro/oswork</a> · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guide: how to learn artificial intelligence</a> · <a href=\"https://www.inema.club/cursos/324-do-chat-ao-agente-degrau-1-o-terminal-pasta-regras-segredos-git-e-vps/\">Full course details on INEMA.CLUB</a>",
+  "videos": {
+    "seq1-oswork": {
+      "titulo": "From chat to the terminal",
+      "duracao": "1 min 52 sec",
+      "mp4": "https://github.com/inematds/jornada-agentes/releases/download/video-v2.0.0/jornada-seq1-oswork-16x9.mp4",
+      "vtt": "assets/vtt/seq1-oswork.vtt",
+      "poster": "assets/img/seq1-oswork.jpg",
+      "pagina": "https://inematds.github.io/jornada-agentes/serie/seq1-oswork/"
+    },
+    "oswork-terminal": {
+      "titulo": "The manager who masters the terminal: OSWork, command by command",
+      "duracao": "7 min 46 sec",
+      "mp4": "https://github.com/inematds/oswork-terminal/releases/download/video-v2.0.0/oswork-terminal-completo-16x9.mp4",
+      "vtt": "assets/vtt/oswork-terminal.vtt",
+      "poster": "assets/img/oswork-terminal.jpg",
+      "pagina": "https://inematds.github.io/oswork-terminal/videos/"
+    },
+    "jornada-ia": {
+      "titulo": "From chat to agent: the overview",
+      "duracao": "2 min 27 sec",
+      "mp4": "https://github.com/inematds/jornada-agentes/releases/download/video-v2.0.0/jornada-jornada-ia-16x9.mp4",
+      "vtt": "assets/vtt/jornada-ia.vtt",
+      "poster": "assets/img/jornada-ia.jpg",
+      "pagina": "https://inematds.github.io/jornada-agentes/serie/jornada-ia/"
+    }
+  },
+  "inicio": {
+    "kicker": "Full course · step 1 of 4 · 8 lessons",
+    "titulo": "From chat to the terminal: the agent working in your folder",
+    "lead": "Open the terminal without fear, install the agent from the official source, set up the folder with rules, save each version with Git, keep keys out of the text, and put your page online. Command by command, with what to check at every step.",
+    "cta": "Start with lesson 1",
+    "cta2": {
+      "t": "Back to the program overview",
+      "href": "https://inematds.github.io/do-chat-ao-agente-v72/"
+    },
+    "capa_alt": "A notebook with the terminal open beside a notepad with a hand-drawn folder tree.",
+    "numeros": [
+      {
+        "v": "8",
+        "t": "lessons"
+      },
+      {
+        "v": "42",
+        "t": "templates with a copy button"
+      },
+      {
+        "v": "6",
+        "t": "practice terminals"
+      },
+      {
+        "v": "17",
+        "t": "exercises with a done-when checklist"
+      }
+    ],
+    "aulas_titulo": "The lessons",
+    "aulas_sub": "In the order you’ll do them. Each lesson ends with practice and a short test; move on only when the “done when” condition is met.",
+    "blocos": [
+      {
+        "t": "Who it’s for",
+        "itens": [
+          "People who use ChatGPT, Claude, or Gemini in a browser and have never opened a terminal.",
+          "People who have seen the program overview and want to complete step 1 for real, with every command.",
+          "People who will guide a team or client and need to know how to check what the agent did."
+        ]
+      },
+      {
+        "t": "What you’ll be able to do",
+        "itens": [
+          "Navigate folders with cmd (and the Mac or Linux Terminal), always knowing where you are.",
+          "Install and sign in to Claude Code or Codex with your subscription, checking the sign-in method.",
+          "Set up the agent’s folder with README, AGENTS.md, .env outside Git, and history you can roll back.",
+          "Publish the page on GitHub Pages and move the same project to a VPS."
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "pular": "Skip to content",
+    "aulas": "Lessons",
+    "concluido": "completed",
+    "aula": "Lesson",
+    "nesta_aula": "In this lesson, you’ll learn:",
+    "objetivo": "Objective:",
+    "proxima_aula": "Next lesson",
+    "aula_anterior": "Previous lesson",
+    "voltar_inicio": "Back to the start of the course",
+    "marcar_concluida": "Mark lesson as complete",
+    "dg_dica": "Click each block in the diagram to see what it does.",
+    "copiar": "Copy",
+    "copiado": "Copied",
+    "selo_simulacao": "Simulation: illustrative example",
+    "selo_real": "Repository example",
+    "pronto_quando": "Done when:",
+    "fiz": "I did this exercise",
+    "video_pagina": "Video page with script",
+    "pergunta": "Question",
+    "de": "of",
+    "cert_tag": "competency",
+    "correto": "Correct",
+    "errado": "Not this one",
+    "quiz_aguarda": "Choose an option. The explanation appears after your attempt.",
+    "proxima_pergunta": "Next question",
+    "quiz_ver": "See results",
+    "quiz_fim": "Test complete",
+    "quiz_total": "You got {a} out of {n} right. Get them all right to mark the lesson complete.",
+    "aparencia": "Appearance",
+    "tamanho_texto": "Text size",
+    "tema": "Theme",
+    "tema_escuro": "Dark",
+    "tema_papel": "Light paper",
+    "role_dica": "Scroll down: each step below lights up its part of the diagram.",
+    "pre_requisito": "requires",
+    "ver_aula": "View lesson",
+    "mapa_dica": "Click an exercise to see what to do and the \"done when\" criteria.",
+    "etapas": "Steps",
+    "exercicios": "exercises",
+    "rever": "Review:",
+    "revisar_erradas": "Review incorrect answers",
+    "refazer": "Retake the test",
+    "h_semana": "hrs per week",
+    "data_inicio": "Start date",
+    "ritmo": "Available time",
+    "gerar_plano": "Generate my plan",
+    "baixar_md": "Download plan.md",
+    "baixar_ics": "Download for calendar (.ics)",
+    "ind_estudo": "Study (lessons)",
+    "ind_pratica": "Declared practice",
+    "ind_nota": "Practice = exercises you marked as done. Your certification exam provides the proof.",
+    "estudo": {
+      "titulo": "Your study",
+      "continuar": "Continue where I left off",
+      "comecar": "Start with lesson 1",
+      "cta_continuar": "Continue lesson {n}",
+      "hoje": "today",
+      "ontem": "yesterday",
+      "ha_dias": "{n} days ago",
+      "desempenho": "Test performance",
+      "notas": "My notes",
+      "dados": "Copy my data",
+      "sem_testes": "No tests taken yet. The test is at the end of each lesson.",
+      "nao_fez": "test not taken yet",
+      "ultimo": "Latest",
+      "melhor": "Best",
+      "tentativas": "attempts",
+      "tentativa": "attempt",
+      "tudo_certo": "You got everything right on the last test.",
+      "rever": "To review",
+      "resposta": "Correct answer:",
+      "ir_teste": "Retake the test",
+      "sem_notas": "No notes yet. In the lesson, select a passage and tap Highlight or Add note.",
+      "so_marcado": "(highlight only)",
+      "marcar": "Highlight",
+      "anotar": "Add note",
+      "salvar": "Save",
+      "apagar": "Remove highlight",
+      "fechar": "Close",
+      "nota_ph": "Write a note about this passage…",
+      "um_bloco": "Highlight text within a single paragraph.",
+      "nao_marca": "This passage can't be highlighted.",
+      "dados_exp": "Your progress, notes, and test scores are stored only in this browser. Download a copy (.json) to save them or continue on another computer or browser; upload the copy there. Uploading adds to what’s already there and doesn’t delete anything.",
+      "exportar": "Download a copy",
+      "importar": "Upload a copy",
+      "import_ok": "Copy loaded ({n} items). Refreshing the page…",
+      "import_erro": "File not recognized. Nothing was changed.",
+      "import_outro": "This copy is from another course. Nothing was changed.",
+      "export_ok": "Copy downloaded."
+    },
+    "st_missoes": "Missions",
+    "st_digite": "Type the command and press Enter",
+    "st_dica": "Show the command",
+    "st_zerar": "Start over",
+    "st_missao": "Mission {n} of {t}:",
+    "st_cumpridas": "Missions completed.",
+    "st_pronto": "Ready.",
+    "st_onde": "This showed you where you are. Now do what mission {n} asks.",
+    "st_errado": "That’s not the command for mission {n}. Reread the request or tap <b>{dica}</b>.",
+    "comecar": "Start the lesson",
+    "nesta_vai": "In this lesson, you will",
+    "trocar_tema": "Switch between light and dark themes"
+  },
+  "icone": "terminal"
+}

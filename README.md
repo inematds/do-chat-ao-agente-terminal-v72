@@ -4,6 +4,8 @@ Curso completo do **degrau 1** da formação [Do chat ao agente](https://inematd
 
 **Abrir o curso:** https://inematds.github.io/do-chat-ao-agente-terminal-v72/
 
+**English:** https://inematds.github.io/do-chat-ao-agente-terminal-v72/en/ · **Español:** https://inematds.github.io/do-chat-ao-agente-terminal-v72/es/
+
 | Aula | O que você sai fazendo |
 |---|---|
 | 1. O terminal começa dizendo onde você está | abrir o cmd e andar pelas pastas com seis comandos |
@@ -20,7 +22,8 @@ Didática v7: objetivo em uma linha, diagrama clicável primeiro, texto curto, *
 ## Como funciona
 
 ```bash
-python3 gerar.py && python3 validar.py --links
+python3 gerar.py && python3 gerar.py --lang en && python3 gerar.py --lang es
+python3 validar.py --links && python3 validar.py --lang en && python3 validar.py --lang es
 node ~/.claude/skills/formato-curso-v72/scripts/conferir-tela.cjs .
 ```
 

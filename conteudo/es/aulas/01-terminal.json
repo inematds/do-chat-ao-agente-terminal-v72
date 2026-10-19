@@ -1,0 +1,406 @@
+{
+  "slug": "terminal",
+  "num": 1,
+  "titulo": "El terminal empieza indicando dónde estás",
+  "titulo_curto": "Dónde estás",
+  "menu": "Terminal",
+  "minutos": 15,
+  "lead": "La terminal es solo otra ventana para las mismas carpetas del Explorador de archivos. Escribes una línea y te devuelve otra. Con seis comandos sabes dónde estás, ves qué hay allí, creas tu carpeta de proyectos y te mueves entre ellas sin el mouse.",
+  "objetivo": "abrir cmd, ver en qué carpeta estás y moverte por las carpetas con seis comandos, sin el mouse.",
+  "hero_alt": "Manos sobre el teclado de una laptop con la ventana negra del Símbolo del sistema abierta.",
+  "competencias": [
+    "abrir-terminal",
+    "leer-el-prompt",
+    "navegar-carpetas",
+    "crear-carpeta-proyectos"
+  ],
+  "aprende": [
+    {
+      "icone": "terminal",
+      "t": "Abrir cmd y leer la línea que termina en >"
+    },
+    {
+      "icone": "lupa",
+      "t": "Saber dónde estás con cd y qué hay allí con dir"
+    },
+    {
+      "icone": "pasta",
+      "t": "Crear proyectos\\meu-primeiro-agente y entrar"
+    },
+    {
+      "icone": "camadas",
+      "t": "Ver la misma carpeta en el Explorador de archivos con explorer ."
+    }
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "El ida y vuelta de la terminal",
+      "sub": "Escribes, responde y vuelve a aparecer el >, esperando que escribas.",
+      "nos": [
+        {
+          "icone": "usuario",
+          "titulo": "Tú escribes",
+          "sub": "Una línea, luego Enter",
+          "itens": [
+            {
+              "icone": "terminal",
+              "t": "cd"
+            },
+            {
+              "icone": "terminal",
+              "t": "dir"
+            }
+          ],
+          "detalhe": "Al abrirlo, cmd muestra una línea corta que termina en <code>&gt;</code>, con el cursor parpadeando. Es la computadora esperando que escribas. No pasa nada hasta que escribas y presiones Enter."
+        },
+        {
+          "icone": "terminal",
+          "titulo": "El prompt",
+          "sub": "C:\\Users\\voce>",
+          "itens": [
+            {
+              "icone": "pasta",
+              "t": "La ruta antes del >",
+              "sub": "es la carpeta donde estás"
+            }
+          ],
+          "detalhe": "Lee la ruta como una dirección. Cada barra invertida separa una carpeta, y la última es donde estás ahora. Tu carpeta personal es <code>C:\\Users\\</code> seguido de tu nombre de usuario.",
+          "forte": true
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "La respuesta",
+          "sub": "Las líneas sin >",
+          "itens": [
+            {
+              "icone": "check",
+              "t": "Resultado del comando"
+            },
+            {
+              "icone": "x",
+              "t": "O el mensaje de error"
+            }
+          ],
+          "detalhe": "La línea sin <code>&gt;</code> es la respuesta de la computadora. Muchos comandos que funcionan no responden nada: quien lo confirma es el siguiente comando, como <code>cd</code> o <code>dir</code>."
+        },
+        {
+          "icone": "pasta",
+          "titulo": "El Explorador de archivos",
+          "sub": "La misma carpeta, con íconos",
+          "itens": [
+            {
+              "icone": "camadas",
+              "t": "explorer ."
+            }
+          ],
+          "detalhe": "La terminal y el Explorador de archivos muestran el mismo disco. Si creas una carpeta en uno, aparece en el otro. El comando <code>explorer .</code> abre la ventana de archivos exactamente en la carpeta donde estás."
+        }
+      ],
+      "volta": "Comando, respuesta y el > de vuelta: siempre es ese ida y vuelta",
+      "legenda": "En Mac y Linux, la terminal se llama Terminal y termina en $; los comandos tienen otros nombres (tabla al final de la lección).",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "Primero la ubicación, después los archivos",
+        "texto": "Antes de cualquier comando que cambie algo, mira la ruta antes del &gt;. Muchos errores que parecen fallas de la IA se deben solo a que estás en la carpeta equivocada: si no sabes dónde estás, el agente tampoco lo sabe."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Los seis comandos, uno a la vez",
+      "sub": "Haz clic en cada paso. Ninguno de estos comandos borra nada.",
+      "passos": [
+        {
+          "titulo": "Abrir cmd",
+          "sub": "Tecla Windows, cmd, Enter",
+          "texto": [
+            "Presiona la tecla Windows, escribe <code>cmd</code> y presiona Enter. Se abre el Símbolo del sistema, la ventana negra. No es necesario abrirlo como administrador.",
+            "Si la línea empieza con <code>PS</code>, abriste PowerShell, otra terminal. Ciérralo y busca cmd otra vez. En Mac: Cmd+Espacio y escribe Terminal."
+          ],
+          "exemplo": {
+            "rot": "Lo que aparece",
+            "texto": "C:\\Users\\voce> con el cursor parpadeando."
+          }
+        },
+        {
+          "titulo": "Dónde estoy",
+          "sub": "cd sin nada más",
+          "texto": [
+            "El comando <code>cd</code>, escrito sin nada más, es el «estás aquí» del mapa. Muestra la ruta completa de la carpeta actual.",
+            "En Mac y Linux, el mismo papel lo cumple <code>pwd</code>."
+          ],
+          "exemplo": {
+            "rot": "Respuesta",
+            "texto": "C:\\Users\\voce"
+          }
+        },
+        {
+          "titulo": "Qué hay aquí",
+          "sub": "dir",
+          "texto": [
+            "Después de saber dónde estás, mira el contenido. <code>dir</code> muestra las carpetas y los archivos; <code>dir /b</code> muestra solo los nombres, uno por línea.",
+            "En Mac y Linux: <code>ls</code>."
+          ],
+          "exemplo": {
+            "rot": "Respuesta",
+            "texto": "Escritorio, Documentos, Descargas…"
+          }
+        },
+        {
+          "titulo": "Crear y entrar",
+          "sub": "mkdir y cd nombre",
+          "texto": [
+            "<code>mkdir projetos</code> crea la carpeta. <code>cd projetos</code> entra en ella y la ruta antes de <code>&gt;</code> cambia.",
+            "Usa nombres cortos, sin espacios ni tildes, como <code>meu-primeiro-agente</code>. En la terminal, los espacios y las tildes dan trabajo."
+          ],
+          "exemplo": {
+            "rot": "El prompt después",
+            "texto": "C:\\Users\\voce\\projetos>"
+          }
+        },
+        {
+          "titulo": "Volver y ver",
+          "sub": "cd .. y explorer .",
+          "texto": [
+            "<code>cd ..</code> sube una carpeta. <code>explorer .</code> abre el Explorador de archivos en la carpeta actual: el punto quiere decir «aquí».",
+            "<code>cls</code> limpia la pantalla sin borrar nada. La tecla Tab completa los nombres de las carpetas mientras escribes."
+          ],
+          "exemplo": {
+            "rot": "Regla de oro",
+            "texto": "¿Te perdiste? Escribe cd y lee la respuesta."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Los comandos de esta clase",
+      "sub": "Copia un bloque a la vez en cmd. Cambia lo que esté entre < > por lo tuyo.",
+      "blocos": [
+        {
+          "rot": "cmd · dónde estoy y qué hay aquí",
+          "icone": "terminal",
+          "conteudo": "cd\ndir\ndir /b"
+        },
+        {
+          "rot": "cmd · la carpeta de proyectos y la del primer proyecto",
+          "icone": "pasta",
+          "conteudo": "cd %USERPROFILE%\nmkdir projetos\ncd projetos\nmkdir meu-primeiro-agente\ncd meu-primeiro-agente\ncd"
+        },
+        {
+          "rot": "cmd · ver la misma carpeta y navegar",
+          "icone": "camadas",
+          "conteudo": "explorer .\ncd ..\ndir\ncd meu-primeiro-agente\ndir"
+        },
+        {
+          "rot": "Mac y Linux · los mismos pasos",
+          "icone": "terminal",
+          "conteudo": "pwd\nls\nmkdir -p ~/projetos/meu-primeiro-agente\ncd ~/projetos/meu-primeiro-agente\npwd"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Lo que aparece",
+            "html": "<pre>C:\\Users\\ana&gt; cd %USERPROFILE%\nC:\\Users\\ana&gt; mkdir projetos\nC:\\Users\\ana&gt; cd projetos\nC:\\Users\\ana\\projetos&gt; mkdir meu-primeiro-agente\nC:\\Users\\ana\\projetos&gt; cd meu-primeiro-agente\nC:\\Users\\ana\\projetos\\meu-primeiro-agente&gt; cd\nC:\\Users\\ana\\projetos\\meu-primeiro-agente</pre><p><code>mkdir</code> y <code>cd</code> no responden cuando funcionan. Lo confirman la ruta antes de <code>&gt;</code> y el <code>cd</code> sin nada más.</p>"
+          },
+          {
+            "rot": "¿Apareció un error?",
+            "html": "<ul><li><b>«El sistema no puede encontrar la ruta especificada»</b>: el nombre está mal o la carpeta no existe aquí. Ejecuta <code>dir</code> y copia el nombre exacto.</li><li><b>«Ya existe un subdirectorio o un archivo projetos»</b>: ya se creó. Solo entra con <code>cd projetos</code>.</li><li><b>La línea empieza con PS</b>: es PowerShell. Ciérralo y abre cmd.</li></ul>"
+          },
+          {
+            "rot": "cmd × Linux",
+            "html": "<ul><li><code>cd</code> sin nada más → <code>pwd</code>: dónde estoy</li><li><code>dir</code> → <code>ls</code>: muestra la carpeta</li><li><code>mkdir nombre</code> → <code>mkdir -p nombre</code>: crea</li><li><code>cls</code> → <code>clear</code>: limpia la pantalla</li><li><code>type archivo</code> → <code>cat archivo</code>: muestra el archivo</li><li><code>%USERPROFILE%</code> → <code>~</code>: carpeta personal</li></ul><p>En Linux, las mayúsculas importan: Projetos y projetos son carpetas distintas.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "simterm",
+      "titulo": "Ensaya antes, sin riesgo",
+      "sub": "Un cmd de mentira: escribe el comando de cada misión y presiona Enter. No se ejecuta nada en tu computadora.",
+      "janela": "Símbolo del sistema · simulación",
+      "sistema": "windows",
+      "inicio": "C:\\Users\\ana",
+      "sufixo": ">",
+      "missoes": [
+        {
+          "pede": "Descubre en qué carpeta estás.",
+          "aceita": [
+            "cd"
+          ],
+          "saida": "{cwd}",
+          "explica": "El <code>cd</code> sin nada más mostró la dirección: la carpeta personal de Ana. Nada cambió."
+        },
+        {
+          "pede": "Mira los nombres de lo que hay aquí.",
+          "aceita": [
+            "dir /b"
+          ],
+          "saida": "Desktop\nDocuments\nDownloads",
+          "explica": "<code>dir /b</code> muestra solo los nombres, uno por línea. <code>dir</code> sin /b también muestra la fecha y el tamaño."
+        },
+        {
+          "pede": "Crea la carpeta <code>projetos</code>.",
+          "aceita": [
+            "mkdir projetos",
+            "md projetos"
+          ],
+          "saida": "",
+          "explica": "El silencio significa que todo salió bien: <code>mkdir</code> no responde cuando funciona."
+        },
+        {
+          "pede": "Entra en la carpeta <code>projetos</code>.",
+          "aceita": [
+            "cd projetos"
+          ],
+          "saida": "",
+          "vai": "C:\\Users\\ana\\projetos",
+          "explica": "Mira la ruta antes de &gt;: ahora incluye <code>\\projetos</code>. Así sabes que entraste."
+        },
+        {
+          "pede": "Crea la carpeta <code>meu-primeiro-agente</code>.",
+          "aceita": [
+            "mkdir meu-primeiro-agente",
+            "md meu-primeiro-agente"
+          ],
+          "saida": "",
+          "explica": "Un nombre corto, sin espacios ni tildes: en la terminal eso evita tener que usar comillas y cometer errores al escribir."
+        },
+        {
+          "pede": "Entra en ella.",
+          "aceita": [
+            "cd meu-primeiro-agente"
+          ],
+          "saida": "",
+          "vai": "C:\\Users\\ana\\projetos\\meu-primeiro-agente",
+          "explica": "Esta es la carpeta donde el agente trabajará en las próximas clases."
+        },
+        {
+          "pede": "Abre la misma carpeta en el Explorador de archivos.",
+          "aceita": [
+            "explorer ."
+          ],
+          "saida": "(el Explorador de archivos se abre en projetos › meu-primeiro-agente)",
+          "explica": "El punto significa «aquí». La terminal y el Explorador de archivos muestran el mismo lugar: lo que creas en uno aparece en el otro."
+        },
+        {
+          "pede": "Sube una carpeta.",
+          "aceita": [
+            "cd .."
+          ],
+          "saida": "",
+          "vai": "C:\\Users\\ana\\projetos",
+          "explica": "<code>cd ..</code> vuelve un nivel. Para entrar de nuevo: <code>cd meu-primeiro-agente</code>."
+        }
+      ],
+      "fim": "Misiones cumplidas. Ahora haz lo mismo en tu cmd: es la práctica que sigue.",
+      "legenda": "Simulación: la carpeta personal de Ana es un ejemplo. En tu computadora aparece tu nombre de usuario."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "Hazlo en tu computadora. Avanza solo cuando se cumpla el criterio de «listo cuando».",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E1 · Primera carpeta desde la terminal",
+          "min": "10 min",
+          "texto": "Crea projetos\\meu-primeiro-agente, entra en ella y lista su contenido (estará vacía). Ejecuta <code>explorer .</code> y compárala con el Explorador de archivos.",
+          "pronto": "llegas a la carpeta solo con la terminal, sin el mouse, y sabes decir en qué carpeta estás."
+        },
+        {
+          "id": "e2",
+          "titulo": "E2 · Lo creas en uno y aparece en el otro",
+          "min": "5 min",
+          "texto": "En el Explorador de archivos, crea cualquier archivo de texto dentro de meu-primeiro-agente. Vuelve al cmd y ejecuta <code>dir /b</code>.",
+          "pronto": "el archivo que creaste con el mouse aparece en la lista de la terminal. Si no aparece, estás en otra carpeta: ejecuta <code>cd</code>."
+        }
+      ]
+    },
+    {
+      "tipo": "video",
+      "titulo": "El nivel 1 en video",
+      "sub": "Seis comandos, un AGENTS.md y la primera tarea, en menos de dos minutos.",
+      "chave": "seq1-oswork"
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Pon a prueba lo que aprendiste",
+      "sub": "La explicación aparece después de tu respuesta.",
+      "perguntas": [
+        {
+          "p": "Abriste el cmd y quieres saber en qué carpeta estás. ¿Qué escribes?",
+          "opcoes": [
+            "dir",
+            "cd, solo",
+            "explorer",
+            "mkdir"
+          ],
+          "certa": 1,
+          "explica": "<code>cd</code> sin nada más muestra la ruta completa de la carpeta actual. <code>dir</code> muestra lo que hay en ella, pero no la dirección.",
+          "cert": true,
+          "ref": "passos"
+        },
+        {
+          "p": "Ejecutaste <code>mkdir projetos</code> y la terminal no respondió. ¿Qué significa?",
+          "opcoes": [
+            "Que hubo un error y no se creó nada.",
+            "Que el comando sigue ejecutándose.",
+            "Que funcionó; confírmalo con dir.",
+            "Que debes abrirlo como administrador."
+          ],
+          "certa": 2,
+          "explica": "Muchos comandos no muestran nada cuando funcionan. El siguiente comando lo confirma: <code>dir</code> muestra la carpeta nueva.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "Creaste un archivo desde el Explorador de archivos, pero no aparece en <code>dir</code>. ¿Cuál es la causa más probable?",
+          "opcoes": [
+            "La terminal no puede ver los archivos del Explorador de archivos.",
+            "Estás en otra carpeta en la terminal.",
+            "Debes reiniciar la computadora.",
+            "El archivo se creó vacío."
+          ],
+          "certa": 1,
+          "explica": "La terminal y el Explorador de archivos muestran el mismo disco. Si el archivo no aparece, la terminal está en otra carpeta: ejecuta <code>cd</code> y compara las rutas.",
+          "ref": "codigo"
+        },
+        {
+          "p": "En la VPS con Linux, ¿qué comando cumple la función de <code>dir</code>?",
+          "opcoes": [
+            "ls",
+            "pwd",
+            "type",
+            "cls"
+          ],
+          "certa": 0,
+          "explica": "<code>ls</code> muestra el contenido de la carpeta. <code>pwd</code> equivale a ejecutar <code>cd</code> sin nada más, y <code>cat</code> equivale a <code>type</code>.",
+          "ref": "codigo"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para profundizar",
+      "links": [
+        {
+          "t": "Vista general: los cuatro niveles de la formación",
+          "href": "https://inematds.github.io/do-chat-ao-agente-v72/",
+          "icone": "camadas"
+        },
+        {
+          "t": "OSWork Quick: la lista completa de comandos",
+          "href": "https://inematds.github.io/oswork-quick/materiais/",
+          "icone": "lista"
+        },
+        {
+          "t": "Área OSWork en Eventos",
+          "href": "https://eventos.inema.pro/oswork/",
+          "icone": "terminal"
+        }
+      ]
+    }
+  ]
+}

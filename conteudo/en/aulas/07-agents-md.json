@@ -1,0 +1,305 @@
+{
+  "slug": "agents-md",
+  "num": 7,
+  "titulo": "AGENTS.md, Skills, and memory you can check",
+  "titulo_curto": "Rules, Skills, and memory",
+  "menu": "Rules",
+  "minutos": 18,
+  "lead": "Every new conversation with the agent starts from scratch. Without an instruction file, you repeat the same reminders; with vague instructions, nothing changes. Rules you can check, a procedure saved in a Skill, and short, dated memory help the agent improve with every task.",
+  "objetivo": "rewrite AGENTS.md with five checkable rules and turn a real failure into a rule for the next run.",
+  "hero_alt": "A hand pointing to an instruction sign posted on the door of a workspace.",
+  "competencias": [
+    "escrever-agents-md",
+    "criar-skill",
+    "manter-memoria",
+    "registrar-falha"
+  ],
+  "aprende": [
+    {
+      "icone": "check",
+      "t": "Write an observable rule: action and evidence"
+    },
+    {
+      "icone": "camadas",
+      "t": "Know which AGENTS.md applies: global, project, subfolder"
+    },
+    {
+      "icone": "lista",
+      "t": "Save a repeated procedure in a Skill"
+    },
+    {
+      "icone": "memoria",
+      "t": "Dated memory and a failure with the smallest fix"
+    }
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Sign on the door, procedure in the binder",
+      "sub": "Where each type of instruction lives. Click each block.",
+      "nos": [
+        {
+          "icone": "arquivo",
+          "titulo": "AGENTS.md",
+          "sub": "The sign on the folder’s door",
+          "itens": [
+            {
+              "icone": "check",
+              "t": "Five short rules"
+            },
+            {
+              "icone": "lupa",
+              "t": "Read for every task"
+            }
+          ],
+          "detalhe": "It explains how to work there: where to start reading, how to check your work, what not to do, and the delivery format. Leave out the history and reasons. A short file gets read in full.",
+          "forte": true
+        },
+        {
+          "icone": "lista",
+          "titulo": "Skill",
+          "sub": "The procedure pulled from the binder",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": ".agents\\skills\\<nome>\\SKILL.md"
+            }
+          ],
+          "detalhe": "A procedure that repeats (the weekly list, Friday’s report) becomes a Skill: a SKILL.md that starts with a name and description. The agent uses it when the task calls for it, without loading the whole manual for every task."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "Memory",
+          "sub": "A dated wall with an owner",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "config\\memoria.md"
+            },
+            {
+              "icone": "arquivo",
+              "t": "config\\decisoes.md"
+            }
+          ],
+          "detalhe": "The model isn’t learning: it’s a file the agent reads when you point it to one. Save stable facts and decisions with the date and reason, not the whole conversation. Mark at the top when it was reviewed."
+        },
+        {
+          "icone": "x",
+          "titulo": "Failures",
+          "sub": "The tape on the step",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "config\\falhas.md"
+            }
+          ],
+          "detalhe": "Symptom, observed cause, smallest fix, and verification, in one line. Say whether the failure came from the request or the infrastructure. Put the fix where the next run will read it: AGENTS.md or the Skill."
+        }
+      ],
+      "volta": "A failure becomes a rule; the rule changes the next task",
+      "legenda": "None of these files overrides system instructions, tool permissions, or what you explicitly ask for in the conversation.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "The agent that improves",
+        "texto": "A verifiable rule at the door, a playbook in the binder, short dated memories, and every slip becoming a small safeguard. That’s how tomorrow’s task turns out better than today’s, without switching models."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Four habits",
+      "sub": "Click each step.",
+      "passos": [
+        {
+          "titulo": "Observable rule",
+          "sub": "Action and evidence",
+          "texto": [
+            "Try the sign test: “wear safety glasses” can be checked by looking; “be careful” can’t.",
+            "A good rule calls for an action and leaves evidence in the deliverable. Remove rules that don’t change any decisions from the file."
+          ],
+          "exemplo": {
+            "rot": "Observable",
+            "texto": "Compare the report total with sales.csv and show the difference."
+          }
+        },
+        {
+          "titulo": "Which file takes precedence",
+          "sub": "Global, project, subfolder",
+          "texto": [
+            "In Codex, the global AGENTS.md is in <code>%USERPROFILE%\\.codex</code> and applies everywhere; the project one applies in its folder; one in a subfolder takes precedence inside that folder.",
+            "Strange behavior? Look for an <code>AGENTS.override.md</code> left behind in a copied folder: in the same folder, it takes precedence over AGENTS.md."
+          ],
+          "exemplo": {
+            "rot": "Ask",
+            "texto": "Summarize the instructions you loaded and say which file each one came from."
+          }
+        },
+        {
+          "titulo": "A Skill with limits",
+          "sub": "Description says when to use it and when not to",
+          "texto": [
+            "The description is what the agent reads to decide whether to activate the Skill. “Helps with reports” can trigger even for meeting minutes.",
+            "Say what situation it covers and where it stops. Before relying on it, rehearse with three cases: normal, incomplete, and outside the agreed scope."
+          ],
+          "exemplo": {
+            "rot": "Good description",
+            "texto": "Generate a weekly report draft when there is a sales CSV. Don’t use it to send reports or handle credentials."
+          }
+        },
+        {
+          "titulo": "Smallest fix",
+          "sub": "Not a rebuild",
+          "texto": [
+            "When the result is wrong, it’s tempting to switch models or redo everything. That wastes hours and hides a simple problem.",
+            "Fix a request failure in the wording; fix an infrastructure failure with a check. One new line in AGENTS.md is often enough."
+          ],
+          "exemplo": {
+            "rot": "Small safeguard",
+            "texto": "Check the header and number of records before generating."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Templates",
+      "sub": "Copy and adapt them for your folder. Replace anything inside < >.",
+      "blocos": [
+        {
+          "rot": "AGENTS.md · five verifiable rules",
+          "icone": "arquivo",
+          "conteudo": "# Instructions for the agent\n\nPurpose: <what this project produces>\n\n1. Read README.md before changing anything.\n2. Use only entradas/ and saidas/; don’t delete or rename files.\n3. Don’t make up data that isn’t in entradas/; list anything missing as a pending item at the end.\n4. Never write keys or passwords to a text file; mention only the .env variable name.\n5. Finish by saying: what you changed, how you checked it, and what’s still pending."
+        },
+        {
+          "rot": ".agents\\skills\\relatorio-semanal\\SKILL.md",
+          "icone": "lista",
+          "conteudo": "---\nname: relatorio-semanal\ndescription: Generate a weekly report draft when the user provides a sales CSV. Don’t use it to send reports or handle credentials.\n---\n\n## Input\nA CSV in entradas/.\n\n## Steps\n1. Check the header and number of records before generating.\n2. Add up the values; don’t make up missing data.\n3. Write the draft to saidas/relatorio.md.\n\n## Output and verification\nCite the source, known total, and pending items. Stop before sending or publishing."
+        },
+        {
+          "rot": "config\\memoria.md",
+          "icone": "memoria",
+          "conteudo": "# Memory\nReviewed on: <dd/mm/yyyy>\n\n- <stable fact 1, e.g., short reports, pending items at the end>\n- <stable fact 2>\n- <stable fact 3>"
+        },
+        {
+          "rot": "config\\falhas.md",
+          "icone": "x",
+          "conteudo": "| Date | Symptom | Observed cause | Smallest fix | Verification | Type |\n|---|---|---|---|---|---|\n| <dd/mm> | empty report | spreadsheet has no records | check the number of rows before generating | empty spreadsheet shows a warning, not a report | infrastructure |"
+        },
+        {
+          "rot": "Request · check what it loaded",
+          "icone": "chat",
+          "conteudo": "Summarize the instructions you loaded in this folder and say which file each one came from. Then, check ../config/memoria.md and, when you do the next task, say which fact from memory you used."
+        },
+        {
+          "rot": "cmd · create the Skill folder and check it",
+          "icone": "terminal",
+          "conteudo": "mkdir .agents\\skills\\relatorio-semanal\nnotepad .agents\\skills\\relatorio-semanal\\SKILL.md\ntype .agents\\skills\\relatorio-semanal\\SKILL.md"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Vague × observable",
+            "html": "<ul><li>\"Be excellent.\" → <b>how to check: there’s no way.</b></li><li>\"Compare the total with sales.csv and report the difference.\" → <b>the deliverable includes the sum and the difference.</b></li><li>\"Review everything very carefully.\" → replace it with \"List the outstanding items at the end.\"</li></ul>"
+          },
+          {
+            "rot": "Where it applies",
+            "html": "<ol><li><code>%USERPROFILE%\\.codex\\AGENTS.md</code>: global, short (\"report what you checked\").</li><li><code>projetos\\meu-primeiro-agente\\AGENTS.md</code>: applies to the project.</li><li><code>…\\provas\\AGENTS.md</code>: takes precedence inside provas for the topics it covers.</li></ol><p>Your explicit request in the conversation takes precedence over all three.</p>"
+          },
+          {
+            "rot": "Incomplete case",
+            "html": "<p><b>Without the rule \"don’t invent missing values\"</b>: \"Weekly total: 100.00\" — the Pen had no value, but the total acted as if it did.</p><p><b>With the rule</b>: \"Known total: 90.50. Outstanding item: the Pen row has no value. I didn’t fill it in.\"</p>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "In the project and the config folder.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E13 · Five rules you can check",
+          "min": "20 min",
+          "texto": "Rewrite AGENTS.md with five rules. Next to each one, note how you’ll check whether it was followed. Give it a task and check.",
+          "pronto": "for each of the five rules, you point to evidence in the agent’s deliverable that shows it was followed."
+        },
+        {
+          "id": "e2",
+          "titulo": "E14 · Turn the failure into a rule",
+          "min": "15 min",
+          "texto": "Record one real failure from earlier lessons in config\\falhas.md (symptom, cause, smallest fix, verification, type) and add the fix to AGENTS.md.",
+          "pronto": "on the next task, the same problem doesn’t happen again, and you can say which line in AGENTS.md prevented it."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "Which of these rules can you check by looking at the agent’s deliverable?",
+          "opcoes": [
+            "Review everything very carefully.",
+            "List the outstanding items at the end.",
+            "Write professionally.",
+            "Do a great job."
+          ],
+          "certa": 1,
+          "explica": "An observable rule has an action and evidence: the list of outstanding items is either at the end or it isn’t. The others leave no trace.",
+          "cert": true,
+          "ref": "passos"
+        },
+        {
+          "p": "The global instructions say \"respond in bullet points,\" the project’s AGENTS.md says nothing about format, and you ask for a table in the conversation. Which one applies?",
+          "opcoes": [
+            "The global bullet points.",
+            "The project’s AGENTS.md.",
+            "The table requested in the conversation.",
+            "None of them; it causes an error."
+          ],
+          "certa": 2,
+          "explica": "The explicit request in the conversation takes precedence over the instruction files.",
+          "ref": "codigo"
+        },
+        {
+          "p": "You created memoria.md in config, but the agent ignored the facts. What should you do first?",
+          "opcoes": [
+            "Switch to a larger model.",
+            "Copy more conversations into the file.",
+            "Point to the file in the request itself and ask which fact it used.",
+            "Delete the memory file."
+          ],
+          "certa": 2,
+          "explica": "The file’s existence doesn’t guarantee it was read. Say which file to check and ask the agent to cite the fact it used.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "The report came out empty because the spreadsheet had no records. What’s the smallest fix?",
+          "opcoes": [
+            "Switch models.",
+            "Rewrite the entire Skill.",
+            "One rule: check the number of records before generating the report.",
+            "Redo the folders."
+          ],
+          "certa": 2,
+          "explica": "An infrastructure failure calls for a small check. Rebuilding takes hours, and the empty spreadsheet will still cause the same problem.",
+          "ref": "passos"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To learn more",
+      "links": [
+        {
+          "t": "OSWork v6.2: AGENTS, Skills, and memory (module 5)",
+          "href": "https://inematds.github.io/oswork-v62/",
+          "icone": "arquivo"
+        }
+      ]
+    }
+  ]
+}

@@ -21,6 +21,8 @@
         lis = sim.querySelectorAll(".st-missoes li"), form = sim.querySelector("form"),
         agora = sim.querySelector(".st-agora");
     var cwd, i;
+    var T = d.txt || {};
+    function tx(k, n) { return (T[k] || "").replace(/\{n\}/g, n).replace(/\{t\}/g, d.missoes.length).replace(/\{dica\}/g, T.st_dica || ""); }
 
     var suf = d.sufixo == null ? ">" : d.sufixo;
     function pr() { return cwd + suf; }
@@ -32,7 +34,7 @@
       });
       prompt.textContent = pr();
       var m = d.missoes[i];
-      agora.innerHTML = m ? "<b>Missão " + (i + 1) + " de " + d.missoes.length + ":</b> " + m.pede : "<b>Missões cumpridas.</b>";
+      agora.innerHTML = m ? "<b>" + tx("st_missao", i + 1) + "</b> " + m.pede : "<b>" + tx("st_cumpridas") + "</b>";
     }
     function zerar() {
       cwd = d.inicio; i = 0; tela.textContent = "";
@@ -40,7 +42,7 @@
       marca();
     }
     function fim() {
-      fb.innerHTML = '<div class="r ok">' + (d.fim || "Pronto.") + "</div>";
+      fb.innerHTML = '<div class="r ok">' + (d.fim || tx("st_pronto")) + "</div>";
       sim.classList.add("concluida");
     }
     function executa(cmd) {
@@ -58,9 +60,9 @@
         if (i >= d.missoes.length) fim();
         return;
       }
-      if (win && c === "cd") { linha(cwd, "st-out"); fb.innerHTML = '<p class="aguarda">Isso mostrou onde você está. Agora faça o que a missão ' + (i + 1) + " pede.</p>"; return; }
+      if (win && c === "cd") { linha(cwd, "st-out"); fb.innerHTML = '<p class="aguarda">' + tx("st_onde", i + 1) + "</p>"; return; }
       if (!m) { fb.innerHTML = '<div class="r ok">' + (d.fim || "") + "</div>"; return; }
-      fb.innerHTML = '<p class="aguarda">Esse não é o comando da missão ' + (i + 1) + ". Releia o pedido ou toque em <b>Mostrar o comando</b>.</p>";
+      fb.innerHTML = '<p class="aguarda">' + tx("st_errado", i + 1) + "</p>";
     }
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();

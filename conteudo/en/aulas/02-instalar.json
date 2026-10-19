@@ -1,0 +1,338 @@
+{
+  "slug": "instalar",
+  "num": 2,
+  "titulo": "Install from the official source and sign in with your account",
+  "titulo_curto": "Install and sign in",
+  "menu": "Install",
+  "minutos": 18,
+  "lead": "Installing the program, signing in to your account, and opening it in the folder are three separate steps, each with its own check. The command comes from the official page, the account is your subscription, and no password passes through the terminal.",
+  "objetivo": "install Git, gh, Node, and the agent (Claude Code or Codex) using cmd, then confirm the version and sign-in method.",
+  "hero_alt": "A hand checking the label on a sealed box beside a laptop with the terminal open.",
+  "competencias": [
+    "install-tools",
+    "check-official-source",
+    "sign-in-with-subscription"
+  ],
+  "aprende": [
+    {
+      "icone": "baixar",
+      "t": "Install Git, GitHub CLI, and Node with winget"
+    },
+    {
+      "icone": "robo",
+      "t": "Install Claude Code or Codex from the official address"
+    },
+    {
+      "icone": "check",
+      "t": "Confirm with --version after reopening cmd"
+    },
+    {
+      "icone": "cadeado",
+      "t": "Sign in with your subscription and check the method, without exposing a key"
+    }
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "From zero to an open agent",
+      "sub": "Three steps, each with its own check.",
+      "estilo": "escada",
+      "nos": [
+        {
+          "icone": "baixar",
+          "titulo": "Install the program",
+          "sub": "winget and the official installer",
+          "itens": [
+            {
+              "icone": "terminal",
+              "t": "winget install …"
+            },
+            {
+              "icone": "check",
+              "t": "check: --version"
+            }
+          ],
+          "detalhe": "Installing puts the program on your computer. It doesn’t connect your account or choose the folder yet. After installing, close cmd and open it again: only the new window can see the program that was just installed."
+        },
+        {
+          "icone": "cadeado",
+          "titulo": "Sign in with your account",
+          "sub": "In your browser, never in the terminal",
+          "itens": [
+            {
+              "icone": "usuario",
+              "t": "Subscription: Claude Pro/Max or ChatGPT Plus/Pro"
+            },
+            {
+              "icone": "check",
+              "t": "check: codex login status"
+            }
+          ],
+          "detalhe": "Like a badge at a turnstile: the terminal sends you to the browser, and that’s where you sign in. Your password never goes through the terminal. Signing in with your account uses your subscription plan; an API key bills usage to a different account.",
+          "forte": true
+        },
+        {
+          "icone": "pasta",
+          "titulo": "Open in the folder",
+          "sub": "cd first, agent second",
+          "itens": [
+            {
+              "icone": "terminal",
+              "t": "cd …\\meu-primeiro-agente"
+            },
+            {
+              "icone": "robo",
+              "t": "claude or codex"
+            }
+          ],
+          "detalhe": "The agent works in the folder where you opened it. The first time you open it in a folder, it asks whether you trust it: this is your practice folder, so confirm. To exit, <code>/quit</code> in Codex or <code>/exit</code> in Claude Code."
+        }
+      ],
+      "legenda": "Right after installing, opening the agent and seeing a sign-in request isn’t a defect: step 1 worked, and step 2 is still needed.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "One step at a time",
+        "texto": "Installed it? Check the version. Signed in? Check the method. Opened it? Check the folder. If something fails, you know exactly which of the three steps stopped."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Check the seal before opening the box",
+      "sub": "Four precautions that apply to any new program.",
+      "passos": [
+        {
+          "titulo": "Official source",
+          "sub": "Read the name in the command",
+          "texto": [
+            "“Faster” commands circulate online. A command pasted without checking can run anything.",
+            "Read the publisher: <code>Git.Git</code>, <code>GitHub.cli</code>, <code>OpenJS.NodeJS.LTS</code>, <code>@openai/codex</code>, <code>claude.ai/install.cmd</code>. If the name is different or from an unknown page, don’t paste it."
+          ],
+          "exemplo": {
+            "rot": "Warning sign",
+            "texto": "A package with “codex” in its name, but without @openai/ in front."
+          }
+        },
+        {
+          "titulo": "Wait for the >",
+          "sub": "One command at a time",
+          "texto": [
+            "Paste one command, wait for it to finish, and for <code>&gt;</code> to return. You don’t need to understand the lines that scroll by.",
+            "The first time, winget may ask if you accept the source terms: type Y and press Enter."
+          ],
+          "exemplo": {
+            "rot": "What you see",
+            "texto": "Successfully installed"
+          }
+        },
+        {
+          "titulo": "Reopen and check",
+          "sub": "--version",
+          "texto": [
+            "Close cmd and open it again. Then <code>git --version</code>, <code>gh --version</code>, and <code>claude --version</code> or <code>codex --version</code> should return a number.",
+            "“Is not recognized as an internal or external command” usually just means you’re using an old window."
+          ],
+          "exemplo": {
+            "rot": "Rule",
+            "texto": "Installed it? Close and reopen cmd before checking."
+          }
+        },
+        {
+          "titulo": "Sign-in method",
+          "sub": "Account, not key",
+          "texto": [
+            "The first time you open it, the agent asks you to sign in: use your subscription. In Codex, <code>codex login</code> opens the browser, and <code>codex login status</code> tells you how you signed in.",
+            "In the project sheet, record the method (“account” or “API”). Never put the key itself in a sheet, prompt, or screenshot."
+          ],
+          "exemplo": {
+            "rot": "Expected response",
+            "texto": "Logged in using ChatGPT"
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "The installation commands",
+      "sub": "Once per computer. Copy one block, wait for it to finish, then close and reopen cmd.",
+      "blocos": [
+        {
+          "rot": "cmd · Git, GitHub CLI, and Node",
+          "icone": "baixar",
+          "conteudo": "winget install --id Git.Git -e\nwinget install --id GitHub.cli -e\nwinget install --id OpenJS.NodeJS.LTS -e"
+        },
+        {
+          "rot": "cmd · the agent (choose one or both)",
+          "icone": "robo",
+          "conteudo": "rem Claude Code:\ncurl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd\n\nrem Codex:\nnpm install -g @openai/codex"
+        },
+        {
+          "rot": "cmd · in a NEW window, check",
+          "icone": "check",
+          "conteudo": "git --version\ngh --version\nclaude --version\ncodex --version"
+        },
+        {
+          "rot": "cmd · sign in and check the method (Codex)",
+          "icone": "cadeado",
+          "conteudo": "codex login\ncodex login status"
+        },
+        {
+          "rot": "cmd · open the agent in the project folder",
+          "icone": "pasta",
+          "conteudo": "cd %USERPROFILE%\\projetos\\meu-primeiro-agente\ncd\nclaude"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "What you see",
+            "html": "<pre>C:\\Users\\ana&gt; winget install --id OpenJS.NodeJS.LTS -e\nSuccessfully installed\nC:\\Users\\ana&gt; rem closed cmd and opened another\nC:\\Users\\ana&gt; npm install -g @openai/codex\nadded 1 package in 9s\nC:\\Users\\ana&gt; codex login status\nLogged in using ChatGPT</pre><p>Version numbers and times change over time. What matters is seeing a number, not an error message.</p>"
+          },
+          {
+            "rot": "Did you get an error?",
+            "html": "<ul><li><b>\"… is not recognized as an internal or external command\"</b>: close cmd, open it again, and repeat.</li><li><b>winget asked you to accept terms</b>: Y and Enter.</li><li><b>login status shows an API key</b> and you wanted the account: <code>codex logout</code>, then <code>codex login</code>.</li><li><b>The agent asks whether it trusts the folder</b>: it’s your practice folder, confirm.</li></ul>"
+          },
+          {
+            "rot": "Mac and Linux",
+            "html": "<p>In the Mac or Linux Terminal, install Claude Code with <code>curl -fsSL https://claude.ai/install.sh | bash</code> and Codex with <code>npm install -g @openai/codex</code> (install Node first). Check the same way: run <code>--version</code> in a new window.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "simterm",
+      "titulo": "Rehearse: install and check",
+      "sub": "Notice what happens when you check in the same window.",
+      "janela": "Command Prompt · simulation",
+      "sistema": "windows",
+      "inicio": "C:\\Users\\ana",
+      "sufixo": ">",
+      "missoes": [
+        {
+          "pede": "Install Git with winget (exact name: <code>Git.Git</code>).",
+          "aceita": [
+            "winget install --id Git.Git -e",
+            "winget install -e --id Git.Git"
+          ],
+          "saida": "Found Git [Git.Git]\nDownloading…\nSuccessfully installed",
+          "explica": "Using <code>--id</code> with <code>-e</code> asks for the exact name, without guessing. That’s the seal."
+        },
+        {
+          "pede": "Check whether Git responds in this same window.",
+          "aceita": [
+            "git --version"
+          ],
+          "saida": "'git' is not recognized as an internal\nor external command, operable program, or batch file.",
+          "explica": "Expected error: the window that was open before installation still can’t see the new program. It’s not a defect."
+        },
+        {
+          "pede": "Close this window (the command is <code>exit</code>).",
+          "aceita": [
+            "exit"
+          ],
+          "saida": "(window closed · you opened a new cmd)",
+          "explica": "In real life: press the Windows key, type cmd, press Enter. New window, program visible."
+        },
+        {
+          "pede": "Now check Git again.",
+          "aceita": [
+            "git --version"
+          ],
+          "saida": "git version (version number)",
+          "explica": "A version number means the computer recognizes the program. Step 1 checked."
+        },
+        {
+          "pede": "Check which method Codex used to sign in.",
+          "aceita": [
+            "codex login status"
+          ],
+          "saida": "Logged in using ChatGPT",
+          "explica": "\"Logged in using ChatGPT\": this is your subscription account, not an API key. Write only that on the card."
+        }
+      ],
+      "fim": "Rehearsal complete. On your computer, the rule is the same: after installing, close and reopen cmd before checking.",
+      "legenda": "Simulation: actual messages may vary with the Windows and program versions."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "Once per computer.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E3 · Tools installed",
+          "min": "20 min",
+          "texto": "Install Git, GitHub CLI, Node, and the agent you’ll use with winget. Close and reopen cmd, then run the <code>--version</code> commands.",
+          "pronto": "<code>git --version</code>, <code>gh --version</code>, and <code>claude --version</code> or <code>codex --version</code> show version numbers."
+        },
+        {
+          "id": "e2",
+          "titulo": "E4 · Sign in and note the method",
+          "min": "10 min",
+          "texto": "Open the agent, sign in with your subscription through the browser, and note on a card (or phone note) which method is active and where you checked.",
+          "pronto": "the card says \"account\" (or \"API\") and contains no password or key."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "You installed Git, and in the same window, <code>git --version</code> replied \"is not recognized.\" What should you do?",
+          "opcoes": [
+            "Install it again with a different command.",
+            "Close cmd, open another, and check again.",
+            "Restart the computer.",
+            "Open cmd as administrator."
+          ],
+          "certa": 1,
+          "explica": "The window that was open before installation can’t see the new program. A new window almost always fixes it; reinstalling only makes things harder.",
+          "ref": "simterm"
+        },
+        {
+          "p": "In a group, someone shared a “faster” command to install Codex, using a package name other than <code>@openai/codex</code>. What do you do?",
+          "opcoes": [
+            "Paste it because it’s faster.",
+            "Paste it, but as an administrator.",
+            "Don’t paste it; use the command from the official page.",
+            "Ask the agent to run it for you."
+          ],
+          "certa": 2,
+          "explica": "The name in the command is the seal. A command from an unknown source can run anything on your computer.",
+          "cert": true,
+          "ref": "passos"
+        },
+        {
+          "p": "What do you put in the project sheet about the agent’s access?",
+          "opcoes": [
+            "The API key, so you don’t lose it.",
+            "The method (account or API) and where you checked it.",
+            "The subscription password.",
+            "A screenshot of the login screen."
+          ],
+          "certa": 1,
+          "explica": "Write down the method, never the credential. A key in plain text, a screenshot, or a request can be used by someone else, and the account is yours.",
+          "ref": "diagrama"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To learn more",
+      "links": [
+        {
+          "t": "OSWork Quick: part 1, your computer",
+          "href": "https://inematds.github.io/oswork-quick/",
+          "icone": "terminal"
+        },
+        {
+          "t": "OSWork v6.2: terminal and Codex in practice, step by step",
+          "href": "https://inematds.github.io/oswork-v62/",
+          "icone": "lista"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "slug": "pasta",
+  "num": 3,
+  "titulo": "The folder is the context: README, AGENTS.md, and Markdown",
+  "titulo_curto": "The agent’s folder",
+  "menu": "Folder",
+  "minutos": 16,
+  "lead": "When everything is in one folder, the AI reads material that has nothing to do with your request, and you can’t tell where each sentence came from. One folder per topic, with one file for people and another for the agent, solves this before your first request.",
+  "objetivo": "create the projetos/config tree and the project folder with entradas, saídas, README.md, and AGENTS.md in Markdown.",
+  "hero_alt": "An open steel filing cabinet with labeled hanging folders and a laptop in the background.",
+  "competencias": [
+    "estruturar-pasta-agente",
+    "escrever-markdown",
+    "separar-entradas-saidas"
+  ],
+  "aprende": [
+    {
+      "icone": "pasta",
+      "t": "One folder per topic, and config for what applies to all"
+    },
+    {
+      "icone": "arquivo",
+      "t": "The three Markdown markers: #, ##, and -"
+    },
+    {
+      "icone": "usuario",
+      "t": "README for people, AGENTS.md for the agent"
+    },
+    {
+      "icone": "lupa",
+      "t": "Edit with Notepad and check with type"
+    }
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "The work tree",
+      "sub": "Each drawer holds one topic. Click each part.",
+      "nos": [
+        {
+          "icone": "pasta",
+          "titulo": "projetos",
+          "sub": "%USERPROFILE%\\projetos",
+          "itens": [
+            {
+              "icone": "pasta",
+              "t": "config"
+            },
+            {
+              "icone": "pasta",
+              "t": "meu-primeiro-agente"
+            }
+          ],
+          "detalhe": "Brings together independent work. Each folder inside it is a context: the material for one topic. When you open the agent in a folder, it works from there."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "config",
+          "sub": "Applies to all projects",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "memoria.md",
+              "sub": "your stable preferences"
+            },
+            {
+              "icone": "arquivo",
+              "t": "decisoes.md",
+              "sub": "choice, date, and reason"
+            }
+          ],
+          "detalhe": "It stays inside projetos, but outside each project. It stores what always applies, such as “I prefer short reports, with pending items at the end.” Write it once, use it everywhere."
+        },
+        {
+          "icone": "pasta",
+          "titulo": "meu-primeiro-agente",
+          "sub": "One context, one topic",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "README.md",
+              "sub": "for people"
+            },
+            {
+              "icone": "arquivo",
+              "t": "AGENTS.md",
+              "sub": "for the agent"
+            },
+            {
+              "icone": "pasta",
+              "t": "entradas / saidas"
+            }
+          ],
+          "detalhe": "Entradas is what the AI reads; saidas is what it produces for you to review. Keeping them separate lets you check one against the other. Don’t mix in material from another client or class here.",
+          "forte": true
+        },
+        {
+          "icone": "robo",
+          "titulo": "Agent",
+          "sub": "Opened inside the project",
+          "itens": [
+            {
+              "icone": "lupa",
+              "t": "Reads AGENTS.md"
+            },
+            {
+              "icone": "arquivo",
+              "t": "Writes to saidas"
+            }
+          ],
+          "detalhe": "The agent looks for AGENTS.md on its own when it starts. It reads the rest when you point it to them: the AI doesn’t open every file in the folder on its own."
+        }
+      ],
+      "legenda": "Short names, with no spaces or accents: meu-primeiro-agente, entradas, saidas.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "Less material, clearer trail",
+        "texto": "A separate folder for each topic means the AI reads less and you can tell where each sentence came from. Sketch the folder tree on paper before creating it. Take your time with the names."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Markdown and the two files",
+      "sub": "Text organized with three marks.",
+      "passos": [
+        {
+          "titulo": "Three marks",
+          "sub": "#, ## and -",
+          "texto": [
+            "<code>#</code> at the start of a line makes a heading, <code>##</code> makes a subheading, and a hyphen makes a list item. The file ends in <code>.md</code> and opens in any text editor.",
+            "It’s still text: readers can understand the structure even without formatting."
+          ],
+          "exemplo": {
+            "rot": "In the file",
+            "texto": "# Science fair  ## Materials  - cotton and a cup"
+          }
+        },
+        {
+          "titulo": "README",
+          "sub": "For the next person",
+          "texto": [
+            "It explains what the project is for and how to check the result. Five sections: Purpose, Read first, Organization, How to verify, and Current status.",
+            "Don’t know a field yet? Write \"to be defined\". An honest blank field is better than template text no one has checked."
+          ],
+          "exemplo": {
+            "rot": "How to verify",
+            "texto": "Every registered group appears on the final list."
+          }
+        },
+        {
+          "titulo": "AGENTS.md",
+          "sub": "The employee handbook",
+          "texto": [
+            "It tells the agent who you are, the project rules, and what’s in the folder. Claude Code and Codex read the same file, so the rules apply to both.",
+            "Start with three rules of your own. In lesson 7, it grows and gets rules you can check."
+          ],
+          "exemplo": {
+            "rot": "Rule",
+            "texto": "Before you finish, say what changed and how I can check it."
+          }
+        },
+        {
+          "titulo": "Edit and check",
+          "sub": "notepad and type",
+          "texto": [
+            "<code>notepad README.md</code> opens the file in Notepad; Ctrl+S saves it. <code>type README.md</code> shows what was saved in cmd.",
+            "Accents displayed incorrectly in cmd, such as Ã§ instead of ç, are just a screen issue; the file is fine."
+          ],
+          "exemplo": {
+            "rot": "On Mac and Linux",
+            "texto": "nano README.md to edit, cat README.md to view."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "The folder tree and the two files",
+      "sub": "Create the folders in cmd and paste the templates into Notepad. Replace what’s inside < >.",
+      "blocos": [
+        {
+          "rot": "cmd · the folders",
+          "icone": "pasta",
+          "conteudo": "cd %USERPROFILE%\\projetos\nmkdir config\ncd meu-primeiro-agente\nmkdir entradas\nmkdir saidas\ndir /b"
+        },
+        {
+          "rot": "README.md",
+          "icone": "arquivo",
+          "conteudo": "# My first agent\n\n## Purpose\n<what this project produces, in one sentence>\n\n## Read first\n1. AGENTS.md\n2. ../config/decisoes.md\n3. ../config/memoria.md\n\n## Organization\n- entradas: what the AI reads\n- saidas: what it produces for me to review\n\n## How to verify\n<how someone can check that the result is correct>\n\n## Current status\nTo be defined."
+        },
+        {
+          "rot": "AGENTS.md",
+          "icone": "arquivo",
+          "conteudo": "# Who I am\n<your name, your profession, who you work for>\n\n# Rules for this project\n- Write in English, using short sentences.\n- Work only inside this folder. Don’t delete files without asking.\n- Before you finish, say what changed and how I can check it.\n\n# What’s here\n- entradas/: material you can read\n- saidas/: where you deliver drafts"
+        },
+        {
+          "rot": "cmd · create, edit, and check",
+          "icone": "terminal",
+          "conteudo": "notepad README.md\nnotepad AGENTS.md\ntype AGENTS.md"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "The finished folder tree",
+            "html": "<pre>C:\\Users\\ana\\projetos\n├─ config\n└─ meu-primeiro-agente\n   ├─ AGENTS.md\n   ├─ README.md\n   ├─ entradas\n   └─ saidas</pre><p>Notepad asks if you want to create the new file: answer Yes. Save with Ctrl+S and close it.</p>"
+          },
+          {
+            "rot": "Common mistakes",
+            "html": "<ul><li><b>File becomes AGENTS.md.txt</b>: in Notepad, under File type, choose \"All files\", or create it with <code>notepad AGENTS.md</code> in cmd.</li><li><b>Everything in the Documents folder</b>: the agent reads evidence, contracts, and notes that have nothing to do with the task.</li><li><b>Repeat the preference in every project</b>: keep it just once, in config.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "simterm",
+      "titulo": "Rehearse: build the folder tree",
+      "sub": "Create the folders and check them, as you would on your computer.",
+      "janela": "Command Prompt · simulation",
+      "sistema": "windows",
+      "inicio": "C:\\Users\\ana\\projetos",
+      "sufixo": ">",
+      "missoes": [
+        {
+          "pede": "Create the <code>config</code> folder here in projetos.",
+          "aceita": [
+            "mkdir config",
+            "md config"
+          ],
+          "saida": "",
+          "explica": "config sits beside the projects, not inside one of them."
+        },
+        {
+          "pede": "Go into <code>meu-primeiro-agente</code>.",
+          "aceita": [
+            "cd meu-primeiro-agente"
+          ],
+          "saida": "",
+          "vai": "C:\\Users\\ana\\projetos\\meu-primeiro-agente",
+          "explica": "The path before the &gt; shows you are in the project."
+        },
+        {
+          "pede": "Create the <code>entradas</code> folder.",
+          "aceita": [
+            "mkdir entradas",
+            "md entradas"
+          ],
+          "saida": "",
+          "explica": "Entradas (inputs): what the AI reads."
+        },
+        {
+          "pede": "Create the <code>saidas</code> folder (without an accent).",
+          "aceita": [
+            "mkdir saidas",
+            "md saidas"
+          ],
+          "saida": "",
+          "explica": "Saidas (outputs): what it produces for you to review."
+        },
+        {
+          "pede": "Open AGENTS.md in Notepad.",
+          "aceita": [
+            "notepad AGENTS.md",
+            "notepad agents.md"
+          ],
+          "saida": "(Notepad opens; you paste the template, press Ctrl+S, and close it)",
+          "explica": "notepad followed by the name opens the editor that comes with Windows."
+        },
+        {
+          "pede": "List only the names of what’s in the folder.",
+          "aceita": [
+            "dir /b"
+          ],
+          "saida": "AGENTS.md\nentradas\nsaidas",
+          "explica": "The folders and the agent file are in place. Only the README is missing; that’s your practice."
+        },
+        {
+          "pede": "Show AGENTS.md in the terminal.",
+          "aceita": [
+            "type AGENTS.md",
+            "type agents.md"
+          ],
+          "saida": "# Who I am\nAna, HR consultant\n\n# Rules for this project\n- Write in English, using short sentences.\n…",
+          "explica": "<code>type</code> shows what was saved. Check it after editing."
+        }
+      ],
+      "fim": "The tree is set up in the rehearsal. Now do the practice below on your computer.",
+      "legenda": "Simulation: Ana is an example. In cmd, uppercase and lowercase letters in a file name mean the same thing."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "In the folder created in lesson 1.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E5 · The tree and the README",
+          "min": "15 min",
+          "texto": "Draw the tree on paper, create config, entradas, and saidas in cmd, and write the README with the five sections.",
+          "pronto": "<code>dir /b</code> shows entradas, saidas, and README.md, and each README section has real information or says \"to be defined\"."
+        },
+        {
+          "id": "e2",
+          "titulo": "E6 · The employee handbook",
+          "min": "15 min",
+          "texto": "Create AGENTS.md with who you are, the project rules, and what’s in the folder.",
+          "pronto": "<code>type AGENTS.md</code> shows at least three rules you wrote yourself."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "You want to save \"I prefer short reports, with open items at the end.\" Where does that note belong?",
+          "opcoes": [
+            "In each project’s outputs.",
+            "In the config folder, outside the projects.",
+            "In each project’s README.",
+            "In entradas, for the AI to read."
+          ],
+          "certa": 1,
+          "explica": "A preference that applies to all projects belongs in config, in one place. Repeating it in each project creates conflicting versions.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "What’s the difference between README.md and AGENTS.md?",
+          "opcoes": [
+            "None. They’re copies.",
+            "The README is for people; AGENTS.md gives the agent work instructions.",
+            "The README is only for Codex.",
+            "AGENTS.md stores passwords."
+          ],
+          "certa": 1,
+          "explica": "Each one has a reader. The README explains the project to newcomers; AGENTS.md tells the agent how to work on it.",
+          "cert": true,
+          "ref": "passos"
+        },
+        {
+          "p": "You asked for a summary of the science fair, but a report card note showed up in the middle. What’s the likely cause?",
+          "opcoes": [
+            "The model is weak.",
+            "The folder mixed topics, and the report card note was in there too.",
+            "There was no internet.",
+            "The Markdown was wrong."
+          ],
+          "certa": 1,
+          "explica": "A folder with several topics creates noise. One folder per context helps the AI read only the material for the task.",
+          "ref": "diagrama"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To learn more",
+      "links": [
+        {
+          "t": "OSWork v6.2: folders, Markdown, and secrets (module 4)",
+          "href": "https://inematds.github.io/oswork-v62/",
+          "icone": "lista"
+        },
+        {
+          "t": "Step 1 exercises in jornada-agentes",
+          "href": "https://github.com/inematds/jornada-agentes/blob/main/exercicios/01-oswork.md",
+          "icone": "check"
+        }
+      ]
+    }
+  ]
+}

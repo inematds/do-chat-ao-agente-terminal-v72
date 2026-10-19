@@ -1,0 +1,375 @@
+{
+  "slug": "git",
+  "num": 6,
+  "titulo": "Git: the safety net for undoing any change",
+  "titulo_curto": "Git: save and undo",
+  "menu": "Git",
+  "minutos": 20,
+  "lead": "For a task, an agent can change ten files at once. Without history, you don’t know what changed or how to go back. With Git, each good version is saved with a date and explanation, and you can undo a change you didn’t approve with one command.",
+  "objetivo": "save versions with status, add, diff, and commit, and undo an agent’s change with git restore, without panicking.",
+  "hero_alt": "Sheets of paper pinned in a row on a clothesline against a dark wall, beside a laptop.",
+  "competencias": [
+    "version-with-git",
+    "review-before-saving",
+    "undo-change"
+  ],
+  "aprende": [
+    {
+      "icone": "git",
+      "t": "Start the history only in the project folder"
+    },
+    {
+      "icone": "lupa",
+      "t": "Read git status and git diff before saving"
+    },
+    {
+      "icone": "check",
+      "t": "Save a version with a message that says what changed"
+    },
+    {
+      "icone": "voltar",
+      "t": "Restore a file with git restore and undo a version with git revert"
+    }
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Changed, staged, saved",
+      "sub": "The three stages of a file in Git. Click each one.",
+      "nos": [
+        {
+          "icone": "caneta",
+          "titulo": "In the folder",
+          "sub": "New or changed",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "index.html (changed)"
+            },
+            {
+              "icone": "arquivo",
+              "t": "notas.txt (new)"
+            }
+          ],
+          "detalhe": "The agent created or changed files. <code>git status</code> shows each one: \"Untracked files\" are files Git isn’t tracking yet; \"Changes not staged\" are changes that haven’t been staged."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Staged",
+          "sub": "git add <nome>",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "index.html"
+            }
+          ],
+          "detalhe": "<code>git add</code> with the file name stages only that file for the next version (Git calls this staging). <code>git diff --cached</code> shows, line by line, what will go in.",
+          "forte": true
+        },
+        {
+          "icone": "git",
+          "titulo": "Version saved",
+          "sub": "git commit -m \"…\"",
+          "itens": [
+            {
+              "icone": "check",
+              "t": "date, author, and message"
+            }
+          ],
+          "detalhe": "The commit clips together what was staged. The message is the photo caption: a verb and an object, such as \"Add contact section.\" \"update\" won’t tell you anything a month from now."
+        },
+        {
+          "icone": "voltar",
+          "titulo": "Back",
+          "sub": "restore or revert",
+          "itens": [
+            {
+              "icone": "arquivo",
+              "t": "git restore index.html"
+            },
+            {
+              "icone": "git",
+              "t": "git revert <código>"
+            }
+          ],
+          "detalhe": "Change not saved yet: <code>git restore</code> returns the file to the last saved version (and discards your changes). Version already saved: <code>git revert</code> creates a new version that undoes the previous one without erasing the history."
+        }
+      ],
+      "volta": "Golden rule: commit before asking for a big change",
+      "legenda": "Git runs only on your computer, without internet. GitHub is another optional step (lesson 8).",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "The cycle with the agent",
+        "texto": "Commit before you ask. The agent makes changes. Check them with status and diff. Like them: add and commit. Don’t like them: restore. Each good version becomes a point you can return to."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "From git init to the first undo",
+      "sub": "Click each step.",
+      "passos": [
+        {
+          "titulo": "Start the history",
+          "sub": "Only in the project folder",
+          "texto": [
+            "Inside meu-primeiro-agente, <code>git init</code> creates the history. Never run it in your entire personal folder.",
+            "<code>git config user.name</code> and <code>user.email</code>, without <code>--global</code>, say who saves changes, only in this project. The email appears in each version and is visible if the folder is published."
+          ],
+          "exemplo": {
+            "rot": "It responds",
+            "texto": "Initialized empty Git repository in …\\meu-primeiro-agente\\.git\\"
+          }
+        },
+        {
+          "titulo": "Look first",
+          "sub": "status and diff",
+          "texto": [
+            "<code>git status</code> tells you what stage each file is at. Always run it before staging anything.",
+            "This is where the .gitignore from lesson 5 proves itself: .env doesn’t appear in the list."
+          ],
+          "exemplo": {
+            "rot": "Look for",
+            "texto": "AGENTS.md, README.md, .gitignore, .env.example… and no .env."
+          }
+        },
+        {
+          "titulo": "Save",
+          "sub": "add and commit",
+          "texto": [
+            "To learn, name the files in <code>git add</code>. The shortcut <code>git add .</code> stages everything that isn’t ignored, including a personal note you forgot in the folder.",
+            "<code>git log --oneline</code> shows a short list of versions, one per line."
+          ],
+          "exemplo": {
+            "rot": "Good message",
+            "texto": "Creates README, AGENTS.md, and a list of what not to save"
+          }
+        },
+        {
+          "titulo": "Undo",
+          "sub": "Find where the change is",
+          "texto": [
+            "Only in the file, not saved: <code>git restore arquivo</code>. In a saved version: <code>git revert</code> with the version code, which appears in the log.",
+            "Check the open file, not just the terminal response."
+          ],
+          "exemplo": {
+            "rot": "An erratum, not an erasure",
+            "texto": "Revert makes a correction and leaves all three versions in the history."
+          }
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Git commands",
+      "sub": "In the meu-primeiro-agente folder. Replace anything inside < >.",
+      "blocos": [
+        {
+          "rot": "cmd · start and identify yourself (only in this folder)",
+          "icone": "git",
+          "conteudo": "cd %USERPROFILE%\\projetos\\meu-primeiro-agente\ngit init\ngit config user.name \"<Seu Nome>\"\ngit config user.email \"<seu@email.com>\"\ngit status"
+        },
+        {
+          "rot": "cmd · look, stage, and save the first version",
+          "icone": "check",
+          "conteudo": "git add README.md AGENTS.md .gitignore .env.example index.html\ngit diff --cached\ngit commit -m \"primeira versão\"\ngit log --oneline"
+        },
+        {
+          "rot": "cmd · after the agent changes something",
+          "icone": "lupa",
+          "conteudo": "git status\ngit diff"
+        },
+        {
+          "rot": "cmd · don’t like it: restore the file",
+          "icone": "voltar",
+          "conteudo": "git restore index.html\ngit status"
+        },
+        {
+          "rot": "cmd · like it: save the new version",
+          "icone": "git",
+          "conteudo": "git add index.html\ngit commit -m \"<what changed, with a verb>\""
+        },
+        {
+          "rot": "cmd · undo a saved version",
+          "icone": "camadas",
+          "conteudo": "git log --oneline\ngit revert <código da versão>"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "git status",
+            "html": "<pre>On branch master\nNo commits yet\nUntracked files:\n  (use \"git add &lt;file&gt;...\" to include in what will be committed)\n        .env.example\n        .gitignore\n        AGENTS.md\n        README.md\n        index.html</pre><p>\"Untracked files\" = outside the history. .env is not on the list: .gitignore worked.</p>"
+          },
+          {
+            "rot": "Reading the English",
+            "html": "<ul><li><b>Untracked files</b>: files Git is not tracking yet.</li><li><b>Changes to be committed</b>: staged; they’ll be included in the next version.</li><li><b>Changes not staged</b>: changed, but not staged.</li><li><b>nothing to commit, working tree clean</b>: nothing has changed since the last version.</li></ul>"
+          },
+          {
+            "rot": "Common mistakes",
+            "html": "<ul><li><b>git init in your personal folder</b>: Git starts looking at Documents, Downloads, everything. Run <code>cd</code> first and check the path.</li><li><b>Skipping Git</b>: the agent’s first bad change becomes manual rework.</li><li><b>\"Please tell me who you are\"</b>: the name and email <code>git config</code> are missing.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "simterm",
+      "titulo": "Rehearse: save, break, and go back",
+      "sub": "The agent will change index.html along the way.",
+      "janela": "Command Prompt · simulation",
+      "sistema": "windows",
+      "inicio": "C:\\Users\\ana\\projetos\\meu-primeiro-agente",
+      "sufixo": ">",
+      "missoes": [
+        {
+          "pede": "Start the history in this folder.",
+          "aceita": [
+            "git init"
+          ],
+          "saida": "Initialized empty Git repository in C:/Users/ana/projetos/meu-primeiro-agente/.git/",
+          "explica": "The history lives in the hidden .git folder, just for this project."
+        },
+        {
+          "pede": "Check the status of the files.",
+          "aceita": [
+            "git status"
+          ],
+          "saida": "On branch master\nNo commits yet\nUntracked files:\n        .env.example\n        .gitignore\n        AGENTS.md\n        README.md\n        index.html",
+          "explica": "Five files outside the history, and no .env. That’s proof of lesson 5. (master or main is just the name of the main branch; in lesson 8 it becomes main.)"
+        },
+        {
+          "pede": "Stage everything that isn’t ignored.",
+          "aceita": [
+            "git add .",
+            "git add -A"
+          ],
+          "saida": "",
+          "explica": "Now you can use the shortcut: you just checked the status and confirmed there’s nothing personal on the list."
+        },
+        {
+          "pede": "Save the first version with the message <code>primeira versão</code>.",
+          "aceita": [
+            "git commit -m \"primeira versão\"",
+            "git commit -m \"primeira versao\""
+          ],
+          "saida": "[master (root-commit) 5f6c1eb] primeira versão\n 5 files changed, 41 insertions(+)",
+          "explica": "Version saved, with a short code (5f6c1eb). The numbers are examples."
+        },
+        {
+          "pede": "The agent rewrote the page, and you didn’t like it. Check the status.",
+          "aceita": [
+            "git status"
+          ],
+          "saida": "On branch master\nChanges not staged for commit:\n        modified:   index.html",
+          "explica": "\"modified\": index.html changed since the last version and hasn’t been saved yet."
+        },
+        {
+          "pede": "Restore index.html to the last saved version.",
+          "aceita": [
+            "git restore index.html"
+          ],
+          "saida": "",
+          "explica": "No output means success. The agent’s change was discarded."
+        },
+        {
+          "pede": "Check that everything is back as it was.",
+          "aceita": [
+            "git status"
+          ],
+          "saida": "On branch master\nnothing to commit, working tree clean",
+          "explica": "\"working tree clean\": the folder matches the saved version. Undone with one command, no panic."
+        }
+      ],
+      "fim": "Full cycle: save, check the change, and go back. Do the same in your project.",
+      "legenda": "Simulation: codes and counts in the responses are examples."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "In the meu-primeiro-agente folder, with the agent open in another cmd window.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E11 · The safety net",
+          "min": "20 min",
+          "texto": "<code>git init</code>, config, status, add, and commit. Ask the agent to make a big change to the page and, if you don’t like it, undo it with <code>git restore</code>.",
+          "pronto": "you undid an agent change with one command, and <code>git status</code> says \"working tree clean\"."
+        },
+        {
+          "id": "e2",
+          "titulo": "E12 · Three versions with captions",
+          "min": "15 min",
+          "texto": "Ask for two small changes and save each with a message that says what changed. Then undo the last one with <code>git revert</code>.",
+          "pronto": "<code>git log --oneline</code> shows the versions with clear messages, including the revert, and the page is back to how it was."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Test what you learned",
+      "sub": "The explanation appears after your answer.",
+      "perguntas": [
+        {
+          "p": "The agent made a big change you didn’t approve, and you haven’t saved anything since. What should you do?",
+          "opcoes": [
+            "Delete the folder and start over.",
+            "Ask the agent to remember how it was.",
+            "git restore on the file, returning it to the last saved version.",
+            "git push."
+          ],
+          "certa": 2,
+          "explica": "With a commit from before the change, <code>git restore</code> restores the file in one command. That’s why you should commit before asking for a major change.",
+          "cert": true,
+          "ref": "simterm"
+        },
+        {
+          "p": "Why name the files in <code>git add</code> instead of always using <code>git add .</code>?",
+          "opcoes": [
+            "Because the dot doesn’t work on Windows.",
+            "So you don’t accidentally include a file you didn’t want in the history.",
+            "Because it’s faster.",
+            "Because the commit requires it."
+          ],
+          "certa": 1,
+          "explica": "The dot includes everything that isn’t ignored, including a forgotten personal note. Use the shortcut only after checking the status.",
+          "ref": "passos"
+        },
+        {
+          "p": "Which of these commit messages will help you a month from now?",
+          "opcoes": [
+            "update",
+            "adjustments",
+            "Adds contact section to index.html",
+            "various"
+          ],
+          "certa": 2,
+          "explica": "Verb and object: the version list already tells you what changed, without opening a file.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "A saved version was wrong. Which command undoes it without erasing the history?",
+          "opcoes": [
+            "git restore",
+            "git revert",
+            "git init",
+            "git status"
+          ],
+          "certa": 1,
+          "explica": "Revert is like a newspaper correction: it creates a new version that undoes the previous one. Restore is for changes that aren’t saved yet.",
+          "ref": "diagrama"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "To learn more",
+      "links": [
+        {
+          "t": "OSWork v6.2: Git and GitHub without losing work (module 6)",
+          "href": "https://inematds.github.io/oswork-v62/",
+          "icone": "git"
+        }
+      ]
+    }
+  ]
+}
