@@ -1,0 +1,218 @@
+{
+  "slug": "primeira-tarefa",
+  "num": 4,
+  "titulo": "Primeiro o agente lê, depois ele muda",
+  "titulo_curto": "A primeira tarefa",
+  "menu": "Tarefa",
+  "minutos": 18,
+  "lead": "\"Arrume o projeto\" mistura diagnóstico e mudança: se algo sai errado, você não sabe em qual parte foi. Separar leitura de alteração, dar a menor permissão que resolve e pedir um fechamento que diz o que foi conferido transforma o agente em alguém que você gerencia.",
+  "objetivo": "dar ao agente uma tarefa com escopo, conferir o que ele leu e mudou, e pedir pelo menos uma correção.",
+  "hero_alt": "Pessoa conferindo uma folha impressa com caneta ao lado do notebook com o terminal.",
+  "competencias": ["delegar-com-escopo", "conferir-entrega", "permissao-minima"],
+  "aprende": [
+    {"icone": "lupa", "t": "Pedir leitura sem edição e conferir os arquivos usados"},
+    {"icone": "arquivo", "t": "Autorizar uma mudança pequena e com nome"},
+    {"icone": "escudo", "t": "Escrever uma autorização em cinco partes"},
+    {"icone": "check", "t": "Exigir o fechamento: feito, conferido, pendente"}
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Vistoria antes da reforma",
+      "sub": "A ordem do primeiro trabalho, em quatro etapas.",
+      "nos": [
+        {
+          "icone": "lupa",
+          "titulo": "Inspecionar",
+          "sub": "Ler e explicar, sem editar",
+          "itens": [{"icone": "arquivo", "t": "Quais arquivos usou?"}],
+          "detalhe": "Nenhum arquivo muda nesta etapa. Peça com todas as letras: sem editar. E peça que ele diga quais arquivos leu, para você comparar com o <code>dir /b</code>."
+        },
+        {
+          "icone": "lista",
+          "titulo": "Planejar",
+          "sub": "Dizer o que falta",
+          "itens": [{"icone": "lista", "t": "plano.md com 3 ações"}],
+          "detalhe": "A lista do que falta é a sua referência. Se ele avisou que não abriu um arquivo, o plano ainda não conhece aquele conteúdo: diga no próximo pedido em que ele deve se apoiar."
+        },
+        {
+          "icone": "caneta",
+          "titulo": "Alterar",
+          "sub": "Um arquivo, com nome",
+          "itens": [{"icone": "arquivo", "t": "só o index.html"}],
+          "detalhe": "Você diz qual arquivo pode ser criado ou mudado. Se o agente perguntar antes de editar, confira que é só aquele arquivo e aprove. Se for outro, recuse.",
+          "forte": true
+        },
+        {
+          "icone": "check",
+          "titulo": "Validar",
+          "sub": "Você abre e confere",
+          "itens": [{"icone": "lupa", "t": "start index.html"}, {"icone": "chat", "t": "pede uma correção"}],
+          "detalhe": "A última palavra é sua. Abra o resultado e compare com o que pediu. Peça pelo menos uma correção: dar a tarefa, conferir e decidir é gestão."
+        }
+      ],
+      "volta": "Não ficou bom? Volte a inspecionar com um pedido mais claro",
+      "legenda": "Vale igual no Claude Code e no Codex: os dois leem o AGENTS.md e trabalham na pasta onde foram abertos.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "Usar × gerenciar",
+        "texto": "Quem usa pede e aceita. Quem gerencia separa leitura de mudança, autoriza com escopo e confere antes de aprovar. A diferença está no hábito, não na ferramenta."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Autonomia é autorização com escopo",
+      "sub": "Cinco partes que cabem num post-it.",
+      "passos": [
+        {
+          "titulo": "Objetivo e arquivos",
+          "sub": "O quê e com o quê",
+          "texto": [
+            "Diga o que é para produzir e o que ele pode ler. \"Rascunho do relatório de setembro, só a partir da planilha de setembro.\"",
+            "Pasta pequena, só com o material da tarefa, já limita o que ele alcança."
+          ],
+          "exemplo": {"rot": "Exemplo", "texto": "Objetivo: index.html sobre mim. Arquivos: só o AGENTS.md."}
+        },
+        {
+          "titulo": "Ações e parada",
+          "sub": "O que pode fazer e onde para",
+          "texto": [
+            "Diga as ações autorizadas e as proibidas: ler e criar, sim; apagar e renomear, não. Enviar, publicar e apagar são ações externas: cada uma exige instrução explícita.",
+            "O botão existir não é permissão. Diga onde ele para e espera você."
+          ],
+          "exemplo": {"rot": "Parada", "texto": "Entregue o rascunho e pare antes de enviar."}
+        },
+        {
+          "titulo": "Permissão mínima",
+          "sub": "Um degrau por vez",
+          "texto": [
+            "Ler arquivos tem risco baixo; escrever, médio; executar comandos, alto. Comece pelo mais restrito que dá conta da tarefa.",
+            "Regra escrita orienta; quem impede de fato são as permissões do programa. No Codex, <code>/permissions</code> mostra e troca o que ele pode fazer."
+          ],
+          "exemplo": {"rot": "Não faça", "texto": "Tirar todas as proteções para contornar um erro."}
+        },
+        {
+          "titulo": "Fechamento",
+          "sub": "Feito, conferido, pendente",
+          "texto": [
+            "Peça sempre que ele termine dizendo o que foi feito, como foi verificado e o que ficou pendente.",
+            "Assim o resultado vira algo que você revisa, e não algo em que precisa acreditar."
+          ],
+          "exemplo": {"rot": "Fechamento", "texto": "Feito: index.html. Conferido: abre no navegador. Pendente: foto."}
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Os pedidos, na ordem",
+      "sub": "Abra o agente dentro da pasta (claude ou codex) e cole um pedido por vez.",
+      "blocos": [
+        {
+          "rot": "Pedido 1 · só leitura",
+          "icone": "lupa",
+          "conteudo": "Leia AGENTS.md e README.md. Explique o propósito do projeto e liste o que falta, sem editar nada. No fim, diga quais arquivos você usou."
+        },
+        {
+          "rot": "Pedido 2 · mudança com nome e parada",
+          "icone": "caneta",
+          "conteudo": "Leia o AGENTS.md. Crie só o index.html com uma página simples sobre mim, usando o que está lá. Não altere nem apague outros arquivos.\nNo fim, diga: o que foi feito, como você conferiu e o que ficou pendente."
+        },
+        {
+          "rot": "cmd · conferir a mudança",
+          "icone": "terminal",
+          "conteudo": "dir /b\nstart index.html"
+        },
+        {
+          "rot": "Pedido 3 · a correção",
+          "icone": "chat",
+          "conteudo": "Troque o título por \"<seu título>\" e acrescente uma seção de contato. Só no index.html."
+        },
+        {
+          "rot": "Pedido 4 · o agente lê os seus arquivos",
+          "icone": "arquivo",
+          "conteudo": "Leia os arquivos .txt da pasta entradas e escreva saidas/resumo.md com 5 decisões e 5 pendências, citando de qual arquivo veio cada uma."
+        },
+        {
+          "rot": "cmd · ponto de retorno antes do Git (aula 6)",
+          "icone": "camadas",
+          "conteudo": "cd %USERPROFILE%\\projetos\nxcopy /e /i meu-primeiro-agente meu-primeiro-agente-antes\nrem depois da mudança, compare:\nfc /n meu-primeiro-agente-antes\\*.md meu-primeiro-agente\\*.md"
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "Resposta boa",
+            "html": "<p><b>Pedido 1:</b> \"O propósito é uma página sobre a Ana. Falta: o index.html, o formato e como conferir. Arquivos lidos: AGENTS.md e README.md. Também consultei a listagem. Nada foi editado.\"</p><p>Explicou, listou o que falta, disse o que leu e o que não leu. Nenhum arquivo mudou.</p>"
+          },
+          {
+            "rot": "Como conferir",
+            "html": "<ol><li>Os arquivos que ele diz ter lido existem no <code>dir /b</code>.</li><li>Depois do pedido 2, só apareceu o index.html.</li><li>A página abre no navegador e você pediu uma correção.</li><li>No resumo.md, você achou no original pelo menos duas das frases citadas.</li></ol>"
+          },
+          {
+            "rot": "Erros comuns",
+            "html": "<ul><li><b>\"Melhore a página\"</b>: gera mudança que você não sabe conferir. Peça um resultado que dá para ver.</li><li><b>Aprovar sem ler</b>: o agente pergunta antes de editar justamente para você ver qual arquivo muda.</li><li><b>Citação que não existe no original</b>: anote no AGENTS.md a regra que faltou (\"cite só frases que existem no arquivo\").</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática",
+      "sub": "Com o agente aberto dentro de meu-primeiro-agente.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E7 · A primeira tarefa",
+          "min": "20 min",
+          "texto": "Faça o pedido 1 (só leitura) e o pedido 2. Abra a página com <code>start index.html</code> e peça uma mudança.",
+          "pronto": "a página abre no navegador e você pediu pelo menos uma correção ao agente."
+        },
+        {
+          "id": "e2",
+          "titulo": "E8 · O agente lê os seus arquivos",
+          "min": "20 min",
+          "texto": "Coloque em entradas três textos seus (anotações, uma ata, um e-mail longo) e faça o pedido 4. Confira duas citações no arquivo original.",
+          "pronto": "você achou no original pelo menos duas das frases citadas. Se alguma não existir, a regra que faltou foi para o AGENTS.md."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "Qual é o melhor primeiro pedido numa pasta nova?",
+          "opcoes": ["\"Arrume o projeto.\"", "\"Leia AGENTS.md e README.md, explique e liste o que falta, sem editar; diga quais arquivos usou.\"", "\"Faça o que achar melhor.\"", "\"Crie todos os arquivos que faltam.\""],
+          "certa": 1,
+          "explica": "Primeiro a vistoria: ler sem editar e dizer o que usou. Assim você tem uma referência antes de qualquer mudança.",
+          "cert": true,
+          "ref": "diagrama"
+        },
+        {
+          "p": "A autorização dizia só \"organize a pasta das provas\", e o agente apagou três arquivos que pareciam cópias. Qual parte faltou?",
+          "opcoes": ["As ações autorizadas.", "O limite de tempo.", "O objetivo.", "O nome do modelo."],
+          "certa": 0,
+          "explica": "Sem dizer o que ele pode e não pode fazer (ler e criar, sim; apagar, não), apagar ficou implícito.",
+          "ref": "passos"
+        },
+        {
+          "p": "O AGENTS.md diz \"não envie nada\". Isso impede tecnicamente o envio?",
+          "opcoes": ["Sim, o agente nunca desobedece.", "Não: a regra orienta; quem impede são as permissões do programa.", "Sim, se o arquivo estiver em maiúsculas.", "Só no Codex."],
+          "certa": 1,
+          "explica": "Regra escrita orienta o comportamento; permissão limita o que é possível. As duas se completam.",
+          "ref": "passos"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para aprofundar",
+      "links": [
+        {"t": "OSWork v6.2: autonomia é autorização com escopo", "href": "https://inematds.github.io/oswork-v62/", "icone": "escudo"},
+        {"t": "Área OSWork no Eventos", "href": "https://eventos.inema.pro/oswork/", "icone": "terminal"}
+      ]
+    }
+  ]
+}

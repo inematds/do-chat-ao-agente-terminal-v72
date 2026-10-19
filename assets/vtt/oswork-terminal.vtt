@@ -1,0 +1,1046 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.870
+Os agentes de inteligência artificial trabalham no terminal.
+
+2
+00:00:02.920 --> 00:00:07.400
+E o gestor que não sabe abrir um terminal não consegue nem ver o que o agente fez.
+
+3
+00:00:07.715 --> 00:00:07.845
+que o agente fez.
+
+4
+00:00:07.845 --> 00:00:09.545
+Lembra do gerente que não sabe lidar
+
+5
+00:00:09.545 --> 00:00:10.225
+com pessoas?
+
+6
+00:00:10.225 --> 00:00:12.285
+Quem não domina o terminal e os
+
+7
+00:00:12.285 --> 00:00:15.165
+agentes está ficando na mesma situação.
+
+8
+00:00:15.165 --> 00:00:16.305
+A boa notícia:
+
+9
+00:00:16.305 --> 00:00:18.305
+dá para aprender em uma tarde.
+
+10
+00:00:18.305 --> 00:00:20.245
+Neste vídeo eu vou fazer com você
+
+11
+00:00:20.245 --> 00:00:21.805
+o OSWork na prática,
+
+12
+00:00:21.805 --> 00:00:23.045
+comando por comando,
+
+13
+00:00:23.045 --> 00:00:24.465
+copiando e colando.
+
+14
+00:00:24.465 --> 00:00:27.145
+Do terminal vazio até o seu site
+
+15
+00:00:27.145 --> 00:00:28.065
+publicado na internet,
+
+16
+00:00:28.065 --> 00:00:31.185
+e o mesmo projeto rodando num servidor.
+
+17
+00:00:31.185 --> 00:00:33.545
+Primeiro, tire o medo da tela preta.
+
+18
+00:00:33.545 --> 00:00:36.265
+O terminal é só outra janela para
+
+19
+00:00:36.265 --> 00:00:37.965
+as mesmas pastas do Windows.
+
+20
+00:00:37.965 --> 00:00:39.305
+Você escreve um comando,
+
+21
+00:00:39.305 --> 00:00:41.665
+aperta Enter e lê a resposta.
+
+22
+00:00:41.665 --> 00:00:43.325
+É ali que o Claude Code e
+
+23
+00:00:43.325 --> 00:00:44.625
+o Codex trabalham:
+
+24
+00:00:44.625 --> 00:00:46.105
+dentro de uma pasta,
+
+25
+00:00:46.105 --> 00:00:48.485
+lendo e criando arquivos.
+
+26
+00:00:48.485 --> 00:00:50.245
+Tudo o que eu vou mostrar está
+
+27
+00:00:50.245 --> 00:00:52.525
+na página do OSWork no eventos do
+
+28
+00:00:52.525 --> 00:00:54.585
+INEMA, com uma cola de comandos para
+
+29
+00:00:54.585 --> 00:00:55.145
+baixar.
+
+30
+00:00:55.145 --> 00:00:56.465
+Você faz na ordem,
+
+31
+00:00:56.465 --> 00:00:59.445
+num computador com Windows dez ou
+
+32
+00:00:59.455 --> 00:00:59.965
+onze.
+
+33
+00:00:59.965 --> 00:01:02.885
+Onde aparecer Seu Nome ou Seu Usuário,
+
+34
+00:01:02.885 --> 00:01:04.645
+troque pelo seu.
+
+35
+00:01:04.645 --> 00:01:05.645
+Passo um.
+
+36
+00:01:05.645 --> 00:01:07.225
+Aperte a tecla Windows,
+
+37
+00:01:07.225 --> 00:01:09.825
+digite cmd e aperte Enter.
+
+38
+00:01:09.825 --> 00:01:12.245
+Abre uma janela preta com C dois
+
+39
+00:01:12.245 --> 00:01:13.905
+pontos, barra, Users,
+
+40
+00:01:13.905 --> 00:01:15.065
+barra, o seu nome.
+
+41
+00:01:15.065 --> 00:01:16.905
+Essa é a sua pasta pessoal.
+
+42
+00:01:16.905 --> 00:01:19.645
+Passo dois: criar a pasta projetos e
+
+43
+00:01:19.645 --> 00:01:21.745
+a do primeiro projeto.
+
+44
+00:01:21.745 --> 00:01:23.305
+Um comando por vez,
+
+45
+00:01:23.305 --> 00:01:24.745
+Enter depois de cada um.
+
+46
+00:01:24.745 --> 00:01:26.405
+cd, porcentagem,
+
+47
+00:01:26.405 --> 00:01:28.045
+user profile, porcentagem,
+
+48
+00:01:28.045 --> 00:01:30.645
+para ir à sua pasta pessoal.
+
+49
+00:01:30.665 --> 00:01:33.565
+mkdir projetos, que cria a pasta.
+
+50
+00:01:33.565 --> 00:01:36.425
+cd projetos, para entrar nela.
+
+51
+00:01:36.425 --> 00:01:37.385
+mkdir
+
+52
+00:01:37.385 --> 00:01:37.745
+meu-site.
+
+53
+00:01:37.745 --> 00:01:39.105
+E cd meu-site.
+
+54
+00:01:39.105 --> 00:01:41.545
+No fim, o terminal mostra que você
+
+55
+00:01:41.545 --> 00:01:43.155
+está dentro de projetos,
+
+56
+00:01:43.155 --> 00:01:43.485
+meu-site.
+
+57
+00:01:43.485 --> 00:01:45.925
+O passo três é o mais importante.
+
+58
+00:01:45.925 --> 00:01:48.245
+Digite explorer, espaço,
+
+59
+00:01:48.245 --> 00:01:48.825
+ponto.
+
+60
+00:01:48.825 --> 00:01:51.605
+O Explorador de Arquivos abre exatamente na
+
+61
+00:01:51.605 --> 00:01:53.745
+pasta em que o terminal está.
+
+62
+00:01:53.745 --> 00:01:56.305
+Terminal e Explorador mostram o mesmo lugar.
+
+63
+00:01:56.305 --> 00:01:57.545
+O que você cria num,
+
+64
+00:01:57.545 --> 00:01:58.665
+aparece no outro.
+
+65
+00:01:58.665 --> 00:02:00.065
+Quando isso fica claro,
+
+66
+00:02:00.065 --> 00:02:02.445
+a tela preta deixa de assustar.
+
+67
+00:02:02.445 --> 00:02:03.245
+Passo quatro.
+
+68
+00:02:03.245 --> 00:02:05.765
+Com seis comandos você
+
+69
+00:02:05.805 --> 00:02:07.425
+anda por todas as pastas.
+
+70
+00:02:07.425 --> 00:02:09.645
+dir lista o que tem na pasta.
+
+71
+00:02:09.645 --> 00:02:11.665
+cd nome entra na pasta.
+
+72
+00:02:11.665 --> 00:02:14.885
+cd ponto ponto volta uma pasta.
+
+73
+00:02:14.885 --> 00:02:17.285
+mkdir nome cria uma pasta.
+
+74
+00:02:17.285 --> 00:02:19.685
+explorer ponto abre a pasta no Windows.
+
+75
+00:02:19.685 --> 00:02:21.805
+E cls limpa a tela.
+
+76
+00:02:21.805 --> 00:02:25.085
+Treine agora: cd ponto ponto para voltar,
+
+77
+00:02:25.085 --> 00:02:26.305
+dir para listar,
+
+78
+00:02:26.305 --> 00:02:29.605
+e cd meu-site para entrar de novo.
+
+79
+00:02:29.605 --> 00:02:31.445
+Passo cinco, só uma vez:
+
+80
+00:02:31.445 --> 00:02:32.485
+instalar o Git,
+
+81
+00:02:32.485 --> 00:02:34.625
+o GitHub CLI e o Node.
+
+82
+00:02:34.625 --> 00:02:36.485
+O winget já vem no Windows.
+
+83
+00:02:36.485 --> 00:02:37.685
+São três linhas,
+
+84
+00:02:37.685 --> 00:02:39.385
+winget install com o nome de cada
+
+85
+00:02:39.385 --> 00:02:39.985
+programa.
+
+86
+00:02:39.985 --> 00:02:42.105
+Depois feche o cmd e abra de
+
+87
+00:02:42.105 --> 00:02:44.305
+novo, para ele enxergar os programas novos.
+
+88
+00:02:44.305 --> 00:02:45.285
+git,
+
+89
+00:02:45.285 --> 00:02:46.205
+traço
+
+90
+00:02:46.205 --> 00:02:47.865
+traço version, e gh,
+
+91
+00:02:47.865 --> 00:02:49.265
+traço traço version,
+
+92
+00:02:49.265 --> 00:02:50.365
+mostram um número de versão.
+
+93
+00:02:50.365 --> 00:02:52.565
+Passo seis: instalar
+
+94
+00:02:53.665 --> 00:02:56.045
+o agente, Claude Code ou Codex.
+
+95
+00:02:56.045 --> 00:02:57.145
+Escolha
+
+96
+00:02:57.145 --> 00:02:58.085
+um, ou os dois.
+
+97
+00:02:58.085 --> 00:02:59.665
+Uma linha instala o Claude Code,
+
+98
+00:02:59.665 --> 00:03:01.885
+a outra instala o Codex.
+
+99
+00:03:01.885 --> 00:03:03.345
+Na primeira vez que abrir,
+
+100
+00:03:03.345 --> 00:03:05.565
+você entra com a sua assinatura,
+
+101
+00:03:05.645 --> 00:03:07.665
+Claude Pro ou Max,
+
+102
+00:03:07.665 --> 00:03:10.265
+ou ChatGPT Plus ou Pro.
+
+103
+00:03:10.265 --> 00:03:13.325
+Passo sete, e aqui o agente entra.
+
+104
+00:03:13.325 --> 00:03:15.665
+O agente só enxerga a pasta em
+
+105
+00:03:15.665 --> 00:03:16.305
+que você está.
+
+106
+00:03:16.305 --> 00:03:18.365
+Então primeiro entre na pasta do projeto,
+
+107
+00:03:18.365 --> 00:03:20.695
+e depois chame o agente:
+
+108
+00:03:20.695 --> 00:03:22.805
+claude, ou codex.
+
+109
+00:03:22.805 --> 00:03:25.645
+Peça assim: crie um index ponto html
+
+110
+00:03:25.645 --> 00:03:27.385
+com uma página simples sobre mim,
+
+111
+00:03:27.385 --> 00:03:30.345
+e um arquivo AGENTS ponto md
+
+112
+00:03:30.425 --> 00:03:32.265
+com as regras deste projeto.
+
+113
+00:03:32.265 --> 00:03:33.485
+Para sair do agente,
+
+114
+00:03:33.485 --> 00:03:34.725
+digite barra exit.
+
+115
+00:03:34.725 --> 00:03:37.845
+Agora dir: os arquivos novos aparecem.
+
+116
+00:03:37.845 --> 00:03:38.805
+E
+
+117
+00:03:38.805 --> 00:03:40.645
+start index ponto html
+
+118
+00:03:40.645 --> 00:03:41.645
+abre
+
+119
+00:03:41.645 --> 00:03:43.365
+a sua página no navegador.
+
+120
+00:03:43.365 --> 00:03:45.905
+Repare: você não programou nada.
+
+121
+00:03:45.905 --> 00:03:47.225
+Você deu a tarefa,
+
+122
+00:03:47.225 --> 00:03:49.905
+conferiu o resultado e decidiu.
+
+123
+00:03:50.145 --> 00:03:51.605
+Isso é gestão.
+
+124
+00:03:51.765 --> 00:03:52.785
+Parte
+
+125
+00:03:52.785 --> 00:03:55.545
+dois: guardar e publicar no GitHub.
+
+126
+00:03:55.545 --> 00:03:57.165
+O git guarda
+
+127
+00:03:57.165 --> 00:03:58.225
+versões do projeto.
+
+128
+00:03:58.225 --> 00:04:00.045
+O gh conversa
+
+129
+00:04:00.045 --> 00:04:01.185
+com a sua conta do GitHub.
+
+130
+00:04:01.185 --> 00:04:03.125
+E a chave SSH é a sua
+
+131
+00:04:03.125 --> 00:04:04.685
+identidade, sem senha.
+
+132
+00:04:04.685 --> 00:04:06.765
+Passo oito: diga ao Git quem é
+
+133
+00:04:06.765 --> 00:04:08.365
+você, com git config,
+
+134
+00:04:08.365 --> 00:04:09.865
+o seu nome e o mesmo e-mail
+
+135
+00:04:09.865 --> 00:04:11.425
+da sua conta do GitHub.
+
+136
+00:04:11.425 --> 00:04:13.925
+Passo nove: crie a sua chave SSH
+
+137
+00:04:13.925 --> 00:04:15.325
+com ssh keygen,
+
+138
+00:04:15.325 --> 00:04:17.385
+e aperte Enter nas três perguntas.
+
+139
+00:04:17.385 --> 00:04:19.605
+Depois abra a pasta ponto ssh.
+
+140
+00:04:19.605 --> 00:04:20.925
+Lá estão dois arquivos.
+
+141
+00:04:20.925 --> 00:04:22.645
+O que não tem ponto pub no
+
+142
+00:04:22.645 --> 00:04:24.805
+fim é a chave privada:
+
+143
+00:04:24.805 --> 00:04:26.525
+nunca envie a ninguém.
+
+144
+00:04:26.525 --> 00:04:28.785
+O que termina em ponto pub é
+
+145
+00:04:28.785 --> 00:04:30.905
+a pública: é ela que você entrega
+
+146
+00:04:30.905 --> 00:04:33.005
+ao GitHub e à VPS.
+
+147
+00:04:33.005 --> 00:04:34.205
+Passo
+
+148
+00:04:34.205 --> 00:04:36.285
+dez: gh auth login.
+
+149
+00:04:36.285 --> 00:04:38.685
+Responda GitHub ponto com,
+
+150
+00:04:38.785 --> 00:04:40.285
+depois SSH,
+
+151
+00:04:40.285 --> 00:04:42.805
+escolha a chave ponto pub e entre
+
+152
+00:04:42.805 --> 00:04:43.805
+pelo navegador.
+
+153
+00:04:43.805 --> 00:04:46.425
+Depois teste a chave com ssh traço
+
+154
+00:04:46.425 --> 00:04:47.385
+T
+
+155
+00:04:47.385 --> 00:04:49.685
+git arroba github ponto com.
+
+156
+00:04:49.685 --> 00:04:50.625
+Na
+
+157
+00:04:50.625 --> 00:04:52.745
+primeira vez, responda yes.
+
+158
+00:04:52.745 --> 00:04:53.965
+Se aparecer Hi,
+
+159
+00:04:53.965 --> 00:04:55.045
+com
+
+160
+00:04:55.045 --> 00:04:55.725
+o seu usuário,
+
+161
+00:04:55.725 --> 00:04:57.365
+e successfully
+
+162
+00:04:57.365 --> 00:04:58.265
+authenticated,
+
+163
+00:04:58.265 --> 00:04:59.265
+deu certo.
+
+164
+00:04:59.265 --> 00:05:01.965
+Passo onze: criar o repositório e enviar
+
+165
+00:05:01.965 --> 00:05:02.665
+o projeto.
+
+166
+00:05:02.665 --> 00:05:03.805
+Dentro da pasta:
+
+167
+00:05:03.805 --> 00:05:06.365
+git init, git add ponto,
+
+168
+00:05:06.365 --> 00:05:09.165
+git commit com a mensagem primeira versão,
+
+169
+00:05:09.165 --> 00:05:10.865
+git branch traço M main,
+
+170
+00:05:10.865 --> 00:05:13.405
+e gh repo create
+
+171
+00:05:13.515 --> 00:05:14.445
+meu-site.
+
+172
+00:05:14.445 --> 00:05:16.385
+Público, qualquer pessoa vê.
+
+173
+00:05:16.385 --> 00:05:19.045
+Privado, só você e quem você convidar.
+
+174
+00:05:19.045 --> 00:05:20.095
+Passo
+
+175
+00:05:20.095 --> 00:05:22.285
+doze: publicar a página no GitHub Pages,
+
+176
+00:05:22.285 --> 00:05:24.165
+de graça em repositório público.
+
+177
+00:05:24.165 --> 00:05:25.865
+Uma linha com gh api,
+
+178
+00:05:25.865 --> 00:05:26.905
+ou pelo site,
+
+179
+00:05:26.905 --> 00:05:28.505
+em Settings, Pages,
+
+180
+00:05:28.505 --> 00:05:29.245
+branch main.
+
+181
+00:05:29.245 --> 00:05:30.625
+Em um ou dois minutos,
+
+182
+00:05:30.625 --> 00:05:32.495
+a página abre no endereço seu usuário
+
+183
+00:05:32.495 --> 00:05:33.625
+ponto github
+
+184
+00:05:33.625 --> 00:05:34.625
+ponto io,
+
+185
+00:05:34.625 --> 00:05:35.625
+barra
+
+186
+00:05:35.625 --> 00:05:35.945
+meu-site.
+
+187
+00:05:35.945 --> 00:05:38.765
+Passo treze, a rotina de todo dia.
+
+188
+00:05:38.765 --> 00:05:40.445
+Mudou alguma coisa?
+
+189
+00:05:40.445 --> 00:05:41.505
+git add ponto,
+
+190
+00:05:41.505 --> 00:05:43.085
+git commit com o que mudou,
+
+191
+00:05:43.085 --> 00:05:44.165
+e git push.
+
+192
+00:05:44.165 --> 00:05:45.805
+Ou peça ao agente:
+
+193
+00:05:45.805 --> 00:05:47.565
+salve e envie para o GitHub.
+
+194
+00:05:47.565 --> 00:05:48.715
+Parte
+
+195
+00:05:48.715 --> 00:05:49.665
+três: o mesmo,
+
+196
+00:05:49.665 --> 00:05:50.785
+num servidor.
+
+197
+00:05:50.785 --> 00:05:53.885
+Uma VPS é um computador Linux ligado
+
+198
+00:05:53.885 --> 00:05:55.325
+vinte e quatro horas.
+
+199
+00:05:55.685 --> 00:05:57.845
+Passo quatorze: na criação,
+
+200
+00:05:57.845 --> 00:06:00.565
+o provedor pede uma chave SSH.
+
+201
+00:06:00.865 --> 00:06:03.165
+Rode type com o caminho da sua
+
+202
+00:06:03.165 --> 00:06:04.225
+chave ponto pub,
+
+203
+00:06:04.225 --> 00:06:05.945
+e copie a linha inteira,
+
+204
+00:06:05.945 --> 00:06:07.765
+que começa com
+
+205
+00:06:08.145 --> 00:06:09.345
+ssh-ed25519.
+
+206
+00:06:09.465 --> 00:06:12.772
+Passo quinze: entre na VPS com
+
+207
+00:06:12.772 --> 00:06:14.765
+ssh root arroba o IP que o
+
+208
+00:06:14.765 --> 00:06:15.445
+provedor mostrou.
+
+209
+00:06:15.445 --> 00:06:17.745
+Agora o terminal é o servidor.
+
+210
+00:06:17.745 --> 00:06:18.755
+Passo
+
+211
+00:06:18.755 --> 00:06:20.745
+dezesseis: a navegação é a mesma,
+
+212
+00:06:20.745 --> 00:06:22.285
+só alguns nomes mudam.
+
+213
+00:06:22.285 --> 00:06:23.825
+dir vira ls.
+
+214
+00:06:23.825 --> 00:06:24.925
+cls
+
+215
+00:06:24.925 --> 00:06:25.885
+vira clear.
+
+216
+00:06:25.885 --> 00:06:27.205
+type vira cat.
+
+217
+00:06:27.205 --> 00:06:29.352
+E a sua pasta pessoal vira o
+
+218
+00:06:29.352 --> 00:06:29.465
+til.
+
+219
+00:06:29.465 --> 00:06:30.465
+Passo
+
+220
+00:06:30.465 --> 00:06:31.965
+dezessete: instale o git,
+
+221
+00:06:31.965 --> 00:06:34.025
+clone o seu projeto do GitHub,
+
+222
+00:06:34.025 --> 00:06:36.665
+entre na pasta e instale o agente.
+
+223
+00:06:36.665 --> 00:06:38.865
+Os mesmos arquivos do seu Windows,
+
+224
+00:06:38.865 --> 00:06:40.395
+agora na VPS.
+
+225
+00:06:40.395 --> 00:06:42.505
+Rode o claude dentro da pasta,
+
+226
+00:06:42.505 --> 00:06:43.585
+como no passo sete.
+
+227
+00:06:43.585 --> 00:06:46.105
+E quando quiser ligar outros sistemas,
+
+228
+00:06:46.105 --> 00:06:47.245
+dois nomes.
+
+229
+00:06:47.245 --> 00:06:49.325
+A Vercel importa o repositório do GitHub
+
+230
+00:06:49.325 --> 00:06:51.905
+e publica o site sozinha a cada
+
+231
+00:06:51.905 --> 00:06:54.245
+git push, com domínio próprio.
+
+232
+00:06:54.245 --> 00:06:55.925
+É bom para sites e apps que
+
+233
+00:06:55.925 --> 00:06:56.685
+vão crescer.
+
+234
+00:06:56.685 --> 00:06:59.265
+E o Supabase dá banco de dados,
+
+235
+00:06:59.265 --> 00:07:01.745
+login de usuários e arquivos para o
+
+236
+00:07:01.745 --> 00:07:02.225
+seu app.
+
+237
+00:07:02.225 --> 00:07:05.065
+O agente escreve a integração.
+
+238
+00:07:05.065 --> 00:07:08.205
+Você guarda as chaves fora do repositório.
+
+239
+00:07:08.505 --> 00:07:09.525
+Recapitulando:
+
+240
+00:07:09.525 --> 00:07:11.265
+terminal e pastas,
+
+241
+00:07:11.265 --> 00:07:13.065
+o agente dentro da pasta,
+
+242
+00:07:13.065 --> 00:07:15.705
+o GitHub para guardar e publicar,
+
+243
+00:07:15.705 --> 00:07:17.485
+e a VPS para rodar o tempo
+
+244
+00:07:17.485 --> 00:07:18.155
+todo.
+
+245
+00:07:18.155 --> 00:07:19.265
+Dezessete passos.
+
+246
+00:07:19.265 --> 00:07:21.465
+O gestor que domina isso enxerga o
+
+247
+00:07:21.465 --> 00:07:22.285
+que o agente fez,
+
+248
+00:07:22.285 --> 00:07:24.325
+confere e decide.
+
+249
+00:07:24.325 --> 00:07:25.865
+Por isso o terminal não é coisa
+
+250
+00:07:25.865 --> 00:07:28.125
+de programador: é o ambiente onde os
+
+251
+00:07:28.125 --> 00:07:29.365
+agentes trabalham.
+
+252
+00:07:29.365 --> 00:07:31.225
+A página está em eventos ponto inema
+
+253
+00:07:31.225 --> 00:07:32.145
+ponto pro,
+
+254
+00:07:32.145 --> 00:07:34.105
+barra oswork, com a cola de comandos.
+
+255
+00:07:34.105 --> 00:07:36.205
+E se quiser cada passo explicado com
+
+256
+00:07:36.205 --> 00:07:39.205
+calma, os cursos OSWork Quick e OSWork
+
+257
+00:07:39.205 --> 00:07:41.345
+seis ponto dois estão no INEMA ponto
+
+258
+00:07:41.345 --> 00:07:41.725
+club.
+
+259
+00:07:41.725 --> 00:07:42.685
+Aberto
+
+260
+00:07:42.685 --> 00:07:43.905
+e gratuito.
+
+261
+00:07:43.905 --> 00:07:45.587
+Comece hoje pelo passo um.
+

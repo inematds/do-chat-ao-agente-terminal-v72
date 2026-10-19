@@ -1,0 +1,188 @@
+{
+  "id": "do-chat-ao-agente-terminal-v72",
+  "lang": "pt-BR",
+  "url": "https://inematds.github.io/do-chat-ao-agente-terminal-v72/",
+  "nome": "Do chat para o terminal",
+  "sub": "Degrau 1 da formação Do chat ao agente",
+  "volta": {
+    "t": "Visão geral: Do chat ao agente",
+    "href": "https://inematds.github.io/do-chat-ao-agente-v72/"
+  },
+  "lado_card": {
+    "rot": "Cola de comandos",
+    "t": "Todos os comandos, na ordem",
+    "texto": "A sequência inteira do terminal à página no ar, para deixar aberta enquanto você faz.",
+    "link": "Abrir a cola do OSWork",
+    "href": "https://inematds.github.io/oswork-quick/materiais/"
+  },
+  "rodape": "INEMA.CLUB · conteúdo aberto e gratuito · formato INEMA Learning v7.2 · <a href=\"https://inematds.github.io/do-chat-ao-agente-v72/\">Visão geral da formação Do chat ao agente</a> · <a href=\"https://eventos.inema.pro/oswork/\">eventos.inema.pro/oswork</a> · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guia: como aprender inteligência artificial</a>",
+  "videos": {
+    "seq1-oswork": {
+      "titulo": "Do chat para o terminal",
+      "duracao": "1 min 52 s",
+      "mp4": "https://github.com/inematds/jornada-agentes/releases/download/video-v2.0.0/jornada-seq1-oswork-16x9.mp4",
+      "vtt": "assets/vtt/seq1-oswork.vtt",
+      "poster": "assets/img/seq1-oswork.jpg",
+      "pagina": "https://inematds.github.io/jornada-agentes/serie/seq1-oswork/"
+    },
+    "oswork-terminal": {
+      "titulo": "O gestor que domina o terminal: OSWork comando por comando",
+      "duracao": "7 min 46 s",
+      "mp4": "https://github.com/inematds/oswork-terminal/releases/download/video-v2.0.0/oswork-terminal-completo-16x9.mp4",
+      "vtt": "assets/vtt/oswork-terminal.vtt",
+      "poster": "assets/img/oswork-terminal.jpg",
+      "pagina": "https://inematds.github.io/oswork-terminal/videos/"
+    },
+    "jornada-ia": {
+      "titulo": "Do chat ao agente: a visão geral",
+      "duracao": "2 min 27 s",
+      "mp4": "https://github.com/inematds/jornada-agentes/releases/download/video-v2.0.0/jornada-jornada-ia-16x9.mp4",
+      "vtt": "assets/vtt/jornada-ia.vtt",
+      "poster": "assets/img/jornada-ia.jpg",
+      "pagina": "https://inematds.github.io/jornada-agentes/serie/jornada-ia/"
+    }
+  },
+  "inicio": {
+    "kicker": "Curso completo · degrau 1 de 4 · 8 aulas",
+    "titulo": "Do chat para o terminal: o agente trabalhando numa pasta sua",
+    "lead": "Abrir o terminal sem medo, instalar o agente da fonte oficial, montar a pasta com regras, guardar cada versão com o Git, manter as chaves fora do texto e pôr a sua página no ar. Comando por comando, com o que conferir em cada passo.",
+    "cta": "Começar pela aula 1",
+    "cta2": {
+      "t": "Voltar à visão geral da formação",
+      "href": "https://inematds.github.io/do-chat-ao-agente-v72/"
+    },
+    "capa_alt": "Notebook com o terminal aberto ao lado de um caderno com a árvore de pastas desenhada à mão.",
+    "numeros": [
+      {
+        "v": "8",
+        "t": "aulas"
+      },
+      {
+        "v": "42",
+        "t": "modelos com botão copiar"
+      },
+      {
+        "v": "6",
+        "t": "terminais de ensaio"
+      },
+      {
+        "v": "17",
+        "t": "exercícios com pronto quando"
+      }
+    ],
+    "aulas_titulo": "As aulas",
+    "aulas_sub": "Na ordem em que você faz. Cada aula termina com prática e um teste curto; só passe para a próxima quando o \"pronto quando\" for verdade.",
+    "blocos": [
+      {
+        "t": "Para quem é",
+        "itens": [
+          "Quem usa ChatGPT, Claude ou Gemini no navegador e nunca abriu um terminal.",
+          "Quem já viu a visão geral da formação e quer fazer o degrau 1 de verdade, com todos os comandos.",
+          "Quem vai orientar equipe ou cliente e precisa saber conferir o que o agente fez."
+        ]
+      },
+      {
+        "t": "O que você sai fazendo",
+        "itens": [
+          "Andar pelas pastas pelo cmd (e pelo Terminal do Mac ou do Linux) sabendo sempre onde está.",
+          "Instalar e entrar no Claude Code ou no Codex pela sua assinatura, conferindo o método.",
+          "Montar a pasta do agente com README, AGENTS.md, .env fora do Git e histórico para desfazer.",
+          "Publicar a página no GitHub Pages e levar o mesmo projeto para uma VPS."
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "pular": "Pular para o conteúdo",
+    "aulas": "Aulas",
+    "concluido": "concluído",
+    "aula": "Aula",
+    "nesta_aula": "Nesta aula, você vai aprender:",
+    "objetivo": "Objetivo:",
+    "proxima_aula": "Próxima aula",
+    "aula_anterior": "Aula anterior",
+    "voltar_inicio": "Voltar ao início do curso",
+    "marcar_concluida": "Marcar aula como concluída",
+    "dg_dica": "Clique em cada bloco do diagrama para ver o que ele faz.",
+    "copiar": "Copiar",
+    "copiado": "Copiado",
+    "selo_simulacao": "Simulação: exemplo ilustrativo",
+    "selo_real": "Exemplo do repositório",
+    "pronto_quando": "Pronto quando:",
+    "fiz": "Fiz este exercício",
+    "video_pagina": "Página do vídeo com roteiro",
+    "pergunta": "Pergunta",
+    "de": "de",
+    "cert_tag": "competência",
+    "correto": "Correto",
+    "errado": "Não é essa",
+    "quiz_aguarda": "Escolha uma alternativa. A explicação aparece depois da sua tentativa.",
+    "proxima_pergunta": "Próxima pergunta",
+    "quiz_ver": "Ver resultado",
+    "quiz_fim": "Teste concluído",
+    "quiz_total": "Você acertou {a} de {n}. Acertando todas, a aula é marcada como concluída.",
+    "aparencia": "Aparência",
+    "tamanho_texto": "Tamanho do texto",
+    "tema": "Tema",
+    "tema_escuro": "Escuro",
+    "tema_papel": "Papel claro",
+    "role_dica": "Role a página: cada etapa abaixo acende a sua parte do diagrama.",
+    "pre_requisito": "requer",
+    "ver_aula": "Ver a aula",
+    "mapa_dica": "Clique num exercício para ver o que fazer e o \"pronto quando\".",
+    "etapas": "Etapas",
+    "exercicios": "exercícios",
+    "rever": "Rever:",
+    "revisar_erradas": "Revisar as erradas",
+    "refazer": "Refazer o teste",
+    "h_semana": "h por semana",
+    "data_inicio": "Data de início",
+    "ritmo": "Tempo disponível",
+    "gerar_plano": "Gerar meu plano",
+    "baixar_md": "Baixar plano.md",
+    "baixar_ics": "Baixar para o calendário (.ics)",
+    "ind_estudo": "Estudo (aulas)",
+    "ind_pratica": "Prática declarada",
+    "ind_nota": "Prática = exercícios que você marcou como feitos. A comprovação vem na prova da certificação.",
+    "estudo": {
+      "titulo": "Seu estudo",
+      "continuar": "Continuar de onde parei",
+      "comecar": "Começar pela aula 1",
+      "cta_continuar": "Continuar a aula {n}",
+      "hoje": "hoje",
+      "ontem": "ontem",
+      "ha_dias": "há {n} dias",
+      "desempenho": "Desempenho nos testes",
+      "notas": "Minhas anotações",
+      "dados": "Copiar meus dados",
+      "sem_testes": "Nenhum teste feito ainda. O teste fica no fim de cada aula.",
+      "nao_fez": "teste ainda não feito",
+      "ultimo": "Último",
+      "melhor": "Melhor",
+      "tentativas": "tentativas",
+      "tentativa": "tentativa",
+      "tudo_certo": "Acertou tudo no último teste.",
+      "rever": "Para rever",
+      "resposta": "Resposta certa:",
+      "ir_teste": "Refazer o teste",
+      "sem_notas": "Nenhuma anotação ainda. Na aula, selecione um trecho do texto e toque em Marcar ou Anotar.",
+      "so_marcado": "(só marcado)",
+      "marcar": "Marcar",
+      "anotar": "Anotar",
+      "salvar": "Salvar",
+      "apagar": "Apagar marca",
+      "fechar": "Fechar",
+      "nota_ph": "Escreva sua anotação sobre este trecho…",
+      "um_bloco": "Marque dentro de um parágrafo só.",
+      "nao_marca": "Este trecho não pode ser marcado.",
+      "dados_exp": "Seu progresso, suas anotações e as notas dos testes ficam só neste navegador. Baixe uma cópia (.json) para guardar ou para continuar em outro computador ou navegador; lá, carregue a cópia. Carregar soma com o que já existe e não apaga nada.",
+      "exportar": "Baixar cópia",
+      "importar": "Carregar cópia",
+      "import_ok": "Cópia carregada ({n} itens). Atualizando a página…",
+      "import_erro": "Arquivo não reconhecido. Nada foi alterado.",
+      "import_outro": "Esta cópia é de outro curso. Nada foi alterado.",
+      "export_ok": "Cópia baixada."
+    }
+  },
+  "icone": "terminal"
+}

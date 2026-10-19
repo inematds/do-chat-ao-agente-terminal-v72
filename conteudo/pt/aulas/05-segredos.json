@@ -1,0 +1,215 @@
+{
+  "slug": "segredos",
+  "num": 5,
+  "titulo": "Segredo não entra no texto",
+  "titulo_curto": "Segredos fora do texto",
+  "menu": "Segredos",
+  "minutos": 14,
+  "lead": "Uma chave colada num documento, num print ou num pedido vira acesso para quem ler, e continua valendo depois que a conversa acaba. Separar o segredo do resto, antes da primeira versão salva, deixa você compartilhar a pasta sem medo.",
+  "objetivo": "criar .env, .env.example e .gitignore antes do primeiro commit e saber o que fazer se uma chave vazar.",
+  "hero_alt": "Mão segurando um chaveiro diante de um quadro de chaves de portaria, com um cofre ao fundo.",
+  "competencias": ["proteger-segredos", "escrever-gitignore", "responder-a-vazamento"],
+  "aprende": [
+    {"icone": "cadeado", "t": "O .env guarda a chave; o .env.example mostra só os nomes"},
+    {"icone": "escudo", "t": "O .gitignore escrito antes da primeira versão"},
+    {"icone": "x", "t": "Vazou? Trocar a chave na origem primeiro"},
+    {"icone": "robo", "t": "A IA precisa do nome da variável, não do valor"}
+  ],
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "O quadro de chaves da portaria",
+      "sub": "A lista de salas pode ficar à vista; a chave, não.",
+      "nos": [
+        {
+          "icone": "cadeado",
+          "titulo": ".env",
+          "sub": "Só no seu computador",
+          "itens": [{"icone": "arquivo", "t": "MINHA_CHAVE=valor real"}],
+          "detalhe": "Guarda variáveis: um nome, um sinal de igual e um valor. Não é cofre: não é criptografado, quem abre o arquivo lê. Por isso fica só na sua máquina e nunca vai para o Git.",
+          "forte": true
+        },
+        {
+          "icone": "arquivo",
+          "titulo": ".env.example",
+          "sub": "Pode circular",
+          "itens": [{"icone": "arquivo", "t": "MINHA_CHAVE=preencha_localmente"}],
+          "detalhe": "Os mesmos nomes, com valores de mentira. Quem recebe o projeto vê o que precisa preencher, mas não ganha acesso a nada. Lembre: o que termina em example é o exemplo."
+        },
+        {
+          "icone": "escudo",
+          "titulo": ".gitignore",
+          "sub": "A lista do que o Git não guarda",
+          "itens": [{"icone": "x", "t": ".env e .env.*"}, {"icone": "check", "t": "!.env.example"}],
+          "detalhe": "Cada linha é um padrão. <code>.env</code> pega o arquivo; <code>.env.*</code> pega variantes como .env.local; a linha com <code>!</code> abre uma exceção e devolve o .env.example à lista do que é guardado."
+        },
+        {
+          "icone": "git",
+          "titulo": "Histórico",
+          "sub": "O que entra fica",
+          "itens": [{"icone": "check", "t": "README, AGENTS.md, .env.example"}],
+          "detalhe": "O .gitignore só vale para o que o Git ainda não guardou. Se o .env já entrou num commit, a linha escrita depois não o tira do histórico. Por isso a lista vem antes da primeira versão."
+        }
+      ],
+      "legenda": "Na regra do AGENTS.md: \"Nunca escreva chaves ou senhas em arquivo de texto; elas ficam no .env.\"",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "Ignore antes do primeiro commit",
+        "texto": "O .env com o valor real fica em casa, o .env.example circula, e o .gitignore decide isso antes de o Git guardar qualquer versão. Depois que o malote partiu, riscar o papel da lista não o traz de volta."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Quatro regras sobre segredos",
+      "sub": "Clique em cada uma.",
+      "passos": [
+        {
+          "titulo": "Credencial é a chave da sala",
+          "sub": "Quem tem, age por você",
+          "texto": [
+            "Senha, chave de API e token de bot deixam quem os tem agir em nome da sua conta, e quem paga é você.",
+            "Antes de mandar um print, olhe os cantos da tela: uma senha visível passa a ser de todo mundo que recebeu."
+          ],
+          "exemplo": {"rot": "Print corrigido", "texto": "A mesma tela, com a senha coberta antes de enviar."}
+        },
+        {
+          "titulo": "A IA precisa do nome",
+          "sub": "Não do valor",
+          "texto": [
+            "Para ajudar, a IA quase sempre só precisa saber que a variável existe, como <code>TELEGRAM_BOT_TOKEN</code>.",
+            "Valor real não vai em pedido, exemplo de curso nem arquivo enviado à IA sem necessidade."
+          ],
+          "exemplo": {"rot": "Pedido certo", "texto": "O token do bot está na variável TELEGRAM_BOT_TOKEN do .env."}
+        },
+        {
+          "titulo": "A lista antes da versão",
+          "sub": ".gitignore primeiro",
+          "texto": [
+            "Crie o .gitignore antes do primeiro <code>git commit</code>. Ele não tira do histórico o que já entrou.",
+            "Na próxima aula, <code>git status</code> é a prova: o .env não pode aparecer."
+          ],
+          "exemplo": {"rot": "Conferência", "texto": "git status não mostra o .env."}
+        },
+        {
+          "titulo": "Vazou?",
+          "sub": "Troque na origem primeiro",
+          "texto": [
+            "Se uma chave foi publicada ou colada por engano, a primeira correção é revogar a chave no site que a criou e gerar outra. Apagar a mensagem ou a linha não invalida a cópia que alguém já viu.",
+            "Só depois cuide do arquivo e do histórico."
+          ],
+          "exemplo": {"rot": "Ordem", "texto": "1. Revogar e trocar. 2. Limpar o arquivo."}
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Os três arquivos",
+      "sub": "Na pasta meu-primeiro-agente. A chave é falsa, de treino.",
+      "blocos": [
+        {
+          "rot": "cmd · criar o .env de treino e o .gitignore",
+          "icone": "terminal",
+          "conteudo": "cd %USERPROFILE%\\projetos\\meu-primeiro-agente\necho MINHA_CHAVE=teste123> .env\necho MINHA_CHAVE=preencha_localmente> .env.example\necho .env> .gitignore\necho .env.*>> .gitignore\necho !.env.example>> .gitignore\ntype .gitignore"
+        },
+        {
+          "rot": ".gitignore (o que deve ter dentro)",
+          "icone": "escudo",
+          "conteudo": ".env\n.env.*\n!.env.example"
+        },
+        {
+          "rot": "AGENTS.md · regra nova",
+          "icone": "arquivo",
+          "conteudo": "- Nunca escreva chaves ou senhas em arquivo de texto; elas ficam no .env.\n- Se precisar de uma chave, cite o nome da variável, nunca o valor."
+        }
+      ],
+      "saida": {
+        "selo": "simulacao",
+        "abas": [
+          {
+            "rot": "O que aparece",
+            "html": "<pre>C:\\Users\\ana\\projetos\\meu-primeiro-agente&gt; type .gitignore\n.env\n.env.*\n!.env.example</pre><p>Um <code>&gt;</code> cria o arquivo (ou substitui o conteúdo); dois <code>&gt;&gt;</code> acrescentam uma linha no fim.</p>"
+          },
+          {
+            "rot": "Erros comuns",
+            "html": "<ul><li><b>Espaço antes do &gt;</b>: <code>echo .env &gt; .gitignore</code> grava \".env \" com espaço no fim. Escreva colado: <code>echo .env&gt; .gitignore</code>.</li><li><b>Chave no AGENTS.md \"para o agente saber usar\"</b>: tudo o que está em texto pode ir parar no GitHub.</li><li><b>.gitignore depois do commit</b>: o .env continua na versão antiga.</li></ul>"
+          }
+        ]
+      }
+    },
+    {
+      "tipo": "simterm",
+      "titulo": "Ensaie: o segredo fora do texto",
+      "sub": "Crie os arquivos e confira a lista.",
+      "janela": "Prompt de Comando · simulação",
+      "sistema": "windows",
+      "inicio": "C:\\Users\\ana\\projetos\\meu-primeiro-agente",
+      "sufixo": ">",
+      "missoes": [
+        {"pede": "Crie o .env com a chave falsa <code>MINHA_CHAVE=teste123</code>.", "aceita": ["echo MINHA_CHAVE=teste123> .env", "echo MINHA_CHAVE=teste123>.env"], "saida": "", "explica": "O valor de treino está no .env. Com chave de verdade é igual, e o arquivo nunca sai daqui."},
+        {"pede": "Crie o .gitignore com a linha <code>.env</code> (sem espaço antes do &gt;).", "aceita": ["echo .env> .gitignore", "echo .env>.gitignore"], "saida": "", "explica": "Um &gt; cria o arquivo. Sem espaço antes dele, a linha fica exatamente \".env\"."},
+        {"pede": "Acrescente a linha <code>.env.*</code>.", "aceita": ["echo .env.*>> .gitignore", "echo .env.*>>.gitignore"], "saida": "", "explica": "Dois &gt;&gt; acrescentam no fim. O asterisco vale por qualquer final, como .env.local."},
+        {"pede": "Acrescente a exceção <code>!.env.example</code>.", "aceita": ["echo !.env.example>> .gitignore", "echo !.env.example>>.gitignore"], "saida": "", "explica": "A exclamação devolve o exemplo à lista do que é guardado."},
+        {"pede": "Mostre o .gitignore.", "aceita": ["type .gitignore"], "saida": ".env\n.env.*\n!.env.example", "explica": "Três linhas, na ordem. Na próxima aula, o <code>git status</code> prova que o .env ficou de fora."}
+      ],
+      "fim": "Lista pronta antes da primeira versão. É o que a prática pede.",
+      "legenda": "Simulação: no seu cmd os comandos são os mesmos."
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática",
+      "sub": "Antes de qualquer git commit.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "E9 · Segredo não entra no texto",
+          "min": "10 min",
+          "texto": "Crie o .env com a chave falsa, o .env.example com o valor de mentira e o .gitignore com as três linhas. Acrescente a regra ao AGENTS.md.",
+          "pronto": "<code>type .gitignore</code> mostra .env, .env.* e !.env.example, e nenhum arquivo além do .env tem o valor teste123."
+        },
+        {
+          "id": "e2",
+          "titulo": "E10 · Ensaio de vazamento",
+          "min": "5 min",
+          "texto": "Escreva na ficha do projeto, para cada credencial que você usa (assinatura, token, chave), o site onde ela se troca.",
+          "pronto": "para cada credencial você sabe em que página revogar e gerar outra, sem procurar na hora do susto."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste o que aprendeu",
+      "sub": "A explicação aparece depois da sua resposta.",
+      "perguntas": [
+        {
+          "p": "Onde fica a chave de uma API no projeto?",
+          "opcoes": ["No AGENTS.md, para o agente saber usar.", "No .env, que está listado no .gitignore.", "No README, comentada.", "No .env.example."],
+          "certa": 1,
+          "explica": "Chave só no .env, e o .env no .gitignore. O .env.example tem só o nome com valor de mentira.",
+          "cert": true,
+          "ref": "diagrama"
+        },
+        {
+          "p": "Um colega pôs o .env no .gitignore uma semana depois da primeira versão. O .env saiu do histórico?",
+          "opcoes": ["Sim, o .gitignore apaga do histórico.", "Não: a versão antiga continua com o .env dentro.", "Sim, depois do próximo push.", "Só se o arquivo for renomeado."],
+          "certa": 1,
+          "explica": "O .gitignore vale daqui para a frente e só para o que ainda não foi guardado. Por isso ele vem antes do primeiro commit.",
+          "ref": "diagrama"
+        },
+        {
+          "p": "Você colou uma chave real num grupo por engano. Qual o primeiro passo?",
+          "opcoes": ["Apagar a mensagem.", "Revogar a chave no site que a criou e gerar outra.", "Pedir que ninguém use.", "Trocar o nome da variável."],
+          "certa": 1,
+          "explica": "Apagar não invalida a cópia que alguém já viu. Revogar na origem fecha o acesso; depois você limpa o resto.",
+          "ref": "passos"
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para aprofundar",
+      "links": [
+        {"t": "OSWork v6.2: segredo não é conhecimento para compartilhar", "href": "https://inematds.github.io/oswork-v62/", "icone": "cadeado"}
+      ]
+    }
+  ]
+}
