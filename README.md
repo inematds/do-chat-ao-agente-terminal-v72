@@ -29,3 +29,9 @@ node ~/.claude/skills/formato-curso-v72/scripts/conferir-tela.cjs .
 Fontes do conteúdo: [OSWork v6.2](https://inematds.github.io/oswork-v62/), [OSWork Quick](https://inematds.github.io/oswork-quick/), [exercícios do degrau 1](https://github.com/inematds/jornada-agentes/blob/main/exercicios/01-oswork.md) e a [área OSWork](https://eventos.inema.pro/oswork/). Vídeos já publicados: série jornada-agentes (`video-v2.0.0`) e [OSWork comando por comando](https://inematds.github.io/oswork-terminal/videos/).
 
 Conteúdo aberto e gratuito · [INEMA.CLUB](https://inema.club)
+
+## Mais no INEMA.CLUB
+
+- [Ficha completa deste curso](https://www.inema.club/cursos/324-do-chat-ao-agente-degrau-1-o-terminal-pasta-regras-segredos-git-e-vps/)
+- [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.inema.club/cursos/)
