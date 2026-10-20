@@ -13,7 +13,7 @@
     "t": "Todos os comandos, na ordem",
     "texto": "A sequência inteira do terminal à página no ar, para deixar aberta enquanto você faz.",
     "link": "Abrir a cola do OSWork",
-    "href": "https://inematds.github.io/oswork-quick/materiais/"
+    "href": "https://inematds.github.io/oswork-quick/materiais/", "href_en": "https://inematds.github.io/oswork-quick/en/materiais/", "href_es": "https://inematds.github.io/oswork-quick/es/materiais/"
   },
   "rodape": "INEMA.CLUB · conteúdo aberto e gratuito · formato INEMA Learning v7.2 · <a href=\"https://inematds.github.io/do-chat-ao-agente-v72/\">Visão geral da formação Do chat ao agente</a> · <a href=\"https://eventos.inema.pro/oswork/\">eventos.inema.pro/oswork</a> · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guia: como aprender inteligência artificial</a> · <a href=\"https://www.inema.club/cursos/324-do-chat-ao-agente-degrau-1-o-terminal-pasta-regras-segredos-git-e-vps/\">Ficha completa deste curso no INEMA.CLUB</a>",
   "videos": {
@@ -23,7 +23,7 @@
       "mp4": "https://github.com/inematds/jornada-agentes/releases/download/video-v2.0.0/jornada-seq1-oswork-16x9.mp4",
       "vtt": "assets/vtt/seq1-oswork.vtt",
       "poster": "assets/img/seq1-oswork.jpg",
-      "pagina": "https://inematds.github.io/jornada-agentes/serie/seq1-oswork/"
+      "pagina": "https://inematds.github.io/jornada-agentes/serie/seq1-oswork/", "idiomas": {"en": {"vtt": "assets/vtt/seq1-oswork-en.vtt", "pagina": "https://inematds.github.io/jornada-agentes/serie/seq1-oswork/en/"}, "es": {"vtt": "assets/vtt/seq1-oswork-es.vtt", "pagina": "https://inematds.github.io/jornada-agentes/serie/seq1-oswork/es/"}}
     },
     "oswork-terminal": {
       "titulo": "O gestor que domina o terminal: OSWork comando por comando",
@@ -31,7 +31,7 @@
       "mp4": "https://github.com/inematds/oswork-terminal/releases/download/video-v2.0.0/oswork-terminal-completo-16x9.mp4",
       "vtt": "assets/vtt/oswork-terminal.vtt",
       "poster": "assets/img/oswork-terminal.jpg",
-      "pagina": "https://inematds.github.io/oswork-terminal/videos/"
+      "pagina": "https://inematds.github.io/oswork-terminal/videos/", "idiomas": {"en": {"mp4": "https://github.com/inematds/oswork-terminal/releases/download/video-v2.0.0/oswork-terminal-completo-16x9-en.mp4", "vtt": "assets/vtt/oswork-terminal-en.vtt", "duracao": "5 min 41 s", "pagina": "https://inematds.github.io/oswork-terminal/videos/en/"}, "es": {"mp4": "https://github.com/inematds/oswork-terminal/releases/download/video-v2.0.0/oswork-terminal-completo-16x9-es.mp4", "vtt": "assets/vtt/oswork-terminal-es.vtt", "duracao": "6 min 43 s", "pagina": "https://inematds.github.io/oswork-terminal/videos/es/"}}
     },
     "jornada-ia": {
       "titulo": "Do chat ao agente: a visão geral",
@@ -39,7 +39,7 @@
       "mp4": "https://github.com/inematds/jornada-agentes/releases/download/video-v2.0.0/jornada-jornada-ia-16x9.mp4",
       "vtt": "assets/vtt/jornada-ia.vtt",
       "poster": "assets/img/jornada-ia.jpg",
-      "pagina": "https://inematds.github.io/jornada-agentes/serie/jornada-ia/"
+      "pagina": "https://inematds.github.io/jornada-agentes/serie/jornada-ia/", "idiomas": {"en": {"vtt": "assets/vtt/jornada-ia-en.vtt", "pagina": "https://inematds.github.io/jornada-agentes/serie/jornada-ia/en/"}, "es": {"vtt": "assets/vtt/jornada-ia-es.vtt", "pagina": "https://inematds.github.io/jornada-agentes/serie/jornada-ia/es/"}}
     }
   },
   "inicio": {

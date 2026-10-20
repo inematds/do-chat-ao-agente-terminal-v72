@@ -5,30 +5,30 @@
   "titulo_curto": "GitHub, Pages y VPS",
   "menu": "Publicar",
   "minutos": 20,
-  "lead": "Guardar, enviar y poner en línea son tres pasos y tres decisiones. Con una clave SSH y gh, envías el proyecto a GitHub, publicas la página con una dirección que puedes abrir en el celular y llevas la misma carpeta a una VPS, donde el agente trabaja aunque tu computadora esté apagada.",
-  "objetivo": "conectar la terminal con GitHub mediante una clave SSH, publicar la página en GitHub Pages y clonar el proyecto en una VPS.",
-  "hero_alt": "Computadora portátil con la terminal abierta y un celular al lado que muestra una página publicada; servidores al fondo.",
+  "lead": "Guardar, enviar y poner en línea son tres pasos y tres decisiones. Con una clave SSH y el gh, envías el proyecto a GitHub, publicas la página con una dirección que abre en el celular y llevas la misma carpeta a una VPS, donde el agente trabaja aunque tu computadora esté apagada.",
+  "objetivo": "conectar la terminal a GitHub con una clave SSH, publicar la página en GitHub Pages y clonar el proyecto en una VPS.",
+  "hero_alt": "Notebook con la terminal abierta y un celular al lado mostrando una página publicada; servidores al fondo.",
   "competencias": [
-    "publicar-en-github",
-    "revisar-antes-del-push",
+    "publicar-no-github",
+    "conferir-antes-do-push",
     "operar-vps-basico"
   ],
   "aprende": [
     {
       "icone": "cadeado",
-      "t": "Crear la clave SSH y entregar solo la pública"
+      "t": "Crear la llave SSH y entregar solo la pública"
     },
     {
       "icone": "enviar",
-      "t": "Crear el repositorio, publicar en Pages y seguir la rutina del push"
+      "t": "Crear el repositorio, publicar en Pages y la rutina del push"
     },
     {
       "icone": "escudo",
-      "t": "Revisar el destino, el estado, las versiones y los secretos antes de enviar"
+      "t": "Revisar destino, estado, versiones y secretos antes de enviar"
     },
     {
       "icone": "nuvem",
-      "t": "Entrar en la VPS, clonar el proyecto y traer los cambios"
+      "t": "Entrar a la VPS, clonar el proyecto y traer lo que cambió"
     }
   ],
   "secoes": [
@@ -51,7 +51,7 @@
               "t": "commit"
             }
           ],
-          "detalhe": "La clave privada nunca sale de aquí. El commit guarda la versión solo en tu computadora; nada va a internet hasta que decidas enviarlo."
+          "detalhe": "La llave privada nunca sale de aquí. El commit guarda la versión solo en tu computadora; nada va a internet hasta que tú decidas enviarlo."
         },
         {
           "icone": "git",
@@ -67,7 +67,7 @@
               "t": "público o privado"
             }
           ],
-          "detalhe": "El push envía las versiones. Repositorio público: cualquiera puede verlo (y es lo que la página gratuita necesita). Privado: solo tú y quienes invites. Tú eliges al crearlo.",
+          "detalhe": "El push envía las versiones. Repositorio público: cualquiera lo ve (y es lo que exige la página gratis). Privado: solo tú y quien invites. Tú eliges al crearlo.",
           "forte": true
         },
         {
@@ -80,7 +80,7 @@
               "t": "https://SEU-USUARIO.github.io/meu-primeiro-agente/"
             }
           ],
-          "detalhe": "Ponerla en línea es un paso más. Una vez activado Pages, cada push actualiza la página en unos minutos, con una dirección que puedes abrir en el celular."
+          "detalhe": "Publicar es un paso más. Con Pages activado, cada push actualiza la página en pocos minutos, con una dirección que abre en el celular."
         },
         {
           "icone": "chip",
@@ -93,18 +93,18 @@
             },
             {
               "icone": "robo",
-              "t": "el agente también funciona allí"
+              "t": "el agente también corre allí"
             }
           ],
-          "detalhe": "Es como una sala alquilada: el proveedor entrega la máquina; los usuarios, las actualizaciones y los programas quedan a tu cargo. Entras por ssh, navegas usando los nombres de Linux y traes el proyecto de GitHub."
+          "detalhe": "Una sala alquilada: el proveedor entrega la máquina; los usuarios, las actualizaciones y los programas son cosa tuya. Entras por ssh, te mueves con los nombres de Linux y traes el proyecto desde GitHub."
         }
       ],
-      "volta": "Cambios en la computadora → push → git pull en la VPS",
-      "legenda": "La clave pública (.pub) es el candado: va a GitHub y a la VPS. La privada es la llave del llavero: se queda contigo.",
+      "volta": "Cambió en la computadora → push → git pull en la VPS",
+      "legenda": "La llave pública (.pub) es el candado: va a GitHub y a la VPS. La privada es la llave del llavero: se queda contigo.",
       "rolagem": true,
       "rolagem_fim": {
-        "titulo": "Guardar, enviar, poner en línea",
-        "texto": "El commit se queda en tu computadora, el push lo lleva a GitHub y Pages lo pone en línea. La VPS obtiene esa misma versión con git pull. Cada paso es una decisión tuya, con su propia revisión."
+        "titulo": "Guardar, enviar, publicar",
+        "texto": "El commit queda en tu computadora, el push lo lleva a GitHub y Pages lo publica. La VPS toma la misma versión con git pull. Cada paso es una decisión tuya, con su propia revisión."
       }
     },
     {
@@ -113,15 +113,15 @@
       "sub": "Haz clic en cada etapa.",
       "passos": [
         {
-          "titulo": "Clave SSH",
+          "titulo": "Llave SSH",
           "sub": "ssh-keygen",
           "texto": [
-            "<code>ssh-keygen</code> ya viene en Windows 10 y 11. Te hace tres preguntas: dónde guardar la clave y una contraseña adicional, dos veces. Para practicar, puedes presionar Enter en las tres.",
-            "Quedan dos archivos en <code>%USERPROFILE%\\.ssh</code>: <code>id_ed25519</code> (privada, nunca sale de ahí) y <code>id_ed25519.pub</code> (pública)."
+            "<code>ssh-keygen</code> ya viene en Windows 10 y 11. Hace tres preguntas: dónde guardar y una contraseña extra, dos veces. Enter en las tres sirve para practicar.",
+            "Quedan dos archivos en <code>%USERPROFILE%\\.ssh</code>: <code>id_ed25519</code> (privada, nunca sale de ahí) e <code>id_ed25519.pub</code> (pública)."
           ],
           "exemplo": {
             "rot": "¿Preguntó Overwrite?",
-            "texto": "Ya tienes una clave: responde n y usa la que existe."
+            "texto": "Ya tienes una llave: responde n y usa la que existe."
           }
         },
         {
@@ -129,35 +129,35 @@
           "sub": "gh auth login",
           "texto": [
             "Responde: GitHub.com → SSH → elige id_ed25519.pub → Login with a web browser. Copia el código, pégalo en el navegador y autoriza.",
-            "<code>ssh -T git@github.com</code> prueba la clave; la primera vez, responde yes."
+            "<code>ssh -T git@github.com</code> prueba la llave; la primera vez responde yes."
           ],
           "exemplo": {
             "rot": "Respuesta",
-            "texto": "¡Hola SEU-USUARIO! Te autenticaste correctamente."
+            "texto": "Hi SEU-USUARIO! You've successfully authenticated."
           }
         },
         {
-          "titulo": "Revisa antes de enviar",
+          "titulo": "Revisar antes de enviar",
           "sub": "Cuatro puntos",
           "texto": [
-            "Destino: <code>git remote -v</code> muestra adónde va. Estado: <code>git status</code> limpio. Versiones: <code>git log --oneline</code> muestra lo que se enviaría. Secretos: ningún .env en la lista.",
-            "Después de enviarlo, el contenido queda disponible para quienes tengan acceso al destino."
+            "Destino: <code>git remote -v</code> muestra a dónde va. Estado: <code>git status</code> limpio. Versiones: <code>git log --oneline</code> muestra lo que se enviaría. Secretos: ningún .env en la lista.",
+            "Una vez enviado, el contenido queda en manos de quien tiene acceso al destino."
           ],
           "exemplo": {
             "rot": "Público",
-            "texto": "Cualquiera puede verlo. Nada de borradores personales ni claves."
+            "texto": "Cualquier persona lo ve. Nada de borradores personales ni claves."
           }
         },
         {
           "titulo": "En la VPS",
           "sub": "ssh, ls, git clone",
           "texto": [
-            "<code>ssh root@IP-DA-VPS</code> abre la terminal de la VPS en tu ventana. El inicio de la línea cambia y termina en <code>#</code> o <code>$</code>: fíjate siempre en qué máquina estás antes de cada comando.",
+            "<code>ssh root@IP-DA-VPS</code> abre el terminal de la VPS en tu ventana. El comienzo de la línea cambia y termina en <code>#</code> o <code>$</code>: fíjate siempre en qué máquina estás antes de cada comando.",
             "Allí: <code>ls</code> en lugar de <code>dir</code>, <code>pwd</code> en lugar de <code>cd</code> solo, y las mayúsculas importan."
           ],
           "exemplo": {
             "rot": "Regla de la segunda sesión",
-            "texto": "¿Cambiaste la forma de entrar? Pruébala en una ventana nueva antes de cerrar la que funciona."
+            "texto": "¿Cambió la forma de entrar? Pruébala en una ventana nueva antes de cerrar la que funciona."
           }
         }
       ]
@@ -165,7 +165,7 @@
     {
       "tipo": "codigo",
       "titulo": "Los comandos, en orden",
-      "sub": "Reemplaza Seu Nome, seu@email.com, SEU-USUARIO e IP-DA-VPS por los tuyos.",
+      "sub": "Cambia Seu Nome, seu@email.com, SEU-USUARIO e IP-DA-VPS por los tuyos.",
       "blocos": [
         {
           "rot": "cmd · quién eres en Git (para todos los proyectos)",
@@ -178,7 +178,7 @@
           "conteudo": "ssh-keygen -t ed25519 -C \"seu@email.com\"\nexplorer %USERPROFILE%\\.ssh"
         },
         {
-          "rot": "cmd · vincular gh a tu cuenta",
+          "rot": "cmd · conectar gh a tu cuenta",
           "icone": "git",
           "conteudo": "gh auth login\nssh -T git@github.com"
         },
@@ -213,15 +213,15 @@
         "abas": [
           {
             "rot": "Lo que aparece",
-            "html": "<pre>C:\\Users\\ana&gt; ssh -T git@github.com\nHi ana-exemplo! You've successfully authenticated, but GitHub does not provide shell access.\nC:\\Users\\ana\\projetos\\meu-primeiro-agente&gt; gh repo create meu-primeiro-agente --public --source=. --push\n✓ Created repository ana-exemplo/meu-primeiro-agente on GitHub</pre><p>Unos minutos después de activar Pages, la página se abre en <code>https://ana-exemplo.github.io/meu-primeiro-agente/</code>.</p>"
+            "html": "<pre>C:\\Users\\ana&gt; ssh -T git@github.com\nHi ana-exemplo! You've successfully authenticated, but GitHub does not provide shell access.\nC:\\Users\\ana\\projetos\\meu-primeiro-agente&gt; gh repo create meu-primeiro-agente --public --source=. --push\n✓ Created repository ana-exemplo/meu-primeiro-agente on GitHub</pre><p>Unos minutos después de activar Pages, la página abre en <code>https://ana-exemplo.github.io/meu-primeiro-agente/</code>.</p>"
           },
           {
-            "rot": "¿Apareció un error?",
-            "html": "<ul><li><b>\"nothing to commit\"</b>: la carpeta está vacía o ya está guardada. Compruébalo con <code>dir</code> y <code>git log --oneline</code>.</li><li><b>\"Name already exists\"</b>: ya existe un repositorio con ese nombre en tu cuenta. Elige otro.</li><li><b>Push rechazado con \"fetch first\"</b>: el repositorio cambió en otro lugar. Ejecuta <code>git pull</code> y luego <code>git push</code>.</li><li><b>\"No such file or directory\" en la VPS</b>: comprueba las mayúsculas y usa Tab para completar.</li></ul>"
+            "rot": "¿Te dio error?",
+            "html": "<ul><li><b>\"nothing to commit\"</b>: la carpeta está vacía o ya está guardada. Compruébalo con <code>dir</code> y <code>git log --oneline</code>.</li><li><b>\"Name already exists\"</b>: ya existe un repositorio con ese nombre en tu cuenta. Elige otro.</li><li><b>Push rechazado con \"fetch first\"</b>: el repositorio cambió en otro lugar. <code>git pull</code> y luego <code>git push</code>.</li><li><b>\"No such file or directory\" en la VPS</b>: revisa las mayúsculas y usa Tab para autocompletar.</li></ul>"
           },
           {
             "rot": "¿Qué archivo entregar?",
-            "html": "<p>Alguien te pidió tu clave \"para configurar el acceso\": solo <code>id_ed25519.pub</code>. <code>id_ed25519</code>, sin .pub, nunca sale de tu computadora.</p>"
+            "html": "<p>Alguien te pidió tu clave \"para configurar el acceso\": solo el <code>id_ed25519.pub</code>. El <code>id_ed25519</code>, sin .pub, nunca sale de tu computadora.</p>"
           }
         ]
       }
@@ -229,20 +229,20 @@
     {
       "tipo": "simterm",
       "titulo": "Ensaya: el proyecto en la VPS",
-      "sub": "La misma navegación, otros nombres. Fíjate en el inicio de la línea.",
+      "sub": "Misma navegación, otros nombres. Fíjate en el comienzo de la línea.",
       "janela": "VPS Ubuntu · simulación",
       "sistema": "linux",
       "inicio": "C:\\Users\\ana>",
       "sufixo": "",
       "missoes": [
         {
-          "pede": "Entra en la VPS como root (la IP de ejemplo es <code>203.0.113.10</code>).",
+          "pede": "Entra a la VPS como root (la IP de ejemplo es <code>203.0.113.10</code>).",
           "aceita": [
             "ssh root@203.0.113.10"
           ],
           "saida": "Welcome to Ubuntu",
           "vai": "root@minha-vps:~#",
-          "explica": "El inicio de la línea cambió: ahora responde el Linux de la VPS. La misma ventana, otra máquina."
+          "explica": "El comienzo de la línea cambió: ahora quien responde es el Linux de la VPS. Misma ventana, otra máquina."
         },
         {
           "pede": "Pregunta dónde estás (en Linux es <code>pwd</code>).",
@@ -250,7 +250,7 @@
             "pwd"
           ],
           "saida": "/root",
-          "explica": "<code>pwd</code> hace el papel de <code>cd</code> solo de cmd."
+          "explica": "<code>pwd</code> cumple el papel del <code>cd</code> solo del cmd."
         },
         {
           "pede": "Crea la carpeta de proyectos (<code>mkdir -p ~/projetos</code>).",
@@ -261,7 +261,7 @@
             "mkdir projetos"
           ],
           "saida": "",
-          "explica": "<code>-p</code> crea la carpeta y no da error si ya existe. <code>~</code> es la carpeta personal, como %USERPROFILE%."
+          "explica": "El <code>-p</code> crea y no se queja si ya existe. El <code>~</code> es la carpeta personal, como el %USERPROFILE%."
         },
         {
           "pede": "Entra en ella.",
@@ -271,7 +271,7 @@
           ],
           "saida": "",
           "vai": "root@minha-vps:~/projetos#",
-          "explica": "La ruta antes de # muestra ~/projetos."
+          "explica": "La ruta antes del # muestra ~/projetos."
         },
         {
           "pede": "Trae el proyecto de GitHub (usuario <code>ana-exemplo</code>).",
@@ -280,16 +280,16 @@
             "git clone https://github.com/ana-exemplo/meu-primeiro-agente"
           ],
           "saida": "Cloning into 'meu-primeiro-agente'...",
-          "explica": "El comando clone trae la carpeta y todo el historial. Clonar no ejecuta nada."
+          "explica": "El clon trae la carpeta y todo el historial. Clonar no ejecuta nada."
         },
         {
-          "pede": "Entra en la carpeta y lista el contenido (dos comandos: primero <code>cd</code>).",
+          "pede": "Entra en la carpeta y lista el contenido (dos comandos: primero el <code>cd</code>).",
           "aceita": [
             "cd meu-primeiro-agente"
           ],
           "saida": "",
           "vai": "root@minha-vps:~/projetos/meu-primeiro-agente#",
-          "explica": "Ahora lista el contenido."
+          "explica": "Ahora lista."
         },
         {
           "pede": "Lista lo que llegó (en Linux es <code>ls</code>).",
@@ -297,7 +297,7 @@
             "ls"
           ],
           "saida": "AGENTS.md  README.md  entradas  index.html  saidas",
-          "explica": "Los mismos archivos que en tu Windows. El archivo .env no llegó porque nunca estuvo en GitHub."
+          "explica": "Los mismos archivos de tu Windows. El .env no vino, porque nunca fue a GitHub."
         },
         {
           "pede": "Cambiaste algo en Windows e hiciste push. Trae el cambio.",
@@ -305,7 +305,7 @@
             "git pull"
           ],
           "saida": "Updating 5f6c1eb..33113cd\nFast-forward\n index.html | 3 ++-",
-          "explica": "GitHub es el puente: la nueva versión llegó a la VPS."
+          "explica": "GitHub es el puente: la versión nueva llegó a la VPS."
         },
         {
           "pede": "Sal de la VPS.",
@@ -317,41 +317,41 @@
           "explica": "De vuelta en tu computadora: el comienzo de la línea volvió a ser C:\\Users\\ana."
         }
       ],
-      "fim": "Proyecto llevado a la VPS y actualizado. En la práctica, el agente funciona ahí con el mismo AGENTS.md.",
+      "fim": "Proyecto llevado a la VPS y actualizado. En la vida real, el agente corre allá dentro con el mismo AGENTS.md.",
       "legenda": "Simulación: la IP, el usuario y los códigos son de ejemplo (203.0.113.10 es una dirección reservada para documentación)."
     },
     {
       "tipo": "pratica",
       "titulo": "Práctica",
-      "sub": "La página publicada es obligatoria; la VPS, cuando tengas una.",
+      "sub": "La página en línea es obligatoria; la VPS, cuando tengas una.",
       "exercicios": [
         {
           "id": "e1",
           "titulo": "E15 · Llave en el llavero",
           "min": "15 min",
-          "texto": "Crea la clave SSH, ejecuta <code>gh auth login</code> eligiendo SSH y prueba con <code>ssh -T git@github.com</code>.",
-          "pronto": "La respuesta empieza con \"Hi\", seguido de tu usuario de GitHub."
+          "texto": "Crea la llave SSH, ejecuta <code>gh auth login</code> eligiendo SSH y prueba con <code>ssh -T git@github.com</code>.",
+          "pronto": "la respuesta empieza con \"Hi\" seguido de tu usuario de GitHub."
         },
         {
           "id": "e2",
-          "titulo": "E16 · Página publicada",
+          "titulo": "E16 · Página en línea",
           "min": "20 min",
-          "texto": "Revisa los cuatro puntos, crea el repositorio público, activa Pages y luego cambia algo y ejecuta la rutina add, commit y push.",
-          "pronto": "La página se abre en el celular en https://SEU-USUARIO.github.io/meu-primeiro-agente/ y el cambio aparece después del push."
+          "texto": "Haz la revisión de cuatro puntos, crea el repositorio público, activa Pages y luego cambia algo y ejecuta la rutina add, commit y push.",
+          "pronto": "la página abre en el celular en https://SEU-USUARIO.github.io/meu-primeiro-agente/ y el cambio aparece después del push."
         },
         {
           "id": "e3",
           "titulo": "E17 · El mismo proyecto en la VPS",
           "min": "30 min",
-          "texto": "En una VPS Ubuntu contratada con tu clave pública, entra con ssh, clona el proyecto, cambia algo en Windows, haz push y tráelo con <code>git pull</code>.",
-          "pronto": "<code>ls</code> en la VPS muestra los archivos y <code>git pull</code> trajo el cambio hecho en Windows."
+          "texto": "En una VPS Ubuntu contratada con tu llave pública, entra con ssh, clona el proyecto, cambia algo en Windows, haz push y tráelo con <code>git pull</code>.",
+          "pronto": "<code>ls</code> en la VPS muestra los archivos y el <code>git pull</code> trajo el cambio hecho en Windows."
         }
       ]
     },
     {
       "tipo": "video",
-      "titulo": "Todo el nivel, comando por comando",
-      "sub": "Desde la terminal vacía en Windows hasta el sitio en GitHub Pages y el proyecto funcionando en la VPS.",
+      "titulo": "El nivel completo, comando por comando",
+      "sub": "Del terminal vacío en Windows al sitio en GitHub Pages y al proyecto corriendo en la VPS.",
       "chave": "oswork-terminal"
     },
     {
@@ -362,48 +362,49 @@
       "horas_padrao": 3,
       "degraus": [
         {
-          "titulo": "Lección 1 · Dónde estás",
+          "titulo": "Clase 1 · Dónde estás",
           "aula": "terminal"
         },
         {
-          "titulo": "Lección 2 · Instalar y entrar",
+          "titulo": "Clase 2 · Instalar y entrar",
           "aula": "instalar"
         },
         {
-          "titulo": "Lección 3 · La carpeta del agente",
+          "titulo": "Clase 3 · La carpeta del agente",
           "aula": "pasta"
         },
         {
-          "titulo": "Lección 4 · La primera tarea",
+          "titulo": "Clase 4 · La primera tarea",
           "aula": "primeira-tarefa"
         },
         {
-          "titulo": "Lección 5 · Secretos fuera del texto",
+          "titulo": "Clase 5 · Secretos fuera del texto",
           "aula": "segredos"
         },
         {
-          "titulo": "Lección 6 · Git",
+          "titulo": "Clase 6 · Git",
           "aula": "git"
         },
         {
-          "titulo": "Lección 7 · Reglas, Skills y memoria",
+          "titulo": "Clase 7 · Reglas, Skills y memoria",
           "aula": "agents-md"
         },
         {
-          "titulo": "Lección 8 · GitHub, Pages y VPS",
+          "titulo": "Clase 8 · GitHub, Pages y VPS",
           "aula": "publicar"
         }
       ],
       "txt": {
-        "titulo": "Plan — Del chat a la terminal",
+        "titulo": "Plan — Del chat al terminal",
         "inicio": "Inicio",
         "ritmo": "Ritmo",
-        "termino": "Finalización prevista",
+        "termino": "Fecha de término prevista",
         "ate": "hasta",
         "pronto": "listo cuando",
         "semanas": "semanas",
         "travou": "## Qué se trabó y la regla que creé",
         "h": "h por semana",
+        "ex1": "ejercicio",
         "exs": "ejercicios"
       }
     },
@@ -413,15 +414,15 @@
       "itens": [
         {
           "t": "Sabe dónde estás",
-          "texto": "Antes de cualquier comando, mira la ruta antes de &gt;. Una carpeta equivocada parece un fallo de la IA."
+          "texto": "Antes de cualquier comando, mira la ruta antes del &gt;. Una carpeta equivocada parece un fallo de la IA."
         },
         {
           "t": "Carpeta con reglas",
-          "texto": "Un tema por carpeta, README para las personas, AGENTS.md con reglas que puedes comprobar."
+          "texto": "Un tema por carpeta, README para las personas, AGENTS.md con reglas que se pueden verificar."
         },
         {
           "t": "Red de seguridad",
-          "texto": "Secreto en .env y fuera de Git; commit antes de un cambio grande; restore si no te gusta."
+          "texto": "El secreto va en el .env y fuera de Git; haz commit antes de un cambio grande; restaura cuando no te guste."
         },
         {
           "t": "Tú decides",
@@ -432,55 +433,55 @@
     {
       "tipo": "quiz",
       "titulo": "Prueba final",
-      "sub": "Sobre esta lección y todo el nivel.",
+      "sub": "Sobre esta clase y el nivel completo.",
       "perguntas": [
         {
-          "p": "Alguien te pidió tu clave SSH para «configurar el acceso». ¿Qué archivo puedes entregar?",
+          "p": "Alguien te pidió tu clave SSH para \"configurar el acceso\". ¿Qué archivo puedes entregar?",
           "opcoes": [
             "id_ed25519",
-            "id_ed25519.pub",
             "Los dos.",
-            "Ninguno, solo la contraseña."
+            "Ninguno, solo la contraseña.",
+            "id_ed25519.pub"
           ],
-          "certa": 1,
-          "explica": "La .pub es el candado: puedes enviarla a GitHub, a la VPS o a quien necesite habilitar tu acceso. La privada nunca sale de tu computadora.",
+          "certa": 3,
+          "explica": "La .pub es el candado: puede ir a GitHub, a la VPS o a quien necesite habilitar tu acceso. La privada nunca sale de tu computador.",
           "cert": true,
           "ref": "codigo"
         },
         {
           "p": "Ejecutaste <code>git commit</code>. ¿La versión ya está en GitHub?",
           "opcoes": [
-            "Sí, el commit la envía.",
-            "No: commit la guarda en tu computadora; quien la envía es git push.",
+            "No: el commit guarda en tu computador; quien envía es git push.",
             "Solo si el repositorio es público.",
-            "Sí, después de unos minutos."
+            "Sí, después de unos minutos.",
+            "Sí, el commit envía."
           ],
-          "certa": 1,
+          "certa": 0,
           "explica": "Guardar, enviar y publicar son tres pasos separados: commit, push y Pages.",
           "ref": "diagrama"
         },
         {
-          "p": "Antes de hacer push a un repositorio público, ¿qué revisas?",
+          "p": "Antes de un push a un repositorio público, ¿qué revisas?",
           "opcoes": [
-            "Solo si la página se ve bonita.",
-            "El destino, el estado de la carpeta, los cambios que se enviarían y que no haya ningún secreto.",
-            "Nada, .gitignore lo resuelve todo.",
-            "La velocidad de internet."
+            "Nada, el .gitignore lo resuelve todo.",
+            "La velocidad de internet.",
+            "Destino, estado de la carpeta, versiones que saldrían y ningún secreto.",
+            "Solo si la página se ve bonita."
           ],
-          "certa": 1,
-          "explica": "Cuatro puntos: <code>git remote -v</code>, <code>git status</code>, <code>git log --oneline</code> y ningún .env ni clave. Es público, cualquiera puede verlo.",
+          "certa": 2,
+          "explica": "Cuatro puntos: <code>git remote -v</code>, <code>git status</code>, <code>git log --oneline</code> y ningún .env ni clave. Si es público, cualquiera lo ve.",
           "ref": "passos"
         },
         {
           "p": "En la VPS, la línea empieza con <code>root@minha-vps:~#</code>. ¿Dónde estás?",
           "opcoes": [
-            "En tu Windows.",
-            "En la VPS, en la carpeta personal de root.",
+            "En la VPS, en la carpeta personal del root.",
             "En GitHub.",
+            "En tu Windows.",
             "En el navegador."
           ],
-          "certa": 1,
-          "explica": "El comienzo de la línea indica en qué máquina estás. <code>~</code> es la carpeta personal; en Windows, la línea empezaría con C:\\Users\\.",
+          "certa": 0,
+          "explica": "El comienzo de la línea indica en qué máquina estás. <code>~</code> es la carpeta personal; en Windows la línea empezaría con C:\\Users\\.",
           "ref": "simterm"
         }
       ]
@@ -490,8 +491,8 @@
       "titulo": "Próximos pasos",
       "links": [
         {
-          "t": "Volver a la vista general: Del chat al agente (niveles 2, 3 y 4)",
-          "href": "https://inematds.github.io/do-chat-ao-agente-v72/",
+          "t": "Volver a la visión general: Del chat al agente (niveles 2, 3 y 4)",
+          "href": "https://inematds.github.io/do-chat-ao-agente-v72/es/",
           "icone": "camadas"
         },
         {
@@ -500,7 +501,7 @@
           "icone": "video"
         },
         {
-          "t": "OSWork Quick: cola de comandos",
+          "t": "OSWork Quick: hoja de comandos",
           "href": "https://inematds.github.io/oswork-quick/materiais/",
           "icone": "lista"
         },

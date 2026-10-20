@@ -33,7 +33,7 @@
           "icone": "lista",
           "titulo": "Skill",
           "sub": "O roteiro que sai do fichário",
-          "itens": [{"icone": "arquivo", "t": ".agents\\skills\\<nome>\\SKILL.md"}],
+          "itens": [{"icone": "arquivo", "t": ".agents\\skills\\&lt;nome&gt;\\SKILL.md"}],
           "detalhe": "Um procedimento que se repete (a lista semanal, o relatório de sexta) vira uma Skill: um SKILL.md que começa com nome e descrição. O agente aciona quando a tarefa pede, sem carregar o manual inteiro em toda tarefa."
         },
         {
@@ -184,30 +184,30 @@
       "perguntas": [
         {
           "p": "Qual destas regras você consegue conferir olhando a entrega do agente?",
-          "opcoes": ["Revise tudo com muita atenção.", "Liste as pendências no final.", "Escreva de modo profissional.", "Capriche."],
-          "certa": 1,
+          "opcoes": ["Capriche.", "Escreva de modo profissional.", "Liste as pendências no final.", "Revise tudo com muita atenção."],
+          "certa": 2,
           "explica": "Regra observável tem ação e evidência: a lista de pendências está ou não está no fim. As outras não deixam rastro.",
           "cert": true,
           "ref": "passos"
         },
         {
           "p": "O global diz \"responda em tópicos\", o AGENTS.md do projeto não fala de formato e você pede uma tabela na conversa. O que vale?",
-          "opcoes": ["Os tópicos do global.", "O AGENTS.md do projeto.", "A tabela pedida na conversa.", "Nenhum, dá erro."],
-          "certa": 2,
+          "opcoes": ["A tabela pedida na conversa.", "Os tópicos do global.", "Nenhum, dá erro.", "O AGENTS.md do projeto."],
+          "certa": 0,
           "explica": "O pedido explícito na conversa vale mais que os arquivos de instrução.",
           "ref": "codigo"
         },
         {
           "p": "Você criou memoria.md em config, mas o agente ignorou os fatos. O que faz primeiro?",
-          "opcoes": ["Troca o modelo por um maior.", "Copia mais conversas no arquivo.", "Indica o arquivo no próprio pedido e pede o fato usado.", "Apaga a memória."],
-          "certa": 2,
+          "opcoes": ["Indica o arquivo no próprio pedido e pede o fato usado.", "Troca o modelo por um maior.", "Copia mais conversas no arquivo.", "Apaga a memória."],
+          "certa": 0,
           "explica": "O arquivo existir não garante leitura. Diga qual arquivo consultar e peça que ele cite o fato que usou.",
           "ref": "diagrama"
         },
         {
           "p": "O relatório saiu vazio porque a planilha estava sem registros. Qual é a menor correção?",
-          "opcoes": ["Trocar de modelo.", "Reescrever a Skill inteira.", "Uma regra: conferir a quantidade de registros antes de gerar.", "Refazer as pastas."],
-          "certa": 2,
+          "opcoes": ["Reescrever a Skill inteira.", "Uma regra: conferir a quantidade de registros antes de gerar.", "Trocar de modelo.", "Refazer as pastas."],
+          "certa": 1,
           "explica": "Falha de infraestrutura se corrige com uma checagem pequena. Reconstruir gasta horas e a planilha vazia continua quebrando.",
           "ref": "passos"
         }

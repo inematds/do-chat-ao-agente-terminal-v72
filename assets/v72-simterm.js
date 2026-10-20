@@ -1,4 +1,4 @@
-/* Simulação de terminal do curso "Do chat para o terminal" (tipo de seção simterm).
+/* 7.14.19: terminal simulado (tipo simterm, sec_simterm em gerar.py), vindo do curso do-chat-ao-agente-terminal-v72.
    O aluno digita o comando de cada missão; o terminal responde como o de verdade responderia.
    Nada roda de verdade: é um ensaio sem risco antes de fazer no seu computador. */
 (function () {

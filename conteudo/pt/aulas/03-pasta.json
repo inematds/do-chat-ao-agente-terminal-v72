@@ -189,22 +189,22 @@
       "perguntas": [
         {
           "p": "Você quer guardar \"prefiro relatórios curtos, com as pendências no fim\". Onde mora essa nota?",
-          "opcoes": ["Nas saídas de cada projeto.", "Na pasta config, fora dos projetos.", "No README de cada projeto.", "Em entradas, para a IA ler."],
-          "certa": 1,
+          "opcoes": ["Na pasta config, fora dos projetos.", "No README de cada projeto.", "Em entradas, para a IA ler.", "Nas saídas de cada projeto."],
+          "certa": 0,
           "explica": "Preferência que vale para todos os projetos fica em config, uma vez só. Repetir em cada projeto gera versões que se contradizem.",
           "ref": "diagrama"
         },
         {
           "p": "Qual é a diferença entre README.md e AGENTS.md?",
-          "opcoes": ["Nenhuma, são cópias.", "O README é para pessoas; o AGENTS.md dá regras de trabalho ao agente.", "O README é só para o Codex.", "O AGENTS.md guarda as senhas."],
-          "certa": 1,
+          "opcoes": ["O README é só para o Codex.", "Nenhuma, são cópias.", "O AGENTS.md guarda as senhas.", "O README é para pessoas; o AGENTS.md dá regras de trabalho ao agente."],
+          "certa": 3,
           "explica": "Cada um tem um leitor. O README explica o projeto a quem chega; o AGENTS.md diz ao agente como trabalhar ali.",
           "cert": true,
           "ref": "passos"
         },
         {
           "p": "Você pediu um resumo da feira de ciências e veio uma nota de boletim no meio. Qual a causa provável?",
-          "opcoes": ["O modelo é fraco.", "A pasta misturava assuntos e o boletim estava junto.", "Faltou internet.", "O Markdown estava errado."],
+          "opcoes": ["Faltou internet.", "A pasta misturava assuntos e o boletim estava junto.", "O Markdown estava errado.", "O modelo é fraco."],
           "certa": 1,
           "explica": "Pasta com vários assuntos vira ruído. Uma pasta por contexto faz a IA ler só o material da tarefa.",
           "ref": "diagrama"

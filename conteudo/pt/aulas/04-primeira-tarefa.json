@@ -184,7 +184,7 @@
       "perguntas": [
         {
           "p": "Qual é o melhor primeiro pedido numa pasta nova?",
-          "opcoes": ["\"Arrume o projeto.\"", "\"Leia AGENTS.md e README.md, explique e liste o que falta, sem editar; diga quais arquivos usou.\"", "\"Faça o que achar melhor.\"", "\"Crie todos os arquivos que faltam.\""],
+          "opcoes": ["\"Faça o que achar melhor.\"", "\"Leia AGENTS.md e README.md, explique e liste o que falta, sem editar; diga quais arquivos usou.\"", "\"Crie todos os arquivos que faltam.\"", "\"Arrume o projeto.\""],
           "certa": 1,
           "explica": "Primeiro a vistoria: ler sem editar e dizer o que usou. Assim você tem uma referência antes de qualquer mudança.",
           "cert": true,
@@ -199,8 +199,8 @@
         },
         {
           "p": "O AGENTS.md diz \"não envie nada\". Isso impede tecnicamente o envio?",
-          "opcoes": ["Sim, o agente nunca desobedece.", "Não: a regra orienta; quem impede são as permissões do programa.", "Sim, se o arquivo estiver em maiúsculas.", "Só no Codex."],
-          "certa": 1,
+          "opcoes": ["Sim, se o arquivo estiver em maiúsculas.", "Sim, o agente nunca desobedece.", "Não: a regra orienta; quem impede são as permissões do programa.", "Só no Codex."],
+          "certa": 2,
           "explica": "Regra escrita orienta o comportamento; permissão limita o que é possível. As duas se completam.",
           "ref": "passos"
         }

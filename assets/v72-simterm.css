@@ -1,4 +1,4 @@
-/* Simulação de terminal (simterm) — próprio deste curso; não altera v71/v72. */
+/* 7.14.19: terminal simulado (tipo simterm, sec_simterm em gerar.py) — veio do curso do-chat-ao-agente-terminal-v72. Só nas aulas que usam o tipo. */
 .simterm .st-grade{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:18px;align-items:start}
 .simterm .st-tit{display:flex;gap:8px;align-items:center;margin:0 0 10px;font:700 14px var(--sora);color:var(--amb-t)}
 .simterm .st-tit .ico{width:18px;height:18px}

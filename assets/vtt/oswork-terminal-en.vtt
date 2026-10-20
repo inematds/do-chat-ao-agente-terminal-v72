@@ -1,0 +1,974 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.390
+AI agents work in the terminal,
+
+2
+00:00:01.440 --> 00:00:05.210
+and a manager who doesn't know how to open a terminal can't even see what the agent did.
+
+3
+00:00:05.504 --> 00:00:07.064
+Remember the manager who doesn’t know how
+
+4
+00:00:07.064 --> 00:00:07.944
+to work with people?
+
+5
+00:00:07.944 --> 00:00:09.464
+If you can’t use the terminal or
+
+6
+00:00:09.464 --> 00:00:11.104
+manage agents, you’re ending up in the
+
+7
+00:00:11.104 --> 00:00:11.984
+same situation.
+
+8
+00:00:11.984 --> 00:00:12.804
+The good news:
+
+9
+00:00:12.804 --> 00:00:14.384
+you can learn this in an afternoon.
+
+10
+00:00:14.384 --> 00:00:15.264
+In this video,
+
+11
+00:00:15.264 --> 00:00:16.484
+I’ll walk you through OSWork,
+
+12
+00:00:16.484 --> 00:00:17.324
+step by step,
+
+13
+00:00:17.324 --> 00:00:18.144
+command by command,
+
+14
+00:00:18.144 --> 00:00:19.104
+copying and pasting.
+
+15
+00:00:19.104 --> 00:00:20.684
+From an empty terminal to your website
+
+16
+00:00:20.684 --> 00:00:22.744
+published online, with the same project running
+
+17
+00:00:22.744 --> 00:00:23.404
+on a server.
+
+18
+00:00:23.404 --> 00:00:24.864
+First, don’t be afraid of the black
+
+19
+00:00:24.864 --> 00:00:25.204
+screen.
+
+20
+00:00:25.204 --> 00:00:26.944
+The terminal is just another window into
+
+21
+00:00:26.944 --> 00:00:28.004
+the same folders on Windows.
+
+22
+00:00:28.004 --> 00:00:29.084
+You type a command,
+
+23
+00:00:29.084 --> 00:00:30.804
+press Enter, and read the response.
+
+24
+00:00:30.804 --> 00:00:32.944
+That’s where Claude Code and Codex work:
+
+25
+00:00:32.944 --> 00:00:33.984
+inside a folder,
+
+26
+00:00:33.984 --> 00:00:35.824
+reading and creating files.
+
+27
+00:00:35.824 --> 00:00:37.614
+Everything I’ll show you is on the
+
+28
+00:00:37.614 --> 00:00:39.524
+OSWork page on INEMA’s events site,
+
+29
+00:00:39.524 --> 00:00:41.104
+along with a command cheat sheet you
+
+30
+00:00:41.104 --> 00:00:41.784
+can download.
+
+31
+00:00:41.784 --> 00:00:43.264
+Follow the steps in order on a
+
+32
+00:00:43.264 --> 00:00:44.944
+computer running Windows 10 or 11.
+
+33
+00:00:44.944 --> 00:00:46.364
+Wherever you see Your Name or Your
+
+34
+00:00:46.364 --> 00:00:48.384
+Username, replace it with your own.
+
+35
+00:00:48.384 --> 00:00:49.044
+Step one.
+
+36
+00:00:49.044 --> 00:00:50.224
+Press the Windows key,
+
+37
+00:00:50.224 --> 00:00:51.944
+type cmd, and press Enter.
+
+38
+00:00:51.944 --> 00:00:53.684
+A black window opens with C colon,
+
+39
+00:00:53.684 --> 00:00:55.324
+backslash, Users, backslash,
+
+40
+00:00:55.324 --> 00:00:55.824
+and your name.
+
+41
+00:00:55.824 --> 00:00:56.944
+That’s your personal folder.
+
+42
+00:00:56.944 --> 00:00:59.184
+Step two: create the projetos folder and
+
+43
+00:00:59.184 --> 00:01:00.404
+a folder for your first project.
+
+44
+00:01:00.404 --> 00:01:01.624
+One command at a time.
+
+45
+00:01:01.624 --> 00:01:03.304
+Press Enter after each one.
+
+46
+00:01:03.304 --> 00:01:04.924
+Type cd, percent sign,
+
+47
+00:01:04.924 --> 00:01:06.764
+USERPROFILE, percent sign to go to your
+
+48
+00:01:06.764 --> 00:01:07.444
+personal folder.
+
+49
+00:01:07.444 --> 00:01:09.564
+Then mkdir projetos to create the folder.
+
+50
+00:01:09.564 --> 00:01:11.564
+Type cd projetos to go inside it.
+
+51
+00:01:11.564 --> 00:01:12.704
+Then mkdir meu-site.
+
+52
+00:01:12.704 --> 00:01:14.264
+And cd meu-site.
+
+53
+00:01:14.264 --> 00:01:15.084
+At the end,
+
+54
+00:01:15.084 --> 00:01:17.477
+the terminal shows that you’re inside projetos,
+
+55
+00:01:17.477 --> 00:01:17.964
+meu-site.
+
+56
+00:01:17.964 --> 00:01:19.784
+Step three is the most important.
+
+57
+00:01:19.784 --> 00:01:21.144
+Type explorer, space,
+
+58
+00:01:21.144 --> 00:01:21.604
+period.
+
+59
+00:01:21.604 --> 00:01:23.404
+File Explorer opens right in the folder
+
+60
+00:01:23.404 --> 00:01:24.284
+where the terminal is.
+
+61
+00:01:24.284 --> 00:01:26.164
+The terminal and File Explorer show the
+
+62
+00:01:26.164 --> 00:01:26.784
+same place.
+
+63
+00:01:26.784 --> 00:01:28.464
+Whatever you create in one appears in
+
+64
+00:01:28.464 --> 00:01:28.864
+the other.
+
+65
+00:01:28.864 --> 00:01:29.904
+Once you understand that,
+
+66
+00:01:29.904 --> 00:01:31.804
+the black screen stops being scary.
+
+67
+00:01:31.804 --> 00:01:32.444
+Step four.
+
+68
+00:01:32.444 --> 00:01:33.404
+With six commands,
+
+69
+00:01:33.404 --> 00:01:34.744
+you can move through every folder.
+
+70
+00:01:34.744 --> 00:01:36.204
+dir lists what’s in the folder.
+
+71
+00:01:36.204 --> 00:01:37.744
+cd name goes into a folder.
+
+72
+00:01:37.744 --> 00:01:39.694
+cd dot dot goes up one folder.
+
+73
+00:01:39.694 --> 00:01:41.084
+mkdir name creates a folder.
+
+74
+00:01:41.084 --> 00:01:42.964
+explorer period opens the folder in Windows.
+
+75
+00:01:42.964 --> 00:01:44.664
+And cls clears the screen.
+
+76
+00:01:44.664 --> 00:01:46.624
+Practice now: type cd dot dot to
+
+77
+00:01:46.624 --> 00:01:48.204
+go back, dir to list the contents,
+
+78
+00:01:48.204 --> 00:01:49.904
+and cd meu-site to go in again.
+
+79
+00:01:49.904 --> 00:01:51.384
+Step five, just once:
+
+80
+00:01:51.384 --> 00:01:53.384
+install Git, GitHub CLI,
+
+81
+00:01:53.384 --> 00:01:54.104
+and Node.
+
+82
+00:01:54.104 --> 00:01:55.344
+Winget comes with Windows.
+
+83
+00:01:55.344 --> 00:01:56.324
+Run three lines:
+
+84
+00:01:56.324 --> 00:01:58.304
+winget install followed by each program’s name.
+
+85
+00:01:58.304 --> 00:02:00.424
+Then close cmd and open it again
+
+86
+00:02:00.424 --> 00:02:01.804
+so it can find the new programs.
+
+87
+00:02:01.804 --> 00:02:04.104
+git dash dash version and gh dash
+
+88
+00:02:04.104 --> 00:02:06.024
+dash version show a version number.
+
+89
+00:02:06.024 --> 00:02:08.074
+Step six: install an agent,
+
+90
+00:02:08.074 --> 00:02:09.204
+Claude Code or Codex.
+
+91
+00:02:09.204 --> 00:02:10.244
+Pick one or both.
+
+92
+00:02:10.244 --> 00:02:11.764
+One line installs Claude Code;
+
+93
+00:02:11.764 --> 00:02:13.264
+the other installs Codex.
+
+94
+00:02:13.264 --> 00:02:14.484
+The first time you open it,
+
+95
+00:02:14.484 --> 00:02:15.864
+sign in with your subscription:
+
+96
+00:02:15.864 --> 00:02:16.764
+Claude Pro or Max,
+
+97
+00:02:16.764 --> 00:02:18.384
+or ChatGPT Plus or Pro.
+
+98
+00:02:18.384 --> 00:02:20.264
+Step seven, and now the agent comes
+
+99
+00:02:20.264 --> 00:02:20.564
+in.
+
+100
+00:02:20.564 --> 00:02:21.884
+The agent can only see the folder
+
+101
+00:02:21.884 --> 00:02:22.384
+you’re in.
+
+102
+00:02:22.384 --> 00:02:24.104
+So first go into your project folder,
+
+103
+00:02:24.104 --> 00:02:25.234
+then start the agent:
+
+104
+00:02:25.234 --> 00:02:26.044
+claude or codex.
+
+105
+00:02:26.044 --> 00:02:28.664
+Ask it: create an index dot html
+
+106
+00:02:28.664 --> 00:02:30.444
+file with a simple page about me,
+
+107
+00:02:30.444 --> 00:02:32.444
+and an AGENTS dot md file with
+
+108
+00:02:32.444 --> 00:02:33.544
+the rules for this project.
+
+109
+00:02:33.544 --> 00:02:34.604
+To exit the agent,
+
+110
+00:02:34.604 --> 00:02:35.544
+type slash exit.
+
+111
+00:02:35.544 --> 00:02:36.564
+Now type dir:
+
+112
+00:02:36.564 --> 00:02:37.564
+the new files appear.
+
+113
+00:02:37.564 --> 00:02:39.484
+And start index dot html
+
+114
+00:02:39.484 --> 00:02:41.684
+opens your page in the browser.
+
+115
+00:02:41.684 --> 00:02:43.704
+Notice: you didn’t write any code.
+
+116
+00:02:43.704 --> 00:02:45.064
+You assigned the task,
+
+117
+00:02:45.064 --> 00:02:45.884
+checked the result,
+
+118
+00:02:45.884 --> 00:02:47.004
+and made a decision.
+
+119
+00:02:47.004 --> 00:02:48.044
+That’s management.
+
+120
+00:02:48.304 --> 00:02:49.844
+Part two: save your project and publish
+
+121
+00:02:49.844 --> 00:02:50.504
+it on GitHub.
+
+122
+00:02:50.504 --> 00:02:51.864
+Git keeps versions of your project.
+
+123
+00:02:51.864 --> 00:02:53.404
+gh connects to your GitHub account.
+
+124
+00:02:53.404 --> 00:02:55.024
+And an SSH key is your identity,
+
+125
+00:02:55.024 --> 00:02:56.004
+without a password.
+
+126
+00:02:56.004 --> 00:02:57.444
+Step eight: tell Git who you are
+
+127
+00:02:57.444 --> 00:02:58.184
+with git config,
+
+128
+00:02:58.184 --> 00:02:59.484
+using your name and the same email
+
+129
+00:02:59.484 --> 00:03:00.804
+address as your GitHub account.
+
+130
+00:03:00.804 --> 00:03:03.404
+Step nine: create your SSH key with
+
+131
+00:03:03.404 --> 00:03:05.124
+ssh-keygen, and press Enter at all three
+
+132
+00:03:05.124 --> 00:03:05.604
+prompts.
+
+133
+00:03:05.604 --> 00:03:07.844
+Then open the dot ssh folder.
+
+134
+00:03:07.844 --> 00:03:09.024
+You’ll see two files.
+
+135
+00:03:09.024 --> 00:03:10.324
+The one without dot pub at the
+
+136
+00:03:10.324 --> 00:03:11.484
+end is your private key.
+
+137
+00:03:11.484 --> 00:03:12.644
+Never send it to anyone.
+
+138
+00:03:12.644 --> 00:03:14.164
+The one ending in dot pub is
+
+139
+00:03:14.164 --> 00:03:14.964
+your public key.
+
+140
+00:03:14.964 --> 00:03:16.764
+Give it to GitHub and your VPS.
+
+141
+00:03:16.764 --> 00:03:19.024
+Step ten: gh auth login.
+
+142
+00:03:19.024 --> 00:03:20.224
+Choose github dot com,
+
+143
+00:03:20.224 --> 00:03:22.264
+then SSH, select the dot pub key,
+
+144
+00:03:22.264 --> 00:03:23.564
+and sign in through your browser.
+
+145
+00:03:23.564 --> 00:03:25.404
+Then test the key with ssh dash
+
+146
+00:03:25.404 --> 00:03:26.984
+T git at github dot com.
+
+147
+00:03:26.984 --> 00:03:27.724
+The first time,
+
+148
+00:03:27.724 --> 00:03:28.564
+answer yes.
+
+149
+00:03:28.564 --> 00:03:29.524
+If you see Hi,
+
+150
+00:03:29.524 --> 00:03:31.524
+your username, and successfully authenticated,
+
+151
+00:03:31.524 --> 00:03:32.084
+it worked.
+
+152
+00:03:32.084 --> 00:03:33.014
+Step
+
+153
+00:03:33.014 --> 00:03:34.924
+eleven: create the repository and upload your
+
+154
+00:03:34.924 --> 00:03:35.424
+project.
+
+155
+00:03:35.424 --> 00:03:36.624
+From inside the folder,
+
+156
+00:03:36.624 --> 00:03:37.604
+run git init,
+
+157
+00:03:37.604 --> 00:03:38.644
+git add period,
+
+158
+00:03:38.644 --> 00:03:40.284
+git commit with the message first version,
+
+159
+00:03:40.284 --> 00:03:41.404
+git branch dash M main,
+
+160
+00:03:41.404 --> 00:03:43.124
+and gh repo create meu-site.
+
+161
+00:03:43.124 --> 00:03:44.964
+Public means anyone can see it.
+
+162
+00:03:44.964 --> 00:03:46.364
+Private means only you and the people
+
+163
+00:03:46.364 --> 00:03:46.764
+you invite.
+
+164
+00:03:46.764 --> 00:03:47.714
+Step
+
+165
+00:03:47.714 --> 00:03:49.784
+twelve: publish your page with GitHub Pages,
+
+166
+00:03:49.784 --> 00:03:51.344
+free for public repositories.
+
+167
+00:03:51.344 --> 00:03:53.144
+Run one line with gh api,
+
+168
+00:03:53.144 --> 00:03:54.304
+or use the website:
+
+169
+00:03:54.304 --> 00:03:55.184
+go to Settings,
+
+170
+00:03:55.184 --> 00:03:57.004
+Pages, and choose the main branch.
+
+171
+00:03:57.004 --> 00:03:58.024
+In one or two minutes,
+
+172
+00:03:58.024 --> 00:03:59.904
+the page opens at your-username dot github
+
+173
+00:03:59.904 --> 00:04:01.064
+dot io, slash meu-site.
+
+174
+00:04:01.064 --> 00:04:03.304
+Step thirteen: your everyday routine.
+
+175
+00:04:03.304 --> 00:04:04.024
+Changed something?
+
+176
+00:04:04.024 --> 00:04:05.244
+Run git add period,
+
+177
+00:04:05.244 --> 00:04:06.644
+git commit with a message about what
+
+178
+00:04:06.644 --> 00:04:07.744
+changed, and git push.
+
+179
+00:04:07.744 --> 00:04:08.684
+Or ask the agent:
+
+180
+00:04:08.684 --> 00:04:10.084
+save it and send it to GitHub.
+
+181
+00:04:10.084 --> 00:04:11.644
+Part three: the same thing on a
+
+182
+00:04:11.644 --> 00:04:12.004
+server.
+
+183
+00:04:12.004 --> 00:04:13.664
+A VPS is a Linux computer that
+
+184
+00:04:13.664 --> 00:04:14.744
+runs 24 hours a day.
+
+185
+00:04:14.744 --> 00:04:16.764
+Step fourteen: when you set it up,
+
+186
+00:04:16.764 --> 00:04:18.624
+the provider asks for an SSH key.
+
+187
+00:04:18.624 --> 00:04:20.024
+Run type with the path to your
+
+188
+00:04:20.024 --> 00:04:20.524
+dot pub key,
+
+189
+00:04:20.524 --> 00:04:21.704
+and copy the whole line,
+
+190
+00:04:21.704 --> 00:04:23.184
+starting with
+
+191
+00:04:23.414 --> 00:04:24.604
+ssh-ed25519.
+
+192
+00:04:24.604 --> 00:04:26.924
+Step fifteen: connect to the VPS with
+
+193
+00:04:26.924 --> 00:04:28.644
+ssh root at the IP address your
+
+194
+00:04:28.644 --> 00:04:29.484
+provider gave you.
+
+195
+00:04:29.484 --> 00:04:31.184
+Now the terminal is the server.
+
+196
+00:04:31.184 --> 00:04:33.284
+Step sixteen: moving around works the same
+
+197
+00:04:33.284 --> 00:04:35.204
+way; only a few names change.
+
+198
+00:04:35.204 --> 00:04:36.904
+dir becomes ls.
+
+199
+00:04:36.904 --> 00:04:38.364
+cls becomes clear.
+
+200
+00:04:38.364 --> 00:04:39.484
+type becomes cat.
+
+201
+00:04:39.484 --> 00:04:41.344
+And your personal folder becomes the tilde.
+
+202
+00:04:41.344 --> 00:04:42.304
+Step
+
+203
+00:04:42.304 --> 00:04:43.704
+seventeen: install Git,
+
+204
+00:04:43.704 --> 00:04:45.064
+clone your GitHub project,
+
+205
+00:04:45.064 --> 00:04:46.084
+go into the folder,
+
+206
+00:04:46.084 --> 00:04:47.284
+and install the agent.
+
+207
+00:04:47.284 --> 00:04:48.984
+The same files from your Windows computer
+
+208
+00:04:48.984 --> 00:04:50.644
+are now on the VPS.
+
+209
+00:04:50.644 --> 00:04:52.304
+Run claude inside the folder,
+
+210
+00:04:52.304 --> 00:04:53.604
+just like in step seven.
+
+211
+00:04:53.604 --> 00:04:54.924
+And when you want to connect other
+
+212
+00:04:54.924 --> 00:04:56.994
+systems, there are two names to know.
+
+213
+00:04:56.994 --> 00:04:59.344
+Vercel imports your GitHub repository and publishes
+
+214
+00:04:59.344 --> 00:05:01.764
+your site automatically with every git push,
+
+215
+00:05:01.764 --> 00:05:02.884
+with its own domain.
+
+216
+00:05:02.884 --> 00:05:04.264
+It’s a good fit for sites and
+
+217
+00:05:04.264 --> 00:05:05.464
+apps that are going to grow.
+
+218
+00:05:05.464 --> 00:05:07.564
+And Supabase gives your app a database,
+
+219
+00:05:07.564 --> 00:05:09.164
+user logins, and file storage.
+
+220
+00:05:09.164 --> 00:05:10.804
+The agent writes the integration.
+
+221
+00:05:10.804 --> 00:05:12.804
+You keep the keys outside the repository.
+
+222
+00:05:12.804 --> 00:05:14.884
+Let’s recap: the terminal and folders,
+
+223
+00:05:14.884 --> 00:05:16.364
+the agent inside the folder,
+
+224
+00:05:16.364 --> 00:05:17.864
+GitHub to save and publish,
+
+225
+00:05:17.864 --> 00:05:19.584
+and the VPS to keep things running
+
+226
+00:05:19.584 --> 00:05:20.524
+all the time.
+
+227
+00:05:20.524 --> 00:05:21.304
+Seventeen steps.
+
+228
+00:05:21.304 --> 00:05:23.024
+A manager who knows this can see
+
+229
+00:05:23.024 --> 00:05:23.844
+what the agent did,
+
+230
+00:05:23.844 --> 00:05:24.604
+check the work,
+
+231
+00:05:24.604 --> 00:05:25.264
+and decide.
+
+232
+00:05:25.264 --> 00:05:26.704
+That’s why the terminal isn’t just for
+
+233
+00:05:26.704 --> 00:05:27.224
+programmers.
+
+234
+00:05:27.224 --> 00:05:28.384
+It’s where agents work.
+
+235
+00:05:28.384 --> 00:05:30.134
+The page is at eventos dot inema
+
+236
+00:05:30.134 --> 00:05:31.544
+dot pro, slash oswork,
+
+237
+00:05:31.544 --> 00:05:32.804
+with the command cheat sheet.
+
+238
+00:05:32.804 --> 00:05:34.284
+And if you want each step explained
+
+239
+00:05:34.284 --> 00:05:35.044
+in more detail,
+
+240
+00:05:35.044 --> 00:05:36.924
+the OSWork Quick and OSWork six point
+
+241
+00:05:36.924 --> 00:05:38.984
+two courses are at INEMA dot club.
+
+242
+00:05:38.984 --> 00:05:39.844
+Open and free.
+
+243
+00:05:39.844 --> 00:05:41.344
+Start with step one today.
+

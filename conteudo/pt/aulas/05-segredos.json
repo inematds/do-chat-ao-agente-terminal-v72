@@ -182,7 +182,7 @@
       "perguntas": [
         {
           "p": "Onde fica a chave de uma API no projeto?",
-          "opcoes": ["No AGENTS.md, para o agente saber usar.", "No .env, que está listado no .gitignore.", "No README, comentada.", "No .env.example."],
+          "opcoes": ["No AGENTS.md, para o agente saber usar.", "No .env, que está listado no .gitignore.", "No .env.example.", "No README, comentada."],
           "certa": 1,
           "explica": "Chave só no .env, e o .env no .gitignore. O .env.example tem só o nome com valor de mentira.",
           "cert": true,
@@ -190,14 +190,14 @@
         },
         {
           "p": "Um colega pôs o .env no .gitignore uma semana depois da primeira versão. O .env saiu do histórico?",
-          "opcoes": ["Sim, o .gitignore apaga do histórico.", "Não: a versão antiga continua com o .env dentro.", "Sim, depois do próximo push.", "Só se o arquivo for renomeado."],
-          "certa": 1,
+          "opcoes": ["Não: a versão antiga continua com o .env dentro.", "Só se o arquivo for renomeado.", "Sim, o .gitignore apaga do histórico.", "Sim, depois do próximo push."],
+          "certa": 0,
           "explica": "O .gitignore vale daqui para a frente e só para o que ainda não foi guardado. Por isso ele vem antes do primeiro commit.",
           "ref": "diagrama"
         },
         {
           "p": "Você colou uma chave real num grupo por engano. Qual o primeiro passo?",
-          "opcoes": ["Apagar a mensagem.", "Revogar a chave no site que a criou e gerar outra.", "Pedir que ninguém use.", "Trocar o nome da variável."],
+          "opcoes": ["Pedir que ninguém use.", "Revogar a chave no site que a criou e gerar outra.", "Trocar o nome da variável.", "Apagar a mensagem."],
           "certa": 1,
           "explica": "Apagar não invalida a cópia que alguém já viu. Revogar na origem fecha o acesso; depois você limpa o resto.",
           "ref": "passos"

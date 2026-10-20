@@ -210,30 +210,30 @@
       "perguntas": [
         {
           "p": "Você abriu o cmd e quer saber em que pasta está. O que digita?",
-          "opcoes": ["dir", "cd, sozinho", "explorer", "mkdir"],
-          "certa": 1,
+          "opcoes": ["cd, sozinho", "explorer", "dir", "mkdir"],
+          "certa": 0,
           "explica": "O <code>cd</code> sem mais nada responde o caminho completo da pasta atual. O <code>dir</code> mostra o que tem nela, mas não o endereço.",
           "cert": true,
           "ref": "passos"
         },
         {
           "p": "Você rodou <code>mkdir projetos</code> e o terminal não respondeu nada. O que isso quer dizer?",
-          "opcoes": ["Que deu erro e nada foi criado.", "Que o comando ainda está rodando.", "Que deu certo; confirme com dir.", "Que precisa abrir como administrador."],
+          "opcoes": ["Que o comando ainda está rodando.", "Que deu erro e nada foi criado.", "Que deu certo; confirme com dir.", "Que precisa abrir como administrador."],
           "certa": 2,
           "explica": "Muitos comandos ficam em silêncio quando dão certo. Quem confirma é o comando seguinte: <code>dir</code> mostra a pasta nova.",
           "ref": "diagrama"
         },
         {
           "p": "Você criou um arquivo pelo Explorador, mas ele não aparece no <code>dir</code>. Qual a causa mais provável?",
-          "opcoes": ["O terminal não enxerga arquivos do Explorador.", "Você está em outra pasta no terminal.", "Precisa reiniciar o computador.", "O arquivo foi criado vazio."],
-          "certa": 1,
+          "opcoes": ["O arquivo foi criado vazio.", "O terminal não enxerga arquivos do Explorador.", "Precisa reiniciar o computador.", "Você está em outra pasta no terminal."],
+          "certa": 3,
           "explica": "Terminal e Explorador mostram o mesmo disco. Se o arquivo não aparece, o terminal está noutra pasta: rode <code>cd</code> e compare os caminhos.",
           "ref": "codigo"
         },
         {
           "p": "Na VPS, com Linux, qual comando faz o papel do <code>dir</code>?",
-          "opcoes": ["ls", "pwd", "type", "cls"],
-          "certa": 0,
+          "opcoes": ["pwd", "cls", "type", "ls"],
+          "certa": 3,
           "explica": "<code>ls</code> lista a pasta. <code>pwd</code> é o equivalente do <code>cd</code> sozinho, e <code>cat</code> o do <code>type</code>.",
           "ref": "codigo"
         }

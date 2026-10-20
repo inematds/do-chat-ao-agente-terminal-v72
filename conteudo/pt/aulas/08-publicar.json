@@ -248,6 +248,7 @@
         "semanas": "semanas",
         "travou": "## O que travou e a regra que criei",
         "h": "h por semana",
+        "ex1": "exercício",
         "exs": "exercícios"
       }
     },
@@ -268,30 +269,30 @@
       "perguntas": [
         {
           "p": "Alguém pediu a sua chave SSH para \"configurar o acesso\". Qual arquivo você pode entregar?",
-          "opcoes": ["id_ed25519", "id_ed25519.pub", "Os dois.", "Nenhum, só a senha."],
-          "certa": 1,
+          "opcoes": ["id_ed25519", "Os dois.", "Nenhum, só a senha.", "id_ed25519.pub"],
+          "certa": 3,
           "explica": "A .pub é o cadeado: pode ir para o GitHub, para a VPS ou para quem precisa liberar seu acesso. A privada nunca sai do seu computador.",
           "cert": true,
           "ref": "codigo"
         },
         {
           "p": "Você deu <code>git commit</code>. A versão já está no GitHub?",
-          "opcoes": ["Sim, o commit envia.", "Não: commit salva no seu computador; quem envia é o git push.", "Só se o repositório for público.", "Sim, depois de alguns minutos."],
-          "certa": 1,
+          "opcoes": ["Não: commit salva no seu computador; quem envia é o git push.", "Só se o repositório for público.", "Sim, depois de alguns minutos.", "Sim, o commit envia."],
+          "certa": 0,
           "explica": "Salvar, enviar e pôr no ar são três passos separados: commit, push e Pages.",
           "ref": "diagrama"
         },
         {
           "p": "Antes de um push para um repositório público, o que você confere?",
-          "opcoes": ["Só se a página está bonita.", "Destino, estado da pasta, versões que iriam e nenhum segredo.", "Nada, o .gitignore resolve tudo.", "A velocidade da internet."],
-          "certa": 1,
+          "opcoes": ["Nada, o .gitignore resolve tudo.", "A velocidade da internet.", "Destino, estado da pasta, versões que iriam e nenhum segredo.", "Só se a página está bonita."],
+          "certa": 2,
           "explica": "Quatro pontos: <code>git remote -v</code>, <code>git status</code>, <code>git log --oneline</code> e nenhum .env ou chave. Público, qualquer pessoa vê.",
           "ref": "passos"
         },
         {
           "p": "Na VPS, a linha começa com <code>root@minha-vps:~#</code>. Onde você está?",
-          "opcoes": ["No seu Windows.", "Na VPS, na pasta pessoal do root.", "No GitHub.", "No navegador."],
-          "certa": 1,
+          "opcoes": ["Na VPS, na pasta pessoal do root.", "No GitHub.", "No seu Windows.", "No navegador."],
+          "certa": 0,
           "explica": "O começo da linha diz em que máquina você está. <code>~</code> é a pasta pessoal; no Windows a linha começaria com C:\\Users\\.",
           "ref": "simterm"
         }

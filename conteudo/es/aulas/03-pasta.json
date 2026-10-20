@@ -5,30 +5,30 @@
   "titulo_curto": "La carpeta del agente",
   "menu": "Carpeta",
   "minutos": 16,
-  "lead": "Cuando todo está en una sola carpeta, la IA lee material que no tiene nada que ver con el pedido y tú no sabes de dónde salió cada frase. Una carpeta por tema, con un archivo para las personas y otro para el agente, resuelve eso antes del primer pedido.",
-  "objetivo": "armar el árbol proyectos/config y la carpeta del proyecto con entradas, salidas, README.md y AGENTS.md en Markdown.",
-  "hero_alt": "Archivador de acero abierto con carpetas colgantes etiquetadas y una laptop al fondo.",
+  "lead": "Cuando todo queda en una sola carpeta, la IA lee material que no tiene nada que ver con el pedido y no sabes de dónde salió cada frase. Una carpeta por tema, con un archivo para personas y otro para el agente, resuelve eso antes del primer pedido.",
+  "objetivo": "armar el árbol projetos/config y la carpeta del proyecto con entradas, saidas, README.md y AGENTS.md en Markdown.",
+  "hero_alt": "Archivador de acero abierto con carpetas colgantes rotuladas y un notebook al fondo.",
   "competencias": [
-    "estructurar-carpeta-agente",
-    "escribir-markdown",
-    "separar-entradas-salidas"
+    "estruturar-pasta-agente",
+    "escrever-markdown",
+    "separar-entradas-saidas"
   ],
   "aprende": [
     {
       "icone": "pasta",
-      "t": "Una carpeta por tema y config para lo que se aplica a todos"
+      "t": "Una carpeta por tema, y config para lo que vale en todos"
     },
     {
       "icone": "arquivo",
-      "t": "Las tres marcas de Markdown: #, ## y -"
+      "t": "Las tres marcas del Markdown: #, ## y -"
     },
     {
       "icone": "usuario",
-      "t": "README para las personas, AGENTS.md para el agente"
+      "t": "README para personas, AGENTS.md para el agente"
     },
     {
       "icone": "lupa",
-      "t": "Editar con notepad y revisar con type"
+      "t": "Editar con notepad y comprobar con type"
     }
   ],
   "secoes": [
@@ -51,17 +51,17 @@
               "t": "meu-primeiro-agente"
             }
           ],
-          "detalhe": "Reúne trabajos independientes. Cada carpeta que contiene es un contexto: el material de un solo tema. Cuando abres el agente en una carpeta, trabaja desde ahí."
+          "detalhe": "Reúne trabajos independientes. Cada carpeta dentro de ella es un contexto: el material de un solo tema. Cuando abres el agente en una carpeta, él trabaja a partir de ella."
         },
         {
           "icone": "memoria",
           "titulo": "config",
-          "sub": "Se aplica a todos los proyectos",
+          "sub": "Vale para todos los proyectos",
           "itens": [
             {
               "icone": "arquivo",
               "t": "memoria.md",
-              "sub": "tu estilo estable"
+              "sub": "tu forma estable"
             },
             {
               "icone": "arquivo",
@@ -69,7 +69,7 @@
               "sub": "elección, fecha y motivo"
             }
           ],
-          "detalhe": "Está dentro de projetos, pero fuera de cada proyecto. Guarda lo que siempre se aplica, como «prefiero informes cortos, con los pendientes al final». Lo escribes una vez y lo usas en todos."
+          "detalhe": "Queda dentro de projetos, pero fuera de cada proyecto. Guarda lo que vale siempre, como \"prefiero informes cortos, con los pendientes al final\". Lo escribes una vez y lo usas en todos."
         },
         {
           "icone": "pasta",
@@ -79,7 +79,7 @@
             {
               "icone": "arquivo",
               "t": "README.md",
-              "sub": "para las personas"
+              "sub": "para personas"
             },
             {
               "icone": "arquivo",
@@ -91,7 +91,7 @@
               "t": "entradas / saidas"
             }
           ],
-          "detalhe": "Entradas es lo que lee la IA; salidas es lo que produce para que lo revises. Separadas, puedes comparar una con otra. No mezcles aquí material de otro cliente o de otro grupo.",
+          "detalhe": "Entradas es lo que la IA lee; saídas es lo que ella produce, para que tú lo revises. Separadas, se puede comparar una con la otra. No mezcles aquí material de otro cliente o de otro grupo.",
           "forte": true
         },
         {
@@ -108,14 +108,14 @@
               "t": "Escribe en saidas"
             }
           ],
-          "detalhe": "El agente busca el AGENTS.md por su cuenta al empezar. El resto lo lee cuando se lo indicas: la IA no abre cada archivo de la carpeta por su cuenta."
+          "detalhe": "El agente busca el AGENTS.md por sí solo al empezar. Lo demás lo lee cuando tú se lo indicas: la IA no abre cada archivo de la carpeta por cuenta propia."
         }
       ],
-      "legenda": "Nombres cortos, sin espacios ni acentos: meu-primeiro-agente, entradas, saidas.",
+      "legenda": "Nombres cortos, sin espacios y sin tildes: meu-primeiro-agente, entradas, saidas.",
       "rolagem": true,
       "rolagem_fim": {
         "titulo": "Menos material, más rastro",
-        "texto": "Una carpeta por tema hace que la IA lea menos cosas y te permite saber de dónde salió cada frase. Dibuja el árbol en papel antes de crearlo: elige los nombres con calma."
+        "texto": "Una carpeta separada por tema hace que la IA lea menos cosas y te deja saber de dónde vino cada frase. Dibuja el árbol en papel antes de crear: los nombres salen con calma."
       }
     },
     {
@@ -127,47 +127,47 @@
           "titulo": "Tres marcas",
           "sub": "#, ## y -",
           "texto": [
-            "El <code>#</code> al inicio de la línea crea un título, <code>##</code> crea un subtítulo y el guion crea un elemento de lista. El archivo termina en <code>.md</code> y se abre en cualquier editor de texto.",
+            "El <code>#</code> al comienzo de la línea hace un título, <code>##</code> hace un subtítulo y el guion hace un ítem de lista. El archivo termina en <code>.md</code> y se abre en cualquier editor de texto.",
             "Sigue siendo texto: quien lo lee entiende la estructura incluso sin formato."
           ],
           "exemplo": {
             "rot": "En el archivo",
-            "texto": "# Feria de ciencias  ## Materiales  - algodón y un vaso"
+            "texto": "# Feira de ciências  ## Materiais  - algodão e um copo"
           }
         },
         {
           "titulo": "README",
-          "sub": "Para quien llegue después",
+          "sub": "Para quien llega después",
           "texto": [
-            "Dice para qué sirve el proyecto y cómo revisar el resultado. Tiene cinco secciones: Propósito, Lee primero, Organización, Cómo verificar y Estado actual.",
-            "¿Aún no sabes qué poner en un campo? Escribe \"por definir\". Es mejor dejar un campo abierto con honestidad que usar un texto de plantilla que nadie revisó."
+            "Dice para qué sirve el proyecto y cómo comprobar el resultado. Cinco secciones: Propósito, Leia primeiro, Organização, Como verificar y Estado atual.",
+            "¿Aún no sabes un campo? Escribe \"a definir\". Un campo honesto abierto vale más que un texto de plantilla que nadie revisó."
           ],
           "exemplo": {
             "rot": "Cómo verificar",
-            "texto": "Todos los grupos inscritos aparecen en la lista final."
+            "texto": "Todo grupo inscrito aparece en la lista final."
           }
         },
         {
           "titulo": "AGENTS.md",
-          "sub": "El manual del agente",
+          "sub": "El manual del empleado",
           "texto": [
-            "Le dice al agente quién eres, cuáles son las reglas del proyecto y qué hay en la carpeta. Claude Code y Codex leen el mismo archivo, así que las reglas sirven para ambos.",
-            "Empieza con tres reglas tuyas. En la clase 7, el manual crecerá e incluirá reglas que se pueden comprobar."
+            "Le dice al agente quién eres, las reglas del proyecto y qué hay en la carpeta. Claude Code y Codex leen el mismo archivo, así que las reglas valen para los dos.",
+            "Empieza con tres reglas tuyas. En la clase 7 crece y gana reglas que puedes comprobar."
           ],
           "exemplo": {
             "rot": "Regla",
-            "texto": "Antes de terminar, di qué cambió y cómo puedo comprobarlo."
+            "texto": "Antes de terminar, dime qué cambió y cómo lo reviso."
           }
         },
         {
           "titulo": "Editar y comprobar",
           "sub": "notepad y type",
           "texto": [
-            "<code>notepad README.md</code> abre el archivo en el Bloc de notas; Ctrl+S lo guarda. <code>type README.md</code> muestra en cmd lo que quedó guardado.",
-            "Si en cmd los acentos aparecen cambiados, como Ã§ en lugar de ç, solo es la pantalla; el archivo está bien."
+            "<code>notepad README.md</code> abre el archivo en el Bloc de notas; Ctrl+S lo guarda. <code>type README.md</code> muestra en el cmd lo que quedó guardado.",
+            "Los acentos cambiados en el cmd, como Ã§ en lugar de ç, son solo la pantalla; el archivo está bien."
           ],
           "exemplo": {
-            "rot": "En Mac y Linux",
+            "rot": "En Mac y en Linux",
             "texto": "nano README.md para editar, cat README.md para ver."
           }
         }
@@ -176,7 +176,7 @@
     {
       "tipo": "codigo",
       "titulo": "El árbol y los dos archivos",
-      "sub": "Crea las carpetas desde cmd y pega las plantillas en el Bloc de notas. Reemplaza lo que esté entre < >.",
+      "sub": "Crea las carpetas desde el cmd y pega las plantillas en el Bloc de notas. Cambia lo que esté entre < >.",
       "blocos": [
         {
           "rot": "cmd · las carpetas",
@@ -186,12 +186,12 @@
         {
           "rot": "README.md",
           "icone": "arquivo",
-          "conteudo": "# Mi primer agente\n\n## Propósito\n<qué produce este proyecto, en una frase>\n\n## Lee primero\n1. AGENTS.md\n2. ../config/decisoes.md\n3. ../config/memoria.md\n\n## Organización\n- entradas: lo que lee la IA\n- saidas: lo que produce para que yo lo revise\n\n## Cómo verificar\n<cómo puede alguien comprobar que el resultado es correcto>\n\n## Estado actual\nPor definir."
+          "conteudo": "# Meu primeiro agente\n\n## Propósito\n<qué produce este proyecto, en una frase>\n\n## Lee primero\n1. AGENTS.md\n2. ../config/decisoes.md\n3. ../config/memoria.md\n\n## Organización\n- entradas: lo que la IA lee\n- saidas: lo que ella produce, para que yo revise\n\n## Cómo verificar\n<cómo alguien comprueba que el resultado está correcto>\n\n## Estado actual\nPor definir."
         },
         {
           "rot": "AGENTS.md",
           "icone": "arquivo",
-          "conteudo": "# Quién soy\n<tu nombre, tu profesión, para quién trabajas>\n\n# Reglas de este proyecto\n- Escribe en español, con frases cortas.\n- Trabaja solo dentro de esta carpeta. No borres archivos sin preguntar.\n- Antes de terminar, di qué cambió y cómo puedo comprobarlo.\n\n# Qué hay aquí\n- entradas/: material que puedes leer\n- saidas/: donde entregas los borradores"
+          "conteudo": "# Quién soy\n<tu nombre, tu profesión, para quién trabajas>\n\n# Reglas de este proyecto\n- Escribe en español, frases cortas.\n- Trabaja solo dentro de esta carpeta. No borres archivos sin preguntar.\n- Antes de terminar, dime qué cambió y cómo lo reviso.\n\n# Qué hay aquí\n- entradas/: material que puedes leer\n- saidas/: donde entregas los borradores"
         },
         {
           "rot": "cmd · crear, editar y comprobar",
@@ -204,32 +204,32 @@
         "abas": [
           {
             "rot": "El árbol listo",
-            "html": "<pre>C:\\Users\\ana\\projetos\n├─ config\n└─ meu-primeiro-agente\n   ├─ AGENTS.md\n   ├─ README.md\n   ├─ entradas\n   └─ saidas</pre><p>El Bloc de notas pregunta si quieres crear el archivo nuevo: responde Sí. Guárdalo con Ctrl+S y ciérralo.</p>"
+            "html": "<pre>C:\\Users\\ana\\projetos\n├─ config\n└─ meu-primeiro-agente\n   ├─ AGENTS.md\n   ├─ README.md\n   ├─ entradas\n   └─ saidas</pre><p>El Bloc de notas pregunta si quieres crear el archivo nuevo: responde Sí. Guarda con Ctrl+S y cierra.</p>"
           },
           {
             "rot": "Errores comunes",
-            "html": "<ul><li><b>El archivo se convierte en AGENTS.md.txt</b>: en Bloc de notas, en Tipo, elige \"Todos los archivos\" o créalo con <code>notepad AGENTS.md</code> en cmd.</li><li><b>Todo en la carpeta Documentos</b>: el agente lee pruebas, contratos y notas que no tienen que ver con la tarea.</li><li><b>La misma preferencia en cada proyecto</b>: se guarda una sola vez, en config.</li></ul>"
+            "html": "<ul><li><b>El archivo se vuelve AGENTS.md.txt</b>: en el Bloc de notas, en Tipo, elige \"Todos los archivos\", o créalo con <code>notepad AGENTS.md</code> en el cmd.</li><li><b>Todo en la carpeta Documentos</b>: el agente lee exámenes, contratos y notas que no tienen que ver con la tarea.</li><li><b>Preferencia repetida en cada proyecto</b>: vive una sola vez, en config.</li></ul>"
           }
         ]
       }
     },
     {
       "tipo": "simterm",
-      "titulo": "Ensaya: montar el árbol",
-      "sub": "Crea las carpetas y revisa, como en tu computadora.",
+      "titulo": "Ensaya: armar el árbol",
+      "sub": "Crea las carpetas y comprueba, como en tu computadora.",
       "janela": "Símbolo del sistema · simulación",
       "sistema": "windows",
       "inicio": "C:\\Users\\ana\\projetos",
       "sufixo": ">",
       "missoes": [
         {
-          "pede": "Crea la carpeta <code>config</code> aquí en <code>projetos</code>.",
+          "pede": "Crea la carpeta <code>config</code> aquí en projetos.",
           "aceita": [
             "mkdir config",
             "md config"
           ],
           "saida": "",
-          "explica": "config queda junto a los proyectos, no dentro de uno de ellos."
+          "explica": "config queda al lado de los proyectos, no dentro de uno de ellos."
         },
         {
           "pede": "Entra en <code>meu-primeiro-agente</code>.",
@@ -238,7 +238,7 @@
           ],
           "saida": "",
           "vai": "C:\\Users\\ana\\projetos\\meu-primeiro-agente",
-          "explica": "La ruta antes de &gt; muestra que estás en el proyecto."
+          "explica": "La ruta antes del &gt; muestra que estás en el proyecto."
         },
         {
           "pede": "Crea la carpeta <code>entradas</code>.",
@@ -247,33 +247,33 @@
             "md entradas"
           ],
           "saida": "",
-          "explica": "Entradas: lo que lee la IA."
+          "explica": "Entradas: lo que la IA lee."
         },
         {
-          "pede": "Crea la carpeta <code>saidas</code> (sin tilde).",
+          "pede": "Crea la carpeta <code>saidas</code> (sin acento).",
           "aceita": [
             "mkdir saidas",
             "md saidas"
           ],
           "saida": "",
-          "explica": "Salidas: lo que produce, para que lo revises."
+          "explica": "Salidas: lo que ella produce, para que tú lo revises."
         },
         {
-          "pede": "Abre el AGENTS.md en Bloc de notas.",
+          "pede": "Abre el AGENTS.md en el Bloc de notas.",
           "aceita": [
             "notepad AGENTS.md",
             "notepad agents.md"
           ],
-          "saida": "(se abre Bloc de notas; pegas el modelo, Ctrl+S y cierras)",
-          "explica": "notepad seguido del nombre abre el editor que ya viene con Windows."
+          "saida": "(el Bloc de notas se abre; pegas la plantilla, Ctrl+S y cierras)",
+          "explica": "notepad seguido del nombre abre el editor que ya viene en Windows."
         },
         {
-          "pede": "Muestra solo los nombres de lo que hay en la carpeta.",
+          "pede": "Lista solo los nombres de lo que hay en la carpeta.",
           "aceita": [
             "dir /b"
           ],
           "saida": "AGENTS.md\nentradas\nsaidas",
-          "explica": "Las carpetas y el archivo del agente están en su lugar. Solo falta el README, que es tu práctica."
+          "explica": "Carpetas y el archivo del agente en su lugar. Falta solo el README, que es tu práctica."
         },
         {
           "pede": "Muestra el AGENTS.md en la terminal.",
@@ -281,12 +281,12 @@
             "type AGENTS.md",
             "type agents.md"
           ],
-          "saida": "# Quién soy\nAna, consultora de RR. HH.\n\n# Reglas de este proyecto\n- Escribe en español, con frases cortas.\n…",
-          "explica": "<code>type</code> muestra lo que quedó guardado. Es la revisión que haces después de editar."
+          "saida": "# Quién soy\nAna, consultora de RR. HH.\n\n# Reglas de este proyecto\n- Escribe en español, frases cortas.\n…",
+          "explica": "<code>type</code> muestra lo que quedó guardado. Es tu comprobación después de editar."
         }
       ],
-      "fim": "Árbol montado en el ensayo. Ahora, en tu computadora: la práctica de abajo.",
-      "legenda": "Simulación: Ana es un ejemplo. En cmd, las mayúsculas y minúsculas del nombre del archivo se consideran iguales."
+      "fim": "Árbol armado en el ensayo. Ahora en tu computadora: la práctica de abajo.",
+      "legenda": "Simulación: Ana es un ejemplo. En el cmd, las mayúsculas y minúsculas en el nombre del archivo dan lo mismo."
     },
     {
       "tipo": "pratica",
@@ -297,7 +297,7 @@
           "id": "e1",
           "titulo": "E5 · El árbol y el README",
           "min": "15 min",
-          "texto": "Dibuja el árbol en papel, crea config, entradas y saidas con cmd y escribe el README con las cinco secciones.",
+          "texto": "Dibuja el árbol en papel, crea config, entradas y saidas desde el cmd y escribe el README con las cinco secciones.",
           "pronto": "<code>dir /b</code> muestra entradas, saidas y README.md, y cada sección del README tiene información real o \"por definir\"."
         },
         {
@@ -311,44 +311,44 @@
     },
     {
       "tipo": "quiz",
-      "titulo": "Pon a prueba lo que aprendiste",
+      "titulo": "Prueba lo que aprendiste",
       "sub": "La explicación aparece después de tu respuesta.",
       "perguntas": [
         {
-          "p": "Quieres guardar \"prefiero informes cortos, con los pendientes al final\". ¿Dónde guardas esa nota?",
+          "p": "Quieres guardar \"prefiero informes cortos, con los pendientes al final\". ¿Dónde vive esa nota?",
           "opcoes": [
-            "En las salidas de cada proyecto.",
             "En la carpeta config, fuera de los proyectos.",
             "En el README de cada proyecto.",
-            "En entradas, para que la IA lo lea."
+            "En entradas, para que la IA la lea.",
+            "En las salidas de cada proyecto."
           ],
-          "certa": 1,
-          "explica": "Las preferencias que aplican a todos los proyectos van en config, una sola vez. Repetirlas en cada proyecto crea versiones que se contradicen.",
+          "certa": 0,
+          "explica": "Una preferencia que vale para todos los proyectos va en config, una sola vez. Repetirla en cada proyecto genera versiones que se contradicen.",
           "ref": "diagrama"
         },
         {
           "p": "¿Cuál es la diferencia entre README.md y AGENTS.md?",
           "opcoes": [
-            "Ninguna, son copias.",
-            "El README es para las personas; AGENTS.md le da reglas de trabajo al agente.",
             "El README es solo para Codex.",
-            "AGENTS.md guarda las contraseñas."
+            "Ninguna, son copias.",
+            "El AGENTS.md guarda las contraseñas.",
+            "El README es para personas; el AGENTS.md le da reglas de trabajo al agente."
           ],
-          "certa": 1,
-          "explica": "Cada uno tiene un lector. El README explica el proyecto a quien llega; AGENTS.md le dice al agente cómo trabajar ahí.",
+          "certa": 3,
+          "explica": "Cada uno tiene su lector. El README le explica el proyecto a quien llega; el AGENTS.md le dice al agente cómo trabajar ahí.",
           "cert": true,
           "ref": "passos"
         },
         {
           "p": "Pediste un resumen de la feria de ciencias y apareció una nota de calificaciones en medio. ¿Cuál es la causa probable?",
           "opcoes": [
-            "El modelo es débil.",
-            "La carpeta mezclaba temas y la nota estaba junto con los demás archivos.",
             "Faltó internet.",
-            "El Markdown estaba mal."
+            "La carpeta mezclaba temas y las calificaciones estaban ahí mismo.",
+            "El Markdown estaba mal.",
+            "El modelo es débil."
           ],
           "certa": 1,
-          "explica": "Una carpeta con varios temas genera ruido. Una carpeta por contexto hace que la IA lea solo el material de la tarea.",
+          "explica": "Una carpeta con varios temas se vuelve ruido. Una carpeta por contexto hace que la IA lea solo el material de la tarea.",
           "ref": "diagrama"
         }
       ]

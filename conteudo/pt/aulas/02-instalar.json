@@ -190,8 +190,8 @@
       "perguntas": [
         {
           "p": "Você instalou o Git e, na mesma janela, <code>git --version</code> respondeu \"não é reconhecido\". O que fazer?",
-          "opcoes": ["Instalar de novo com outro comando.", "Fechar o cmd, abrir outro e conferir de novo.", "Reiniciar o computador.", "Abrir o cmd como administrador."],
-          "certa": 1,
+          "opcoes": ["Instalar de novo com outro comando.", "Abrir o cmd como administrador.", "Reiniciar o computador.", "Fechar o cmd, abrir outro e conferir de novo."],
+          "certa": 3,
           "explica": "A janela aberta antes da instalação não enxerga o programa novo. Janela nova resolve quase sempre; reinstalar só complica.",
           "ref": "simterm"
         },
@@ -205,8 +205,8 @@
         },
         {
           "p": "O que vai na ficha do projeto sobre o acesso do agente?",
-          "opcoes": ["A chave de API, para não perder.", "O método (conta ou API) e onde você conferiu.", "A senha da assinatura.", "Um print da tela de login."],
-          "certa": 1,
+          "opcoes": ["Um print da tela de login.", "A chave de API, para não perder.", "A senha da assinatura.", "O método (conta ou API) e onde você conferiu."],
+          "certa": 3,
           "explica": "Anote o método, nunca a credencial. Chave em texto, print ou pedido pode ser usada por outra pessoa, e a conta é sua.",
           "ref": "diagrama"
         }

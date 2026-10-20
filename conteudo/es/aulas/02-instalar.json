@@ -5,9 +5,9 @@
   "titulo_curto": "Instalar e iniciar sesión",
   "menu": "Instalar",
   "minutos": 18,
-  "lead": "Instalar el programa, iniciar sesión con tu cuenta y abrirlo en la carpeta son tres pasos distintos, cada uno con su propia comprobación. El comando viene de la página oficial, la cuenta es tu suscripción y ninguna contraseña pasa por la terminal.",
+  "lead": "Instalar el programa, iniciar sesión con la cuenta y abrir en la carpeta son tres etapas distintas, cada una con su comprobación. El comando viene de la página oficial, la cuenta es tu suscripción y ninguna contraseña pasa por el terminal.",
   "objetivo": "instalar Git, gh, Node y el agente (Claude Code o Codex) desde el cmd y confirmar la versión y el método de inicio de sesión.",
-  "hero_alt": "Una mano comprueba la etiqueta de una caja sellada junto a una laptop con la terminal abierta.",
+  "hero_alt": "Una mano revisando la etiqueta de una caja sellada junto a un notebook con el terminal abierto.",
   "competencias": [
     "instalar-ferramentas",
     "conferir-fonte-oficial",
@@ -28,14 +28,14 @@
     },
     {
       "icone": "cadeado",
-      "t": "Iniciar sesión con tu suscripción y comprobar el método, sin exponer ninguna clave"
+      "t": "Iniciar sesión con la suscripción y comprobar el método, sin exponer ninguna clave"
     }
   ],
   "secoes": [
     {
       "tipo": "diagrama",
-      "titulo": "De cero a tener el agente abierto",
-      "sub": "Tres pasos, cada uno con su propia comprobación.",
+      "titulo": "De cero al agente abierto",
+      "sub": "Tres etapas, cada una con su \"comprobación\".",
       "estilo": "escada",
       "nos": [
         {
@@ -52,12 +52,12 @@
               "t": "comprueba: --version"
             }
           ],
-          "detalhe": "Instalar coloca el programa en la computadora. Eso aún no conecta tu cuenta ni elige la carpeta. Después de instalarlo, cierra el cmd y vuelve a abrirlo: solo la ventana nueva reconoce el programa recién instalado."
+          "detalhe": "Instalar pone el programa en el computador. Eso todavía no conecta tu cuenta ni elige la carpeta. Después de instalar, cierra el cmd y ábrelo de nuevo: solo la ventana nueva ve el programa que llegó."
         },
         {
           "icone": "cadeado",
           "titulo": "Iniciar sesión con la cuenta",
-          "sub": "Desde el navegador, nunca desde la terminal",
+          "sub": "Por el navegador, nunca por el terminal",
           "itens": [
             {
               "icone": "usuario",
@@ -68,13 +68,13 @@
               "t": "comprueba: codex login status"
             }
           ],
-          "detalhe": "Como la tarjeta de acceso en el torniquete: la terminal te lleva al navegador y ahí inicias sesión. La contraseña nunca pasa por la terminal. Iniciar sesión con tu cuenta usa el plan de la suscripción; una clave de API cobra según el consumo, en otra cuenta.",
+          "detalhe": "Como la credencial en el torniquete: el terminal te manda al navegador y es allí donde inicias sesión. La contraseña nunca pasa por el terminal. Iniciar sesión con la cuenta usa el plan de la suscripción; una clave de API cobra por consumo, en otra cuenta.",
           "forte": true
         },
         {
           "icone": "pasta",
           "titulo": "Abrir en la carpeta",
-          "sub": "cd primero, agente después",
+          "sub": "primero cd, después el agente",
           "itens": [
             {
               "icone": "terminal",
@@ -85,63 +85,63 @@
               "t": "claude o codex"
             }
           ],
-          "detalhe": "El agente trabaja en la carpeta desde la que lo abriste. La primera vez que lo abres en una carpeta, te pregunta si confías en ella: es tu carpeta de práctica, confirma. Para salir, <code>/quit</code> en Codex o <code>/exit</code> en Claude Code."
+          "detalhe": "El agente trabaja en la carpeta en la que fue abierto. La primera vez en una carpeta te pregunta si confías en ella: es tu carpeta de práctica, confirma. Para salir, <code>/quit</code> en Codex o <code>/exit</code> en Claude Code."
         }
       ],
-      "legenda": "Justo después de instalar, abrir el agente y ver que pide iniciar sesión no es un error: el paso 1 salió bien y falta el 2.",
+      "legenda": "Justo después de instalar, abrir el agente y ver la solicitud de inicio de sesión no es un defecto: la etapa 1 salió bien y falta la 2.",
       "rolagem": true,
       "rolagem_fim": {
-        "titulo": "Un paso a la vez",
-        "texto": "Instalaste, comprueba la versión. Iniciaste sesión, comprueba el método. Abriste, comprueba la carpeta. Si algo falla, sabes exactamente en cuál de los tres pasos te quedaste."
+        "titulo": "Una etapa a la vez",
+        "texto": "Instalaste, comprueba la versión. Iniciaste sesión, comprueba el método. Abriste, comprueba la carpeta. Si algo falla, sabes exactamente en cuál de las tres te quedaste."
       }
     },
     {
       "tipo": "passos",
       "titulo": "Revisa el sello antes de abrir la caja",
-      "sub": "Cuatro cuidados que sirven para cualquier programa nuevo.",
+      "sub": "Cuatro cuidados que valen para cualquier programa nuevo.",
       "passos": [
         {
           "titulo": "Fuente oficial",
           "sub": "Lee el nombre dentro del comando",
           "texto": [
-            "En internet circulan comandos «más rápidos». Un comando pegado sin comprobar puede ejecutar cualquier cosa.",
-            "Lee el remitente: <code>Git.Git</code>, <code>GitHub.cli</code>, <code>OpenJS.NodeJS.LTS</code>, <code>@openai/codex</code>, <code>claude.ai/install.cmd</code>. Si el nombre es distinto y la página es desconocida, no lo pegues."
+            "En internet circulan comandos \"más rápidos\". Un comando pegado sin revisar puede ejecutar cualquier cosa.",
+            "Lee el remitente: <code>Git.Git</code>, <code>GitHub.cli</code>, <code>OpenJS.NodeJS.LTS</code>, <code>@openai/codex</code>, <code>claude.ai/install.cmd</code>. Un nombre distinto, de una página desconocida, no se pega."
           ],
           "exemplo": {
             "rot": "Señal de alerta",
-            "texto": "Un paquete que tiene «codex» en el nombre, pero no lleva @openai/ al principio."
+            "texto": "Un paquete con \"codex\" en el nombre, pero sin el @openai/ delante."
           }
         },
         {
-          "titulo": "Espera a que vuelva el >",
+          "titulo": "Esperar el >",
           "sub": "Un comando a la vez",
           "texto": [
-            "Pega un comando, espera a que termine y a que vuelva el <code>&gt;</code>. No necesitas entender las líneas que aparecen.",
-            "La primera vez, winget puede preguntarte si aceptas los términos de la fuente: escribe Y y presiona Enter."
+            "Pega un comando, espera a que termine y a que vuelva el <code>&gt;</code>. Las líneas que pasan no tienes que entenderlas.",
+            "La primera vez, winget puede preguntarte si aceptas los términos del origen: escribe Y y Enter."
           ],
           "exemplo": {
             "rot": "Lo que aparece",
-            "texto": "Instalado correctamente"
+            "texto": "Instalado con êxito"
           }
         },
         {
-          "titulo": "Vuelve a abrir y comprueba",
+          "titulo": "Reabrir y comprobar",
           "sub": "--version",
           "texto": [
-            "Cierra cmd y vuelve a abrirlo. Entonces <code>git --version</code>, <code>gh --version</code> y <code>claude --version</code> o <code>codex --version</code> mostrarán un número.",
-            "«No se reconoce como un comando interno o externo» casi siempre significa que la ventana ya estaba abierta."
+            "Cierra el cmd y ábrelo de nuevo. Entonces <code>git --version</code>, <code>gh --version</code> y <code>claude --version</code> o <code>codex --version</code> responden con un número.",
+            "\"No se reconoce como un comando interno o externo\" casi siempre es solo la ventana vieja."
           ],
           "exemplo": {
             "rot": "Regla",
-            "texto": "¿Instalaste? Cierra y vuelve a abrir cmd antes de comprobar."
+            "texto": "¿Instalaste? Cierra y abre el cmd antes de comprobar."
           }
         },
         {
-          "titulo": "Método de inicio de sesión",
+          "titulo": "Método de entrada",
           "sub": "Cuenta, no clave",
           "texto": [
-            "La primera vez que lo abres, el agente te pide iniciar sesión: usa tu suscripción. En Codex, <code>codex login</code> abre el navegador y <code>codex login status</code> indica cómo iniciaste sesión.",
-            "En la ficha del proyecto, anota el método («cuenta» o «API»). La clave nunca va en la ficha, en una solicitud ni en una captura de pantalla."
+            "La primera vez que se abre, el agente te pide iniciar sesión: usa tu suscripción. En Codex, <code>codex login</code> abre el navegador y <code>codex login status</code> te dice por qué camino entraste.",
+            "En la ficha del proyecto va el método (\"cuenta\" o \"API\"). La clave en sí nunca va en la ficha, en el pedido ni en una captura."
           ],
           "exemplo": {
             "rot": "Respuesta esperada",
@@ -153,7 +153,7 @@
     {
       "tipo": "codigo",
       "titulo": "Los comandos de instalación",
-      "sub": "Una vez por computadora. Copia un bloque, espera a que termine, cierra y vuelve a abrir cmd.",
+      "sub": "Una vez por computadora. Copia un bloque, espera a que termine, cierra y vuelve a abrir el cmd.",
       "blocos": [
         {
           "rot": "cmd · Git, GitHub CLI y Node",
@@ -161,7 +161,7 @@
           "conteudo": "winget install --id Git.Git -e\nwinget install --id GitHub.cli -e\nwinget install --id OpenJS.NodeJS.LTS -e"
         },
         {
-          "rot": "cmd · el agente (elige uno o los dos)",
+          "rot": "cmd · el agente (elige uno, o los dos)",
           "icone": "robo",
           "conteudo": "rem Claude Code:\ncurl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd\n\nrem Codex:\nnpm install -g @openai/codex"
         },
@@ -171,7 +171,7 @@
           "conteudo": "git --version\ngh --version\nclaude --version\ncodex --version"
         },
         {
-          "rot": "cmd · entrar y comprobar el método (Codex)",
+          "rot": "cmd · iniciar sesión y comprobar el método (Codex)",
           "icone": "cadeado",
           "conteudo": "codex login\ncodex login status"
         },
@@ -186,15 +186,15 @@
         "abas": [
           {
             "rot": "Lo que aparece",
-            "html": "<pre>C:\\Users\\ana&gt; winget install --id OpenJS.NodeJS.LTS -e\nInstalado com êxito\nC:\\Users\\ana&gt; rem fechou o cmd e abriu outro\nC:\\Users\\ana&gt; npm install -g @openai/codex\nadded 1 package in 9s\nC:\\Users\\ana&gt; codex login status\nLogged in using ChatGPT</pre><p>Los números de versión y los tiempos cambian con el tiempo. Lo importante es que aparezca un número y no un mensaje de error.</p>"
+            "html": "<pre>C:\\Users\\ana&gt; winget install --id OpenJS.NodeJS.LTS -e\nInstalado com êxito\nC:\\Users\\ana&gt; rem fechou o cmd e abriu outro\nC:\\Users\\ana&gt; npm install -g @openai/codex\nadded 1 package in 9s\nC:\\Users\\ana&gt; codex login status\nLogged in using ChatGPT</pre><p>Los números de versión y los tiempos cambian con el tiempo. Lo que importa es que aparezca un número, y no el mensaje de error.</p>"
           },
           {
-            "rot": "¿Apareció un error?",
-            "html": "<ul><li><b>\"… no se reconoce como un comando interno o externo\"</b>: cierra el cmd, vuelve a abrirlo y repite.</li><li><b>winget pidió aceptar los términos</b>: Y y Enter.</li><li><b>login status muestra una clave de API</b> y querías usar la cuenta: <code>codex logout</code> y después <code>codex login</code>.</li><li><b>El agente pregunta si confías en la carpeta</b>: es tu carpeta de práctica, confirma.</li></ul>"
+            "rot": "¿Te dio error?",
+            "html": "<ul><li><b>\"… no se reconoce como un comando interno o externo\"</b>: cierra el cmd, ábrelo de nuevo y repite.</li><li><b>winget pidió aceptar términos</b>: Y y Enter.</li><li><b>login status muestra una clave de API</b> y querías la cuenta: <code>codex logout</code> y después <code>codex login</code>.</li><li><b>El agente pregunta si confías en la carpeta</b>: es tu carpeta de entrenamiento, confirma.</li></ul>"
           },
           {
             "rot": "Mac y Linux",
-            "html": "<p>En la Terminal de Mac o Linux, Claude Code se instala con <code>curl -fsSL https://claude.ai/install.sh | bash</code> y Codex con <code>npm install -g @openai/codex</code> (primero necesitas Node). La comprobación es la misma: <code>--version</code> en una ventana nueva.</p>"
+            "html": "<p>En la Terminal de Mac o de Linux, Claude Code se instala con <code>curl -fsSL https://claude.ai/install.sh | bash</code> y Codex con <code>npm install -g @openai/codex</code> (primero va Node). La comprobación es la misma: <code>--version</code> en una ventana nueva.</p>"
           }
         ]
       }
@@ -202,7 +202,7 @@
     {
       "tipo": "simterm",
       "titulo": "Ensaya: instalar y comprobar",
-      "sub": "Observa qué pasa cuando compruebas en la misma ventana.",
+      "sub": "Fíjate en lo que pasa cuando compruebas en la misma ventana.",
       "janela": "Símbolo del sistema · simulación",
       "sistema": "windows",
       "inicio": "C:\\Users\\ana",
@@ -214,16 +214,16 @@
             "winget install --id Git.Git -e",
             "winget install -e --id Git.Git"
           ],
-          "saida": "Encontrado Git [Git.Git]\nDescargando…\nInstalado con éxito",
-          "explica": "<code>--id</code> con <code>-e</code> pide el nombre exacto, sin adivinar. Ese es el sello."
+          "saida": "Encontrado Git [Git.Git]\nBaixando…\nInstalado com êxito",
+          "explica": "El <code>--id</code> con <code>-e</code> pide el nombre exacto, sin adivinar. Ese es el sello."
         },
         {
-          "pede": "Comprueba si Git responde en esta misma ventana.",
+          "pede": "Comprueba si Git responde, en esta misma ventana.",
           "aceita": [
             "git --version"
           ],
-          "saida": "'git' no se reconoce como un comando interno\no externo, un programa operable o un archivo por lotes.",
-          "explica": "Error esperado: la ventana que estaba abierta antes de la instalación todavía no reconoce el programa nuevo. No es un defecto."
+          "saida": "'git' no se reconoce como un comando interno\no externo, programa ejecutable o archivo por lotes.",
+          "explica": "Error esperado: la ventana abierta antes de la instalación todavía no ve el programa nuevo. No es un defecto."
         },
         {
           "pede": "Cierra esta ventana (el comando es <code>exit</code>).",
@@ -238,82 +238,82 @@
           "aceita": [
             "git --version"
           ],
-          "saida": "git version (número de versión)",
-          "explica": "Un número de versión: la computadora reconoce el programa. Paso 1 comprobado."
+          "saida": "git version (número de la versión)",
+          "explica": "Un número de versión: el computador reconoce el programa. Paso 1 verificado."
         },
         {
-          "pede": "Comprueba con qué método iniciaste sesión en Codex.",
+          "pede": "Verifica por qué método entró Codex.",
           "aceita": [
             "codex login status"
           ],
           "saida": "Logged in using ChatGPT",
-          "explica": "\"Conectado con ChatGPT\": es la cuenta de la suscripción, no una clave de API. Anota solo eso en la ficha."
+          "explica": "\"Conectado usando ChatGPT\": es la cuenta de la suscripción, no una clave de API. Anota solo eso en la ficha."
         }
       ],
-      "fim": "Ensayo terminado. En tu computadora, la regla es la misma: después de instalar, cierra y abre el cmd antes de comprobar.",
+      "fim": "Ensayo hecho. En tu computador, la regla es la misma: si instalaste, cierra y abre el cmd antes de verificar.",
       "legenda": "Simulación: los mensajes reales pueden variar según la versión de Windows y del programa."
     },
     {
       "tipo": "pratica",
       "titulo": "Práctica",
-      "sub": "Una vez por computadora.",
+      "sub": "Una vez por computador.",
       "exercicios": [
         {
           "id": "e1",
           "titulo": "E3 · Herramientas instaladas",
           "min": "20 min",
-          "texto": "Instala Git, GitHub CLI y Node con winget, además del agente que vas a usar. Cierra y vuelve a abrir el cmd y ejecuta los <code>--version</code>.",
+          "texto": "Instala Git, GitHub CLI y Node con winget y el agente que vas a usar. Cierra y vuelve a abrir el cmd y ejecuta los <code>--version</code>.",
           "pronto": "<code>git --version</code>, <code>gh --version</code> y <code>claude --version</code> o <code>codex --version</code> muestran números de versión."
         },
         {
           "id": "e2",
-          "titulo": "E4 · Iniciar sesión y anotar el método",
+          "titulo": "E4 · Entrar y anotar el método",
           "min": "10 min",
-          "texto": "Abre el agente, inicia sesión con tu suscripción desde el navegador y anota en una ficha (o una nota en el celular) qué método está activo y dónde lo comprobaste.",
+          "texto": "Abre el agente, entra con tu suscripción desde el navegador y anota en una ficha (o nota en el celular) qué método está activo y dónde lo verificaste.",
           "pronto": "la ficha dice \"cuenta\" (o \"API\") y no contiene ninguna contraseña ni clave."
         }
       ]
     },
     {
       "tipo": "quiz",
-      "titulo": "Pon a prueba lo que aprendiste",
+      "titulo": "Prueba lo que aprendiste",
       "sub": "La explicación aparece después de tu respuesta.",
       "perguntas": [
         {
           "p": "Instalaste Git y, en la misma ventana, <code>git --version</code> respondió \"no se reconoce\". ¿Qué haces?",
           "opcoes": [
-            "Instalarlo de nuevo con otro comando.",
-            "Cerrar el cmd, abrir otro y volver a comprobar.",
-            "Reiniciar la computadora.",
-            "Abrir el cmd como administrador."
+            "Instalar de nuevo con otro comando.",
+            "Abrir el cmd como administrador.",
+            "Reiniciar el computador.",
+            "Cerrar el cmd, abrir otro y verificar de nuevo."
           ],
-          "certa": 1,
-          "explica": "La ventana que estaba abierta antes de la instalación no reconoce el programa nuevo. Abrir una ventana nueva casi siempre lo resuelve; reinstalarlo solo complica las cosas.",
+          "certa": 3,
+          "explica": "La ventana abierta antes de la instalación no ve el programa nuevo. Una ventana nueva casi siempre lo resuelve; reinstalar solo complica.",
           "ref": "simterm"
         },
         {
-          "p": "En un grupo, alguien compartió un comando «más rápido» para instalar Codex, con un nombre de paquete distinto de <code>@openai/codex</code>. ¿Qué haces?",
+          "p": "En un grupo, alguien mandó un comando \"más rápido\" para instalar Codex, con un nombre de paquete distinto de <code>@openai/codex</code>. ¿Qué haces?",
           "opcoes": [
-            "Lo pegas porque es más rápido.",
-            "Lo pegas, pero como administrador.",
-            "No lo pegas; usas el comando de la página oficial.",
-            "Le pides al agente que lo ejecute por ti."
+            "Lo pego, porque es más rápido.",
+            "Lo pego, pero como administrador.",
+            "No lo pego; uso el comando de la página oficial.",
+            "Le pido al agente que lo ejecute por ti."
           ],
           "certa": 2,
-          "explica": "El nombre dentro del comando es el sello de seguridad. Un comando de origen desconocido puede ejecutar cualquier cosa en tu computadora.",
+          "explica": "El nombre dentro del comando es el sello. Un comando de origen desconocido puede ejecutar cualquier cosa en tu computador.",
           "cert": true,
           "ref": "passos"
         },
         {
-          "p": "¿Qué anotas en la ficha del proyecto sobre el acceso del agente?",
+          "p": "¿Qué va en la ficha del proyecto sobre el acceso del agente?",
           "opcoes": [
+            "Una captura de la pantalla de inicio de sesión.",
             "La clave de API, para no perderla.",
-            "El método (cuenta o API) y dónde lo verificaste.",
             "La contraseña de la suscripción.",
-            "Una captura de pantalla del inicio de sesión."
+            "El método (cuenta o API) y dónde lo verificaste."
           ],
-          "certa": 1,
-          "explica": "Anota el método, nunca la credencial. Otra persona podría usar una clave en texto, una captura de pantalla o una solicitud, y la cuenta es tuya.",
+          "certa": 3,
+          "explica": "Anota el método, nunca la credencial. Una clave en texto, una captura o un mensaje puede ser usada por otra persona, y la cuenta es tuya.",
           "ref": "diagrama"
         }
       ]
@@ -323,7 +323,7 @@
       "titulo": "Para profundizar",
       "links": [
         {
-          "t": "OSWork Quick: parte 1, tu computadora",
+          "t": "OSWork Quick: parte 1, tu computador",
           "href": "https://inematds.github.io/oswork-quick/",
           "icone": "terminal"
         },
